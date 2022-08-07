@@ -1,0 +1,151 @@
+/*=======  Testimonials  =======*/
+.sengle-testi{
+    padding: 0px 15px;
+}
+.testimonial-box {
+    p {
+        padding: 45px 35px;
+        border-top: 3px solid $primary-color;
+        background-color: $white;
+        border-radius: 0 0 5px 5px;
+
+        @include respond-below(sm) {
+            padding: 30px;
+        }
+    }
+
+    .author {
+        margin-top: 30px;
+        padding-left: 20px;
+        .desc {
+            margin-left: 10px;
+            h6 {
+                font-size: 16px;
+                color: $black;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    &.color-1 {
+        p {
+            border-color: #006de8;
+        }
+    }
+    &.color-2 {
+        p {
+            border-color: #00978e;
+        }
+    }
+    &.color-3 {
+        p {
+            border-color: #ef452e;
+        }
+    }
+}
+
+.testimonial-box-two {
+    padding-top: 35px;
+
+    .testimonial-inner {
+        display: flex;
+        align-items: flex-end;
+        border-radius: 10px;
+        background: $white;
+        box-shadow: 0px 10px 30px rgba(239, 239, 239, 0.79);
+        padding: 30px;
+
+        @include respond-between(lg, xl) {
+            padding: 20px;
+        }
+
+        @include respond-below(sm) {
+            flex-wrap: wrap;
+        }
+
+        .testimonial-img {
+            position: relative;
+            z-index: 1;
+            width: 210px;
+            flex: 0 0 210px;
+            margin-top: -60px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            @include respond-between(lg, xl) {
+                width: 180px;
+                flex: 0 0 180px;
+            }
+
+            @include respond-below(sm) {
+                width: 250px;
+                flex: 0 0 100%;
+            }
+
+            i {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 57px;
+                width: 52px;
+                background-color: $primary-color;
+                color: $white;
+                font-size: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        .content {
+            padding-left: 30px;
+            padding-bottom: 10px;
+
+            @include respond-between(lg, xl) {
+                padding-left: 20px;
+            }
+
+            @include respond-below(sm) {
+                padding-left: 0;
+                padding-top: 30px;
+            }
+
+            p {
+                margin-bottom: 20px;
+            }
+
+            .name {
+                font-size: 16px;
+
+                font-weight: 700;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+.testimonials-arrow {
+    text-align: right;
+
+    .slick-arrow {
+        height: 60px;
+        width: 60px;
+        text-align: center;
+        line-height: 58px;
+        border-radius: 50%;
+        background-color: $white;
+        border: 2px solid rgba($primary-color, 0.1);
+        cursor: pointer;
+        color: $primary-color;
+
+        &.next {
+            background-color: $primary-color;
+            margin-left: 15px;
+            border-color: $primary-color;
+            color: $white;
+        }
+    }
+}

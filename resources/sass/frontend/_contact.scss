@@ -1,0 +1,284 @@
+/*=======  Contact  =======*/
+.conatct-section {
+    position: relative;
+    z-index: 2;
+
+    .contact-form-area {
+        background: $white;
+        box-shadow: 0px 16px 32px 0px rgba(228, 228, 228, 0.56);
+        padding: 60px;
+
+        @include respond-below(sm) {
+            padding: 30px;
+        }
+
+        .contact-form {
+            padding-left: 10px;
+
+            .form-title {
+                font-size: 40px;
+                color: $black;
+                padding-right: 40px;
+
+                @include respond-below(md) {
+                    font-size: 28px;
+                }
+            }
+
+            .input-group {
+                position: relative;
+
+                input,
+                textarea {
+                    height: 50px;
+                    border: 0;
+                    border-bottom: 2px solid $border-color;
+                    color: $text-color;
+
+                    padding: 0;
+                }
+
+                textarea {
+                    height: 90px;
+                }
+
+                .icon {
+                    right: 0;
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+
+    .conatct-one-bg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 74%;
+        z-index: -2;
+        background-size: cover;
+        background-position: center;
+        background-color: $primary-color;
+        background-repeat: no-repeat;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-color: $primary-color;
+            opacity: 0.9;
+        }
+    }
+}
+
+.conatct-section-two {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-color: $secondary-color;
+        opacity: 0.8;
+    }
+
+    .contact-form {
+        input,
+        textarea {
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            background-color: transparent;
+            color: $white;
+        }
+
+        ::placeholder {
+            color: #c1d0de;
+        }
+    }
+}
+
+.contact-map-one {
+    height: 340px;
+
+    iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+}
+
+.contact-map-two {
+    text-align: end;
+    position: relative;
+    z-index: 2;
+
+    &::before {
+        position: absolute;
+        content: "";
+        height: 0;
+        width: 0;
+        border-bottom: 400px solid $primary-color;
+        border-left: 400px solid transparent;
+        right: -15px;
+        bottom: -15px;
+        z-index: -1;
+
+        @include respond-below(sm) {
+            border-width: 200px;
+        }
+    }
+
+    iframe {
+        border: none;
+        width: 90%;
+        height: 560px;
+
+        @include respond-below(lg) {
+            width: 100%;
+        }
+    }
+}
+
+.contact-map-three {
+    iframe {
+        border: none;
+        width: 100%;
+        height: 550px;
+    }
+}
+
+.contact-info-items {
+    .contact-info-item {
+        border: 1px solid $border-color-2;
+        padding: 30px 20px 30px;
+        margin-bottom: 30px;
+        min-height: 320px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        i {
+            height: 80px;
+            width: 80px;
+            border-radius: 50%;
+            background: $primary-color;
+            text-align: center;
+            line-height: 80px;
+            color: $white;
+            font-size: 24px;
+        }
+
+        .title {
+            font-size: 21px;
+            padding-top: 25px;
+        }
+
+        p {
+            font-size: 18px;
+            color: $text-color-3;
+            padding-top: 5px;
+        }
+        .s-links{
+            display: inline-block;
+            margin-top: 10px;
+            a {
+                display: inline-block;
+                margin: 3px 7px;
+                i{
+                    height: auto;
+                    width: auto;
+                    border-radius: unset;
+                    background: unset;
+                    text-align: center;
+                    line-height: 30px;
+                    font-size: 20px;
+                    color: $text-color-3;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
+
+.contact-video {
+    position: relative;
+    z-index: 1;
+    text-align: right;
+
+    &::before {
+        position: absolute;
+        content: "";
+        height: 0;
+        width: 0;
+        border-bottom: 400px solid $primary-color;
+        border-left: 400px solid transparent;
+        right: -20px;
+        bottom: -20px;
+        z-index: -1;
+
+        @include respond-below(sm) {
+            border-width: 200px;
+        }
+    }
+
+    .video-popup {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        height: 120px;
+        width: 120px;
+        text-align: center;
+        line-height: 120px;
+        color: $white;
+        font-size: 24px;
+        z-index: 5;
+        border-radius: 50%;
+        background-color: $primary-color;
+        transform: translate(-50%, -50%);
+
+        @include respond-below(sm) {
+            height: 80px;
+            width: 80px;
+            line-height: 80px;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            background: $white;
+            top: 0;
+            left: 0;
+            z-index: -2;
+            opacity: 0.6;
+            animation: pulseBtnBefore 1.5s linear infinite;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: $primary-color;
+            border-radius: 50%;
+            z-index: -1;
+        }
+    }
+}

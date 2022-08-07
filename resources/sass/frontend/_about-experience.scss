@@ -1,0 +1,148 @@
+
+
+
+/*===========================
+    22.ABOUT EXPERIENCE css 
+===========================*/
+
+
+.about-experience-area{
+	padding-top: 113px;
+	& .experience-item{
+		margin-bottom: 50px;
+		& span{
+			color: $theme-color;
+			font-weight: 700;
+			position: relative;
+			&::before{
+				position: absolute;
+				content: '';
+				right: -100px;
+				top: 10px;
+				height: 2px;
+				width: 70px;
+				background: $theme-color;
+			}
+
+		}
+		& .title{
+			font-size: 60px;
+			line-height: 70px;
+			padding-top: 24px;
+			@media #{$lg} {
+				font-size: 46px;
+				line-height: 56px;
+			}
+			@media #{$md} {
+				padding-right: 130px;
+			}
+			@media #{$xs} {
+				font-size: 34px;
+				line-height: 44px;
+			}
+		}
+		& p{
+			color: #69a1bb;
+		}
+		& a{
+			font-weight: 700;
+			color: $theme-color;
+			margin-top: 17px;
+		}
+	}
+	& .single-experience{
+		position: relative;
+		& .experience-overlay{
+			padding: 40px 40px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 34, 73,.4);
+			padding-top: 275px;
+			@include transition(0.3s);
+			z-index: 5;
+			@media #{$lg} {
+				padding-top: 170px;
+			}
+			@media #{$md} {
+				padding-top: 205px;
+			}
+			@media #{$xs} {
+				padding: 40px 20px;
+				padding-top: 165px;
+			}
+			@media #{$sm} {
+				padding-top: 210px;
+				padding: 40px 40px;
+			}
+			& .title{
+				color: $white;
+				font-size: 22px;
+				padding-bottom: 10px;
+				@media #{$lg} {
+					font-size: 18px;
+				}
+				@media #{$xs} {
+					font-size: 20px;
+				}
+
+			}
+			& p{
+				color: #cadef6;
+				font-size: 14px;
+			}
+			& a{
+				color: $white;
+				font-size: 14px;
+				font-weight: 700;
+				opacity: 0;
+				@include transition(0.3s);
+			}
+			& i{
+				position: absolute;
+				top: 10px;
+				right: 20px;
+				font-size: 200px;
+				color: $white;
+				opacity: 0;
+				@include transition(0.3s);
+				z-index: -1;
+				@media #{$lg} {
+					font-size: 130px;
+				}
+				@media #{$xs} {
+					font-size: 150px;
+				}
+				@media #{$sm} {
+					font-size: 150px;
+				}
+			}
+		}
+		&:hover{
+			& .experience-overlay{
+				background: rgba(12, 89, 219,.9);
+				padding-top: 255px;
+				@media #{$lg} {
+					padding-top: 140px;
+				}
+				@media #{$md} {
+					padding-top: 175px;
+				}
+				@media #{$xs} {
+					padding-top: 135px;
+				}
+				@media #{$sm} {
+					padding-top: 180px;
+				}
+				& a{
+					opacity: 1;
+				}
+				& i{
+					opacity: .1;
+				}
+			}
+		}
+	}
+}

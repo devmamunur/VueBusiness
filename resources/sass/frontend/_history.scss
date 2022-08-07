@@ -1,0 +1,132 @@
+/*======= History timeline =======*/
+
+.about-history-area{
+	padding-top: 100px;
+	padding-bottom: 170px;
+	& .section-title{
+		padding-bottom: 60px;
+		& .title{
+			margin-bottom: 13px;
+			&::before{
+				display: none;
+			}
+		}
+		& p{
+			@include respond-below(sm) {
+				font-size: 15px;
+			}
+		}
+	}
+	& .history-item{
+		box-shadow: 0px 8px 16px 0px rgba(132, 190, 255, 0.1);
+		margin-right: 55px;
+		position: relative;
+		@include respond-below(sm) {
+			padding-top: 0;
+			margin-right: 0;
+		}
+
+		& .history-thumb{
+			& img{
+				width: 100%;
+			}
+
+		}
+		& .history-content{
+			padding: 33px 40px 38px;
+			@include respond-below(md) {
+				padding: 25px 20px 25px;
+			}
+			@include respond-below(sm) {
+				padding: 15px;
+			}
+			@include respond-below(sm) {
+				padding: 33px 40px 38px;
+			}
+			& span{
+				color: $primary-color;
+				font-weight: 700;
+			}
+			& .title{
+				font-size: 26px;
+				padding-top: 9px;
+				@include respond-below(lg) {
+					font-size: 22px;
+				}
+				@include respond-below(md) {
+					font-size: 17px;
+				}
+				@include respond-below(sm) {
+					font-size: 18px;
+				}
+				@include respond-below(sm) {
+					font-size: 26px;
+				}
+			}
+		}
+		&.history-item-2{
+			margin-right: 0;
+			margin-left: 55px;
+			@include respond-below(sm) {
+				margin-left: 0;
+			}
+			&::after{
+				left: -72px;
+			}
+			& .number-box{
+				left: -100px;
+			}
+		}
+		&::after{
+			position: absolute;
+			content: '';
+			right: -70px;
+			top: 0;
+			height: 100%;
+			width: 2px;
+			background: $border-color;
+			@include respond-below(sm) {
+				display: none;
+			}
+		}
+		& .number-box{
+			height: 60px;
+			width: 60px;
+			border-radius: 50%;
+			border: 4px solid #9edbff;
+			position: absolute;
+			top: -25px;
+			right: -99px;
+			background: $white;
+			z-index: 5;
+			text-align: center;
+			@include respond-below(sm) {
+				display: none;
+			}
+			& span{
+				line-height: 55px;
+				font-weight: 700;
+				color: $secondary-color;
+			}
+		}
+		& .number-box-2{
+			height: 60px;
+			width: 60px;
+			text-align: center;
+			border-radius: 50%;
+			background: $primary-color;
+			position: absolute;
+			right: -99px;
+			bottom: -50px;
+			z-index: 9;
+			@include respond-below(sm) {
+				display: none;
+			}
+			& i{
+				color: $white;
+				font-size: 20px;
+				line-height: 60px;
+			}
+		}
+	}
+}

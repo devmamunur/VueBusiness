@@ -1,0 +1,103 @@
+
+
+
+/*===============================
+    36.SOLUTION css 
+================================*/
+
+
+.solution-area{
+	& .solution-overlay{
+		background-color: rgba(16, 16, 40,.8);
+		padding-bottom: 355px;
+		& .solution-content{
+			border: 10px solid rgba(255, 255, 255,0.15);
+			padding: 40px  70px 50px;
+			margin-right: 70px;
+			@media #{$md} {
+				margin-right: 0;
+			}
+			@media #{$xs} {
+				margin-right: 0;
+				padding: 50px 20px;
+			}
+			@media #{$sm} {
+				margin-right: 0;
+				padding: 40px  70px 50px;
+			}
+			& .title{
+				font-size: 55px;
+				color: $white;
+				line-height: 65px;
+                @media #{$lg} {
+                    font-size: 40px;
+                    line-height: 50px;
+                }
+                @media #{$xs} {
+                    font-size: 30px;
+                    line-height: 40px;
+                }
+                @media #{$sm} {
+                    font-size: 36px;
+                    line-height: 46px;
+                }
+			}
+			& p{
+				font-size: 15px;
+				color: $white;
+				padding-top: 20px;
+			}
+		}
+	}
+}
+
+.solution-play{
+	@media #{$md} {
+		text-align: left !important;
+		margin-top: 40px;
+	}
+	@media #{$xs} {
+		text-align: center !important;
+		margin-top: 40px;
+		margin-right: 0;
+	}
+	@media #{$sm} {
+		text-align: left !important;
+		margin-top: 40px;
+	}
+	& a{
+		height: 80px;
+		width: 80px;
+		background: $white;
+		color: $theme-color;
+		text-align: center;
+		line-height: 80px;
+		border-radius: 50%;
+		position: relative;
+		z-index: 5;
+		&::before{
+			position: absolute;
+			content: '';
+			height: 100%;
+			width: 100%;
+			border-radius: 50%;
+			border: 1px solid $white;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			@include animation(play-btn-1 1.8s linear infinite);
+		}
+		&::after{
+			position: absolute;
+			content: '';
+			height: 100%;
+			width: 100%;
+			border-radius: 50%;
+			border: 1px solid $white;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			@include animation(play-btn-2 1.5s linear infinite);
+		}
+	}
+}

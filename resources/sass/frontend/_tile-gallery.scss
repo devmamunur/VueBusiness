@@ -1,0 +1,119 @@
+/*======= Tile Gallery =======*/
+.tile-gallery-one {
+    text-align: right;
+
+    img {
+        border: 11px solid $white;
+        box-shadow: 0px 13px 30px rgba(0, 0, 0, 0.07);
+    }
+
+    .img-one {
+        text-align: left;
+
+        @include respond-between(lg, xl) {
+            max-width: 90%;
+        }
+
+        @include respond-below(md) {
+            max-width: 90%;
+        }
+    }
+
+    .img-two {
+        margin-top: -80px;
+        position: relative;
+        display: inline-block;
+        margin-left: auto;
+        z-index: 1;
+
+        @include respond-between(lg, xl) {
+            max-width: 90%;
+        }
+
+        @include respond-below(md) {
+            max-width: 90%;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            content: "";
+            left: -15px;
+            bottom: -15px;
+            background-color: $primary-color;
+            z-index: -1;
+            height: 180px;
+            width: 180px;
+            clip-path: polygon(0 0, 0% 100%, 100% 100%);
+        }
+    }
+}
+
+.tile-gallery-two {
+    text-align: right;
+
+    .img-one {
+        text-align: left;
+
+        @include respond-below(sm) {
+            max-width: 90%;
+        }
+    }
+
+    .img-two {
+        margin-top: -220px;
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+
+        @include respond-between(lg, xl) {
+            max-width: 80%;
+        }
+
+        @include respond-below(sm) {
+            max-width: 90%;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            content: "";
+            right: -15px;
+            bottom: -15px;
+            background-color: $primary-color;
+            z-index: -1;
+            width: calc(100% - 80px);
+            height: calc(100% - 80px);
+            clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+        }
+    }
+}
+
+.tile-gallery-three {
+    .img-one {
+        text-align: right;
+
+        @include respond-below(sm) {
+            max-width: 90%;
+        }
+    }
+
+    .img-two {
+        margin-top: -220px;
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+
+        @include respond-below(sm) {
+            max-width: 90%;
+        }
+
+        @include respond-between(lg, xl) {
+            max-width: 90%;
+        }
+
+        img {
+            border: 15px solid $soft-blue;
+        }
+    }
+}

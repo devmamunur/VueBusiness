@@ -1,0 +1,23 @@
+/*=======  Brand Slider  =======*/
+.brand-slider {
+    .brand-item {
+        text-align: center;
+        padding: 0px 15px;
+        a {
+            opacity: 0.2;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        &.full-opacity a{
+            opacity: 1;
+        }
+    }
+
+    .slick-track {
+        display: flex;
+        align-items: center;
+    }
+}

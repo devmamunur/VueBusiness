@@ -1,0 +1,317 @@
+/*=======  Latest News  =======*/
+.latest-news-box {
+    box-shadow: 0px 16px 32px rgba(228, 228, 228, 0.56);
+
+    .post-content {
+        padding: 25px 25px 30px;
+        background-color: $white;
+
+        .title {
+            font-size: 20px;
+            line-height: 1.3;
+            font-weight: 600;
+
+            @include respond-between(lg, xl) {
+                font-size: 18px;
+            }
+
+            @include respond-below(lg) {
+                font-size: 20px;
+            }
+
+            a {
+                color: $black;
+            }
+        }
+
+        .post-meta {
+            margin-bottom: 10px;
+
+            li {
+                display: inline-block;
+            }
+
+            a {
+                font-size: 14px;
+                font-weight: 600;
+            }
+        }
+
+        .read-more-btn {
+            margin-top: 25px;
+            color: $black;
+            font-size: 15px;
+            font-weight: 600;
+
+            i {
+                margin-left: 10px;
+            }
+
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+.latest-news-box-two {
+    .post-meta {
+        margin-bottom: 10px;
+
+        li {
+            display: inline-block;
+        }
+
+        a {
+            font-size: 14px;
+            font-weight: 700;
+        }
+    }
+
+    .title {
+        font-size: 24px;
+        padding-bottom: 25px;
+        line-height: 1.3;
+
+        @include respond-between(lg, xl) {
+            font-size: 20px;
+        }
+
+        @include respond-below(lg) {
+            font-size: 20px;
+        }
+
+        a {
+            color: $black;
+        }
+    }
+
+    .news-btn {
+        font-size: 15px;
+        color: #232323;
+        background-color: transparent;
+        border: 1px solid $primary-color;
+        margin-top: 30px;
+        padding: 20px 35px;
+        line-height: 1;
+        border-radius: 5px;
+        font-weight: 700;
+
+        i {
+            position: relative;
+            top: 2px;
+            margin-left: 5px;
+        }
+
+        &:hover {
+            background-color: $primary-color;
+            border-color: $primary-color;
+            color: $white;
+        }
+    }
+}
+
+.latest-news-box-three {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+    img {
+        width: 100%;
+        transform: scale(1) rotate(0deg);
+        @include transition(0.3s);
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        background-color: $secondary-color;
+        opacity: 0.4;
+        @include transition(0.3s);
+    }
+
+    .post-content {
+        position: absolute;
+        left: 40px;
+        bottom: 40px;
+        right: 40px;
+        z-index: 3;
+        @include transition(0.3s);
+        max-height: 95px;
+        overflow: hidden;
+
+
+        @include respond-between(lg, xl) {
+            left: 25px;
+            bottom: 30px;
+            right: 25px;
+        }
+
+        @include respond-below(sm) {
+            left: 25px;
+            bottom: 30px;
+            right: 25px;
+        }
+
+        .cat {
+            font-weight: 700;
+            color: $white;
+            font-size: 14px;
+        }
+
+        .title {
+            font-size: 24px;
+            padding-top: 10px;
+
+            @include respond-between(lg, xl) {
+                font-size: 20px;
+            }
+
+            @include respond-below(sm) {
+                font-size: 20px;
+            }
+
+            a {
+                color: $white;
+            }
+        }
+    }
+
+    .news-link {
+        color: $white;
+        font-size: 30px;
+        position: absolute;
+        line-height: 1;
+        bottom: 20px;
+        left: 40px;
+        @include transition(0.3s);
+        opacity: 0;
+        visibility: hidden;
+        z-index: 4;
+
+        @include respond-between(lg, xl) {
+            left: 25px;
+        }
+
+        @include respond-below(sm) {
+            left: 25px;
+        }
+    }
+
+    &:hover {
+        img {
+            transform: scale(1.2) rotate(5deg);
+        }
+
+        .post-content {
+            bottom: calc( 100% - 130px );
+        }
+
+        &::before {
+            opacity: 0.9;
+            background-color: $primary-color;
+        }
+
+        .news-link {
+            bottom: 40px;
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+.latest-news-box-four {
+    border: 10px solid #e3eeff;
+    padding: 40px;
+    @include transition(0.3s);
+
+    @include respond-between(lg, xl) {
+        padding: 30px;
+        border-width: 8px;
+    }
+
+    .meta li {
+        display: inline-block;
+        font-size: 14px;
+        padding-right: 15px;
+        padding-bottom: 5px;
+        color: $text-color-2;
+
+        @include respond-between(lg, xl) {
+            padding-right: 8px;
+        }
+
+        i {
+            padding-right: 5px;
+            color: $primary-color;
+        }
+    }
+
+    .title {
+        font-size: 22px;
+        margin-top: 5px;
+        margin-bottom: 20px;
+
+        a {
+            color: $black;
+        }
+    }
+
+    p {
+        font-size: 14px;
+        color: $text-color-2;
+    }
+
+    .news-link {
+        color: $text-color-2;
+        font-weight: 700;
+        transition: all 0.3s ease-out 0s;
+        margin-top: 10px;
+
+        i {
+            margin-right: 5px;
+            position: relative;
+            top: 1px;
+        }
+    }
+
+    &:hover {
+        border-color: $primary-color;
+
+        .news-link {
+            color: $primary-color;
+        }
+    }
+}
+
+.latest-news-white-box {
+    padding-bottom: 80px;
+    padding-top: 50px;
+    box-shadow: 0px 16px 32px 0px rgba(228, 228, 228, 0.56);
+    background-color: $white;
+    margin-right: 40px;
+    margin-left: 40px;
+
+    @include respond-between(lg, xl) {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    @include respond-below(lg) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+    @include respond-below(sm) {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}

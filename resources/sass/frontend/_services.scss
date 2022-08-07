@@ -1,0 +1,51 @@
+
+
+
+/*===========================
+    4.SERVICES css 
+===========================*/
+
+
+.services-area{
+	& .single-services{
+		border: 2px solid $border-color;
+		padding: 75px 33px;
+		position: relative;
+		overflow: hidden;
+		@media #{$lg} {
+			padding: 60px 28px;
+		}
+		@media #{$xs} {
+			padding: 30px 20px;
+		}
+		@media #{$sm} {
+			padding: 40px 33px;
+		}
+		& .icon{
+			i {
+				font-size: 60px;
+				color: $theme-color;
+			}
+		}
+		& .title{
+			font-size: 24px;
+			padding-top: 30px;
+			padding-bottom: 20px;
+			@media #{$lg} {
+				font-size: 24px;
+			}
+			@media #{$md} {
+				font-size: 20px;
+			}
+			@media #{$xs} {
+				font-size: 20px;
+			}
+		}
+		& a{
+			font-weight: 700;
+			
+			color: $text-color;
+			margin-top: 15px;
+		}
+	}
+}

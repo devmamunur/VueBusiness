@@ -1,0 +1,109 @@
+/*===== Why Choose css =====*/
+.why-choose-area {
+    background-color: #101028;
+    padding-top: 113px;
+    padding-bottom: 113px;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+
+    .single-choose {
+        .icon-box {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            height: 175px;
+            width: 175px;
+            border-radius: 50%;
+            border: 2px solid rgb(37, 37, 67);
+            background: radial-gradient(
+                circle,
+                #8383f9 0%,
+                rgba(209, 209, 223, 0) 50%,
+                rgba(255, 255, 255, 0) 74%
+            );
+            position: relative;
+            z-index: 2;
+            font-size: 60px;
+            color: $white;
+            line-height: 1;
+            margin-bottom: 50px;
+
+            .rotate-dot {
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                border-radius: 50%;
+                z-index: -1;
+                @include animation(rotateTwo 30s linear infinite);
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    height: 15px;
+                    width: 15px;
+                    background: $white;
+                    top: -8px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    border-radius: 50%;
+                }
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    height: 7px;
+                    width: 7px;
+                    background: $white;
+                    bottom: -4px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        h4 {
+            font-size: 26px;
+            color: $white;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #c7c7ff;
+            padding: 0 20px;
+
+            @include respond-between(lg, xl) {
+                padding: 0;
+            }
+
+            @include respond-below(sm) {
+                padding: 0;
+            }
+        }
+    }
+
+    .choose-dot {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .choose-shape {
+        position: absolute;
+        left: 0;
+        top: -170px;
+        z-index: -1;
+
+        img {
+            width: 100%;
+        }
+    }
+}

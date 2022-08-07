@@ -1,0 +1,182 @@
+/*=======  Gallery  =======*/
+.project-gallery{
+    .mix {
+        display: none;
+    }
+    padding: 110px 0px 90px;
+    position: relative;
+    .shape{
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      width: 500px;
+      z-index: -9;
+    }
+    .project-gallery-filter{
+      .project-gallery-menu{
+        margin-bottom: 30px;
+        padding-left: 0px;
+        .filter{
+          margin: 5px;
+          list-style: none;
+          display: inline-block;
+          padding: 12px 30px;
+          border-radius: 5px;
+          cursor: pointer;
+          border: 2px solid $primary-color;
+          color: $primary-color;
+          font-weight: 600;
+          
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.10);
+          @include transition(0.3s);
+
+          @include respond-below(lg) {
+              padding: 9px 25px;
+          }
+            @include respond-below(sm) {
+              padding: 8px 20px;
+          }
+
+          &.active,
+          &:hover
+          {
+            color: $white;
+            background: $primary-color;
+  
+          }
+        }
+      }
+    }
+    .project-gallery-item{
+      .gallery-item{
+        .item-thumbnail{
+          margin-bottom: 30px;
+          position: relative;
+          overflow: hidden;
+          border-radius: 10px;
+          height: 370px;
+          width: 100%;
+          .img{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+          .content-overlay{
+            position: absolute;
+            top: 7%;
+            left: 5%;
+            width: 0%;
+            height: 86%;
+            background: rgba(rgb(255, 255, 255), .95);
+            border-radius: 10px;
+            @include transition(0.3s);
+            .content{
+              .links{
+                a{
+                  position: absolute;
+                  right: 5%;
+                  top: 10%;
+                  width: 40px;
+                  height: 40px;
+                  line-height: 40px;
+                  border-radius: 50%;
+                  border: 1px solid #555;
+                  text-align: center;
+                  font-size: 16px;
+                  color: #555;
+                  -webkit-transition: all .5s;
+                  transition: all .5s;
+                  -webkit-transform: translateX(50px);
+                  transform: translateX(50px);
+                  opacity: 0;
+                  visibility: hidden;
+                  &:hover{
+                    background: $primary-color;
+                    border-color: $primary-color;
+                    color: #fff;
+                  }
+                  &.image-preview{
+                    margin-right: 12px;
+                  }
+                }
+              }
+              .info{
+                position: absolute;
+                bottom: 10%;
+                left: 10%;
+                overflow: hidden;
+                .tag{
+                  margin-bottom: 0px;
+                  color: #555;
+                  font-weight: 400;
+                  font-size: 14px;
+                  line-height: 24px;
+                  opacity: 0;
+                  visibility: hidden;
+                  -webkit-transform: translateY(50px);
+                  transform: translateY(50px);
+                  -webkit-transition: all .4s;
+                  transition: all .4s;
+                }
+                .project-name{
+                  font-size: 18px;
+                  line-height: 28px;
+                  font-weight: 600;
+                  margin-top: 0px;
+                  color: #555;
+                  opacity: 0;
+                  visibility: hidden;
+                  -webkit-transform: translateY(50px);
+                  transform: translateY(50px);
+                  -webkit-transition: all .4s;
+                  transition: all .4s;
+                }
+              }
+            }
+          }
+        &:hover{
+          .content-overlay{
+            opacity: 1;
+            width: 90%;
+            .content{
+              .links{
+                a{
+                  -webkit-transform: translateX(0px);
+                  transform: translateX(0px);
+                  opacity: 1;
+                  visibility: visible;
+                  -webkit-transition-delay: .3s;
+                  transition-delay: .3s;
+                }
+              }
+              .info{
+                .tag{
+                  opacity: 1;
+                  visibility: visible;
+                  -webkit-transform: translateY(0px);
+                  transform: translateY(0px);
+                  -webkit-transition-delay: .3s;
+                  transition-delay: .3s;
+                }
+                .project-name{
+                  opacity: 1;
+                  visibility: visible;
+                  -webkit-transform: translateY(0px);
+                  transform: translateY(0px);
+                  -webkit-transition-delay: .5s;
+                  transition-delay: .5s;
+                }
+              }
+            }
+          }
+        }
+        }
+      }
+    }
+  }
+  

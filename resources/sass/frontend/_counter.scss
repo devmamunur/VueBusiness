@@ -1,0 +1,320 @@
+/*=======  Counter  =======*/
+.counter-box {
+    text-align: center;
+    padding: 35px;
+    border: 3px solid rgba($white, 0.1);
+
+    .icon {
+        height: 75px;
+        width: 75px;
+        font-size: 30px;
+        color: $white;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $primary-color;
+        border-radius: 50%;
+        margin-bottom: 20px;
+    }
+
+    .counter {
+        display: block;
+        line-height: 1;
+        color: $white;
+        font-size: 70px;
+
+        @include respond-between(lg, xl) {
+            font-size: 50px;
+        }
+
+        @include respond-below(lg) {
+            font-size: 52px;
+        }
+    }
+
+    .title {
+        color: $white;
+
+        margin-top: 15px;
+        font-size: 18px;
+        letter-spacing: -1px;
+    }
+
+    &.color-1 {
+        .icon {
+            background-color: #00978e;
+        }
+    }
+
+    &.color-2 {
+        .icon {
+            background-color: #fbb81b;
+        }
+    }
+
+    &.color-3 {
+        .icon {
+            background-color: #ef452e;
+        }
+    }
+}
+
+.counter-box-two {
+    border-radius: 5px;
+    background: transparent;
+    border: 2px solid rgba($white, 0.5);
+    box-shadow: 0px 3px 30px rgba(0, 0, 0, 0.07);
+    padding: 25px 40px;
+
+    @include respond-between(lg, xl) {
+        padding: 25px;
+    }
+
+    @include respond-between(sm, md) {
+        padding: 25px;
+    }
+
+    @include respond-below(sm) {
+        padding: 40px;
+        text-align: center;
+    }
+
+    .counter-wrap {
+        font-size: 55px;
+        line-height: 1;
+        color: $white;
+        margin-bottom: 5px;
+        font-weight: 600;
+
+        @include respond-between(lg, xl) {
+            font-size: 45px;
+        }
+
+        @include respond-below(md) {
+            font-size: 45px;
+        }
+
+        sup {
+
+        }
+    }
+
+    .title {
+        color: $white;
+        font-weight: 600;
+        font-size: 18px;
+
+        @include respond-between(lg, xl) {
+            font-size: 16px;
+        }
+
+        @include respond-below(md) {
+            font-size: 16px;
+        }
+    }
+}
+
+.counter-box-three {
+    .counter-wrap {
+        font-size: 55px;
+        font-weight: 600;
+        color: $primary-color;
+        line-height: 1;
+    }
+
+    .title {
+        font-size: 18px;
+        color: $black;
+        display: block;
+        font-weight: 600;
+        margin: 15px 0 15px;
+        line-height: 1.3;
+    }
+
+    p {
+        font-size: 15px;
+        padding-right: 30px;
+    }
+}
+
+.counter-box-four {
+    border: 2px solid $border-color;
+    padding: 34px 38px;
+    position: relative;
+    z-index: 10;
+    overflow: hidden;
+
+    @include respond-between(lg, xl) {
+        padding: 30px 25px;
+    }
+
+    .counter-wrap {
+        font-size: 50px;
+        font-weight: 600;
+        color: $primary-color;
+
+        line-height: 1;
+        position: relative;
+        margin-bottom: 5px;
+
+        &::after {
+            content: "+";
+            font-size: 16px;
+            line-height: 1;
+            right: 5px;
+        }
+    }
+
+    .title {
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    p {
+        font-size: 14px;
+        padding-top: 15px;
+    }
+
+    i {
+        font-size: 120px;
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        color: #f6fbff;
+        z-index: -1;
+    }
+}
+
+.counter-box-five {
+    display: flex;
+    align-items: center;
+
+    .icon {
+        font-size: 50px;
+        line-height: 1;
+        color: $white;
+        margin-right: 30px;
+    }
+
+    .counter {
+        color: $white;
+        font-size: 50px;
+        line-height: 1;
+        font-weight: 700;
+        margin-bottom: 5px;
+
+        &::after {
+            content: "+";
+            font-size: 16px;
+            margin-left: 5px;
+        }
+    }
+
+    .title {
+        font-size: 14px;
+        font-weight: 700;
+
+        color: $white;
+        opacity: 0.6;
+
+    }
+}
+
+.piechart-box {
+    height: 230px;
+    width: 230px;
+    position: relative;
+    z-index: 1;
+    margin-left: auto;
+    margin-right: auto;
+
+    .icon {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: $primary-color;
+        line-height: 1;
+        font-size: 70px;
+    }
+
+    .counter {
+        position: absolute;
+        color: #f2f8ff;
+        z-index: -1;
+        font-size: 70px;
+        bottom: 50px;
+        width: 100%;
+        text-align: center;
+        line-height: 1;
+        font-weight: 700;
+
+    }
+}
+
+.counter-section-two {
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0 50px;
+}
+
+.faq-counter-boxes-two {
+    &.row {
+        margin-left: -40px;
+        margin-right: -40px;
+
+        @include respond-between(lg, xl) {
+            margin-left: -20px;
+            margin-right: -20px;
+        }
+
+        @include respond-below(md) {
+            margin-left: -20px;
+            margin-right: -20px;
+        }
+
+        & > [class*="col-"] {
+            padding-right: 40px;
+            padding-left: 40px;
+
+            @include respond-between(lg, xl) {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            @include respond-below(md) {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+    }
+
+    .counter-box-two {
+        margin-top: 80px;
+
+        @include respond-between(lg, xl) {
+            margin-top: 40px;
+        }
+
+        @include respond-below(md) {
+            margin-top: 40px;
+        }
+
+        @include respond-below(sm) {
+            margin-top: 30px;
+        }
+    }
+}
+
+.counter-faq-section-one {
+    position: relative;
+    z-index: 1;
+
+    .map-image {
+        position: absolute;
+        z-index: -1;
+        right: 100px;
+        top: 140px;
+        opacity: 0.1;
+    }
+}

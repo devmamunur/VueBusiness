@@ -1,0 +1,319 @@
+/*===== Accordion Css =====*/
+.accordion-one {
+    border: none;
+
+    .card {
+        border-radius: 0;
+        border: 0;
+
+        &:first-child {
+            border-top: 0;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+
+        .card-header {
+            border-bottom: 0;
+            padding: 0;
+            margin: 0;
+            background-color: transparent;
+
+            a {
+                line-height: 50px;
+                padding: 0 0 0 0px;
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 18px;
+                width: 100%;
+                color: $primary-color;
+                position: relative;
+
+                @include respond-below(sm) {
+                    font-size: 16px;
+                }
+
+                i {
+                    padding-right: 5px;
+                }
+
+                &.collapsed {
+                    color: #616161;
+                }
+            }
+        }
+
+        .card-body {
+            padding: 0 10px 10px 25px;
+
+            p {
+                font-size: 15px;
+                color: $text-color;
+            }
+        }
+    }
+
+    &.white-version {
+        .card {
+            background-color: transparent;
+            .card-header {
+                a {
+                    color: $white;
+
+                }
+            }
+
+            @include respond-below(sm) {
+                margin: 0;
+            }
+
+            .card-body {
+                p {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.accordion-two {
+    border: none;
+
+    .card {
+        border-radius: 0;
+        border: 0;
+        box-shadow: 0px 8px 16px 0px rgb(39 54 70 / 10%);
+
+        &:first-child {
+            border-top: 0;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        .card-header {
+            border-bottom: 0;
+            padding: 0;
+            margin: 0;
+            background-color: transparent;
+
+            a {
+                padding: 20px 55px 20px 40px;
+                text-decoration: none;
+                font-weight: 700;
+                font-size: 16px;
+                width: 100%;
+                color: $primary-color;
+                position: relative;
+
+                @include respond-below(md) {
+                    padding: 0 0 0 40px;
+                    line-height: 60px;
+                    font-size: 16px;
+                }
+
+                @include respond-below(sm) {
+                    padding: 10px 30px 10px 20px;
+                    line-height: 20px;
+                    font-size: 15px;
+                }
+
+                &.collapsed {
+                    color: #7a95b4;
+
+                    &::before {
+                        content: "\f107";
+                        color: #cddae8;
+                    }
+                }
+
+                &::before {
+                    position: absolute;
+                    content: "\f106";
+                    right: 36px;
+                    font-family: "Font Awesome 5 Pro";
+
+                    @include respond-below(sm) {
+                        right: 18px;
+                    }
+                }
+            }
+        }
+
+        .card-body {
+            padding: 0 40px 20px;
+
+            p {
+                font-size: 14px;
+                color: $text-color-2;
+            }
+        }
+    }
+}
+
+.accordion-three {
+    border: 2px solid $border-color;
+
+    .card {
+        border-radius: 0;
+        border: 0;
+        border-top: 2px solid $border-color;
+
+        &:first-child {
+            border-top: 0;
+        }
+
+        .card-header {
+            border-bottom: 0;
+            padding: 0;
+            margin: 0;
+            background-color: transparent;
+
+            a {
+                padding: 16px 55px 16px 40px;
+                text-decoration: none;
+                font-weight: 600;
+                color: $secondary-color;
+                font-size: 16px;
+                width: 100%;
+                color: $primary-color;
+                position: relative;
+
+                @include respond-below(sm) {
+                    padding: 16px 40px 16px 20px;
+                }
+
+                &.collapsed {
+                    color: $secondary-color;
+
+                    &::before {
+                        content: "\f063";
+                        color: #cddae8;
+                    }
+                }
+
+                &::before {
+                    position: absolute;
+                    content: "\f062";
+                    right: 36px;
+                    font-family: "Font Awesome 5 Pro";
+
+                    @include respond-below(sm) {
+                        right: 15px;
+                    }
+                }
+            }
+        }
+
+        .card-body {
+            padding: 0 40px 20px;
+
+            @include respond-below(sm) {
+                padding: 0 20px 20px;
+            }
+        }
+    }
+
+    &.accordion-three-two {
+        border: none;
+
+        .card {
+            border: 2px solid $border-color;
+
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+
+            .card-header a {
+                &.collapsed {
+                    color: $secondary-color;
+
+                    &::before {
+                        content: "\f067";
+                    }
+                }
+
+                &::before {
+                    position: absolute;
+                    content: "\f068";
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+.accordion-four {
+    border: none;
+    .card {
+        border-radius: 40px !important;
+        border: 0;
+        border-top: 2px solid transparent;
+        margin-bottom: 20px;
+        box-shadow: 0px 8px 16px 0px rgba(132, 190, 255, 0.1);
+
+        &:first-child {
+            border-top: 0;
+        }
+
+        .card-header {
+            border-bottom: 0;
+            padding: 0;
+            margin: 0;
+            background-color: transparent;
+
+            a {
+                padding: 22px 60px 22px 40px;
+                text-decoration: none;
+                font-weight: 700;
+                font-size: 16px;
+                width: 100%;
+                color: #7a95b4;
+                position: relative;
+
+                @include respond-below(md) {
+                    padding: 22px 50px 22px 20px;
+                }
+
+                i {
+                    color: $primary-color;
+                    padding-right: 20px;
+                }
+
+                &.collapsed {
+                    font-size: 16px;
+                    color: #436584;
+
+                    &::before {
+                        content: "\f067";
+                        color: #99b1c8;
+                    }
+                }
+
+                &::before {
+                    position: absolute;
+                    content: "\f068";
+                    right: 36px;
+                    font-size: 16px;
+                    font-family: "Font Awesome 5 Pro";
+                    color: #99b1c8;
+
+                    @include respond-below(md) {
+                        right: 20px;
+                    }
+                }
+            }
+        }
+
+        .card-body {
+            padding: 0 40px 25px;
+
+            p {
+                font-size: 14px;
+                color: $text-color-2;
+            }
+        }
+    }
+}

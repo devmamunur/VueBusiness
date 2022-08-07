@@ -1,0 +1,328 @@
+/*=======  Feature  =======*/
+.feature-text-block {
+    p {
+        font-size: 16px;
+        color: $text-color-3;
+
+        &.big-text {
+            font-size: 26px;
+
+            @include respond-below(sm) {
+                font-size: 18px;
+                line-height: 1.4;
+            }
+        }
+    }
+
+    .feature-btn {
+        display: flex;
+        align-items: center;
+
+        @include respond-below(sm) {
+            display: block;
+        }
+
+        li {
+            &:not(:last-child) {
+                margin-right: 20px;
+
+                @include respond-below(sm) {
+                    margin-right: 0;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    &.with-absolute-image {
+        border: 15px solid $soft-blue;
+        padding: 90px 85px 100px 535px;
+        position: relative;
+
+        @include respond-between(lg, xl) {
+            padding: 90px 30px 100px 320px;
+        }
+
+        @include respond-below(lg) {
+            padding: 40px;
+        }
+
+        @include respond-below(sm) {
+            padding: 30px;
+            border-width: 8px;
+        }
+
+        .absolute-img {
+            position: absolute;
+            top: -15px;
+            bottom: -15px;
+            left: -15px;
+            width: 465px;
+            background-size: cover;
+            background-position: center;
+
+            @include respond-between(lg, xl) {
+                width: 300px;
+            }
+
+            @include respond-below(lg) {
+                display: none;
+            }
+        }
+    }
+}
+
+.feature-list {
+    li {
+        padding: 0 80px;
+        position: relative;
+
+        @include respond-below(xl) {
+            padding-right: 30px;
+        }
+
+        @include respond-below(sm) {
+            padding-right: 0;
+        }
+
+        &::before {
+            height: 50px;
+            width: 50px;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 50%;
+            background: $white;
+            box-shadow: 0px 4px 8px 0px rgba(160, 194, 255, 0.2);
+            font-size: 20px;
+            color: $primary-color;
+            transition: all 0.3s ease-out 0s;
+            position: absolute;
+            top: -10px;
+            left: 0;
+            font-family: "Font Awesome 5 Pro";
+            font-weight: 300;
+            content: "\f00c";
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+
+        h4 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-weight: 600;
+            @include respond-below(sm) {
+                font-size: 18px;
+            }
+        }
+
+        p {
+            color: $text-color-2;
+        }
+
+        &:hover {
+            &::before {
+                background-color: $primary-color;
+                color: $white;
+            }
+        }
+    }
+}
+
+.feature-box {
+    position: relative;
+
+    img {
+        width: 100%;
+    }
+
+    .feature-overlay {
+        padding: 40px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($secondary-color, 0.4);
+        @include transition(0.3s);
+        z-index: 5;
+        display: flex;
+        align-items: flex-end;
+        overflow: hidden;
+
+        @include respond-between(lg, xl) {
+            padding: 30px;
+        }
+
+        @include respond-below(sm) {
+            padding: 25px;
+        }
+
+        .title {
+            color: $white;
+            font-size: 22px;
+            padding-bottom: 10px;
+            @include transition(0.3s);
+
+            @include respond-between(lg, xl) {
+                font-size: 20px;
+            }
+
+            @include respond-below(sm) {
+                font-size: 20px;
+            }
+        }
+
+        p {
+            color: #cadef6;
+            font-size: 14px;
+            @include transition(0.3s);
+        }
+
+        a {
+            color: $white;
+            font-size: 14px;
+            font-weight: 700;
+            @include transition(0.3s);
+            opacity: 0;
+        }
+
+        i {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 200px;
+            color: $white;
+            opacity: 0;
+            @include transition(0.3s);
+            z-index: -1;
+
+            @include respond-below(sm) {
+                font-size: 120px;
+            }
+        }
+
+        .content {
+            margin-bottom: -25px;
+            @include transition(0.3s);
+        }
+
+        &:hover {
+            background-color: rgba($primary-color, 0.9);
+            .content {
+                margin-bottom: 0;
+            }
+
+            a {
+                opacity: 1;
+            }
+
+            i {
+                opacity: 0.1;
+            }
+        }
+    }
+}
+
+.feature-intro-video {
+    position: relative;
+
+    .video-popup {
+        height: 100px;
+        width: 100px;
+        color: $white;
+        background: $primary-color;
+        text-align: center;
+        line-height: 100px;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 2;
+        transform: translate(-50%, -50%);
+
+        @include respond-below(sm) {
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            border: 2px solid $white;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            @include animation(pulseBtnBefore 1.8s linear infinite);
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            border: 2px solid $white;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            @include animation(pulseBtnAfter 1.5s linear infinite);
+        }
+    }
+}
+
+.features-sub {
+    padding: 60px 60px 70px;
+    background: #006de8;
+
+    @include respond-between(lg, xl) {
+        padding: 50px 40px;
+    }
+
+    @include respond-below(sm) {
+        padding: 50px 30px;;
+    }
+
+    .title {
+        
+        color: $white;
+        font-size: 30px;
+        margin-bottom: 8px;
+
+        @include respond-between(lg, xl) {
+            font-size: 24px;
+        }
+    }
+
+    p {
+        color: $white;
+        padding-bottom: 25px;
+    }
+
+    .input-box {
+        input {
+            background-color: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            width: 100%;
+            padding-left: 30px;
+            color: $white;
+            font-size: 14px;
+            height: 65px;
+        }
+
+        button {
+            height: 65px;
+            width: 100%;
+            background: #005ec9;
+            border: none;
+            color: $white;
+            text-align: center;
+            margin-top: 10px;
+        }
+    }
+}

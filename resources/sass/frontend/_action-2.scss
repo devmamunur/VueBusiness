@@ -1,0 +1,85 @@
+
+
+
+/*===========================
+    17.ACTION 2 css 
+===========================*/
+
+
+.action-2-area{
+	& .action-overlay{
+		background-color: rgba(0, 109, 232,.9);
+		padding-top: 85px;
+		padding-bottom: 120px;
+		& .action-item{
+			& span{
+				color: $white;
+				font-weight: 700;
+				letter-spacing: 2px;
+
+			}
+			& .title{
+				color: $white;
+				font-size: 60px;
+				@media #{$xs} {
+					font-size: 46px;
+				}
+				@media #{$sm} {
+					font-size: 60px;
+				}
+
+			}
+		}
+		& .action-support{
+			@media #{$xs} {
+				display: block !important;
+			}
+			@media #{$sm} {
+				display: flex !important;
+			}
+			& .action-support-item{
+				background: #ff5f6e;
+				text-align: center;
+				padding: 20px 25px;
+				position: relative;
+				z-index: 5;
+				& i{
+					position: absolute;
+					top: 8px;
+					left: 10px;
+					opacity: .05;
+					color: $white;
+					font-size: 60px;
+					z-index: -1;
+				}
+				& p{
+					color: $white;
+					font-size: 14px;
+				}
+				& span{
+					color: $white;
+					font-weight: 600;
+					font-size: 23px;
+					@media #{$lg} {
+						font-size: 18px;
+					}
+					@media #{$sm} {
+						font-size: 18px;
+					}
+				}
+				&.action-support-item-2{
+					background: #0058bb;
+					margin-left: 30px;
+					@media #{$xs} {
+						margin-left: 0;
+						margin-top: 30px;
+					}
+					@media #{$sm} {
+						margin-left: 20px;
+						margin-top: 0px;
+					}
+				}
+			}
+		}
+	}
+}

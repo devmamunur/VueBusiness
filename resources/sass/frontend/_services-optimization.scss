@@ -1,0 +1,155 @@
+
+
+
+/*===============================
+    25.SERVICES OPTIMIZATION css 
+================================*/
+
+
+.service-details-page{
+	padding: 120px 0px 120px;
+	.service-details-content{
+		.img{
+			margin-bottom: 30px;
+			img{
+				width: 100%;
+			}
+		}
+	}
+	& .blog-sidebar-item{
+		border: 2px solid #ededed;
+		padding: 35px 40px;
+        @media #{$lg} {
+            padding: 35px 20px;
+        }
+        @media #{$md} {
+            padding: 35px 20px;
+        }
+        @media #{$xs} {
+            padding: 35px 20px;
+        }
+		& .sidebar-title{
+			& .title{
+				font-size: 20px;
+				padding-left: 45px;
+				position: relative;
+				&::before{
+					position: absolute;
+					content: '';
+					height: 4px;
+					width: 4px;
+					left: 21px;
+					top: 12px;
+					background: $theme-color;
+
+				}
+				&::after{
+					position: absolute;
+					content: '';
+					height: 4px;
+					width: 18px;
+					left: 0;
+					top: 12px;
+					background: $theme-color;
+
+				}
+			}
+		}
+		& .sidebar-categories{
+			& ul{
+				& li{
+					margin-top: 10px;
+					& a{
+						width: 100%;
+						background: #f4fbff;
+						line-height: 40px;
+						padding-left: 30px;
+						font-size: 14px;
+						position: relative;
+						color: $heading-color;
+						@include transition(0.3s);
+						&:hover,
+						&.active
+						{
+							background: $theme-color;
+							color: #fff;
+						}
+					}
+				}
+			}
+		}
+		& .sidebar-social{
+			& ul{
+				& li{
+					display: inline-block;
+					& a{
+						height: 40px;
+						width: 40px;
+						background: #002249;
+						text-align: center;
+						line-height: 40px;
+						color: $white;
+						margin: 0 4px;
+						@media #{$lg} {
+							margin: 0 1px;
+						}
+						@media #{$xs} {
+							margin: 0 1px;
+							height: 38px;
+							width: 38px;
+							line-height: 38px;
+						}
+						
+					}
+				}
+			}
+		}
+		
+	}
+	& .side-bar-contact{
+		background: $theme-color;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		position: relative;
+		padding: 40px 40px 40px;
+		text-align: center;
+		.overlay{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: 100%;
+			background: $theme-color;
+			opacity: 0.9;
+		}
+		.content{
+			position: relative;
+			z-index: 8;
+			h3{
+				color: #fff;
+				margin-bottom: 40px;
+			}
+			i{
+				width: 105px;
+				height: 105px;
+				line-height: 105px;
+				font-size: 36px;
+				color: $theme-color;
+				border-radius: 50%;
+				background-color: #fff;
+				margin-bottom: 30px;
+			}
+			.call{
+				a{
+					color: #fff;
+					line-height: 40px;
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+
+

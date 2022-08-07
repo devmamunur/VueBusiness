@@ -1,0 +1,135 @@
+/*=======  Coming Soon  =======*/
+.timer-items {
+    .syotimer {
+        .syotimer__body {
+            display: flex;
+            justify-content: space-between;
+
+            @include respond-below(md) {
+                flex-wrap: wrap;
+            }
+
+            @include respond-below(sm) {
+                display: block;
+            }
+
+            .syotimer-cell {
+                height: 250px;
+                width: 250px;
+                border: 10px solid $soft-blue;
+                border-radius: 50%;
+                position: relative;
+                z-index: 2;
+                text-align: center;
+                display: flex;
+                flex-wrap: wrap;
+                align-content: center;
+                margin-bottom: 40px;
+
+                @include respond-below(xl) {
+                    height: 200px;
+                    width: 200px;
+                }
+
+                @include respond-below(lg) {
+                    height: 150px;
+                    width: 150px;
+                }
+
+                @include respond-below(md) {
+                    height: 200px;
+                    width: 200px;
+                }
+
+                @include respond-below(sm) {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                & > div {
+                    width: 100%;
+                    flex: 0 0 100%;
+                }
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    height: 108%;
+                    width: 108%;
+                    border-radius: 50%;
+                    border: 10px solid transparent;
+                    left: -10px;
+                    top: -10px;
+                    z-index: -1;
+                    border-left-color: $primary-color;
+                    border-right-color: $primary-color;
+                    transform: rotate(-45deg);
+
+                    @include respond-below(xl) {
+                        width: 110%;
+                        height: 110%;
+                    }
+
+                    @include respond-below(lg) {
+                        height: 114%;
+                        width: 114%;
+                    }
+
+                    @include respond-below(md) {
+                        width: 110%;
+                        height: 110%;
+                    }
+                }
+
+                .syotimer-cell__value {
+                    font-size: 50px;
+                    font-weight: 700;
+                    color: $secondary-color;
+                    line-height: 1;
+
+                    @include respond-below(lg) {
+                        font-size: 40px;
+                    }
+                }
+                .syotimer-cell__unit {
+                    font-weight: 700;
+                    color: $text-color-3;
+                }
+            }
+        }
+    }
+
+    .timer-title {
+        margin-top: 60px;
+        font-size: 80px;
+        text-align: center;
+        line-height: 1.1;
+
+        @include respond-below(xl) {
+            font-size: 60px;
+        }
+
+        @include respond-below(md) {
+            font-size: 42px;
+        }
+    }
+}
+
+.error-content {
+    padding-top: 100px;
+
+    .error-title {
+        font-size: 80px;
+        text-align: center;
+        line-height: 1.1;
+        margin-bottom: 30px;
+
+        @include respond-below(xl) {
+            font-size: 60px;
+        }
+
+        @include respond-below(md) {
+            font-size: 42px;
+        }
+    }
+}

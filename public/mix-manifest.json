@@ -1,0 +1,20 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/js/admin.js": "/js/admin.js",
+    "/js/Home.js": "/js/Home.js",
+    "/js/About.js": "/js/About.js",
+    "/js/Contact.js": "/js/Contact.js",
+    "/js/Service.js": "/js/Service.js",
+    "/js/ServiceDetails.js": "/js/ServiceDetails.js",
+    "/js/Portfolio.js": "/js/Portfolio.js",
+    "/js/PortfolioDetails.js": "/js/PortfolioDetails.js",
+    "/js/Package.js": "/js/Package.js",
+    "/js/Team.js": "/js/Team.js",
+    "/js/TeamDetails.js": "/js/TeamDetails.js",
+    "/js/Faq.js": "/js/Faq.js",
+    "/js/Gallery.js": "/js/Gallery.js",
+    "/js/Career.js": "/js/Career.js",
+    "/js/CareerDetails.js": "/js/CareerDetails.js",
+    "/css/admin.css": "/css/admin.css",
+    "/css/app.css": "/css/app.css"
+}

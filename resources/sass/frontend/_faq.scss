@@ -1,0 +1,179 @@
+
+
+
+/*===========================
+    7.FAQ css 
+===========================*/
+
+
+.faq-area{
+	padding-bottom: 100px;
+	& .section-title{
+		& .title{
+			padding-bottom: 10px;
+			@media #{$lg} {
+				font-size: 56px;
+			}
+			@media #{$xs} {
+				font-size: 34px;
+			}
+			@media #{$sm} {
+				font-size: 54px;
+			}
+		}
+	}
+	& .faq-accordion{
+		& .accordion{
+			border: 2px solid $border-color;
+			& .card{
+				border-radius: 0;
+				border: 0;
+				border-top: 2px solid $border-color;
+				&:first-child{
+					border-top: 0;
+				}
+				& .card-header{
+					border-bottom: 0;
+					padding: 0;
+					margin: 0;
+					background-color: transparent;
+					& a{
+						line-height: 60px;
+						padding: 0 0 0 40px;
+						text-decoration: none;
+						font-weight: 700;
+						color: $heading-color;
+						font-size: 16px;
+						width: 100%;
+						color: $theme-color;
+						position: relative;
+						@media #{$xs} {
+							padding: 10px 30px 10px 20px;
+							line-height: 20px;
+							font-size: 15px;
+						}
+						@media #{$sm} {
+							
+							padding: 0 0 0 40px;
+							line-height: 60px;
+							font-size: 16px;
+						}
+						&.collapsed{
+							color: $heading-color;
+							&::before{
+								content: '\f063';
+								color: #cddae8;
+							}
+						}
+						&::before{
+							position: absolute;
+							content: '\f062';
+							right: 36px;
+							font-family: 'Font Awesome 5 Pro';
+							@media #{$xs} {
+								right: 18px;
+							}
+
+						}
+					}
+				}
+				& .card-body{
+					padding: 0 40px 14px 40px !important;
+					@media #{$xs} {
+						padding: 0 40px 14px 20px !important;
+					}
+					@media #{$sm} {
+						padding: 0 40px 14px 40px !important;
+					}
+					& p{
+						margin-top: -10px;
+						font-size: 14px;
+					}
+				}
+				&.show{
+					.card-body{
+						padding: 0 40px 14px 40px !important;
+						& p{
+							margin-top: -10px;
+							font-size: 14px;
+						}
+					}
+				}
+			}
+		}
+	}
+	& .single-faq{
+		border: 2px solid $border-color;
+		padding: 34px 38px;
+		position: relative;
+		z-index: 10;
+		overflow: hidden;
+		@media #{$lg} {
+			padding: 34px 20px;
+		}
+		@media #{$md} {
+			margin-top: 40px;
+		}
+		@media #{$xs} {
+			margin-top: 40px;
+		}
+		& .title{
+			color: $theme-color;
+			font-size: 16px;
+			& span{
+				font-size: 50px;
+			}
+		}
+		& > span{
+			font-size: 14px;
+			font-weight: 700;
+		}
+		& p{
+			font-size: 14px;
+			padding-top: 15px;
+		}
+		& i{
+			font-size: 120px;
+			position: absolute;
+			top: 10px;
+			right: 15px;
+			color: #f6fbff;
+			z-index: -1;
+		}
+	}
+	&.faq-area-3{
+		& .section-title{
+			& .title{
+				&::before{
+					display: none;
+				}
+			}
+		}
+		& .faq-thumb{
+			margin-top: 35px;
+			& .faq-thumb-1{
+				padding-right: 40px;
+				position: relative;
+				&::before{
+					position: absolute;
+					content: '';
+					height: 90px;
+					width: 90px;
+					border-radius: 50%;
+					background: #edf4ff;
+					right: -6px;
+					bottom: -43px;
+					z-index: -1;
+				}
+			}
+			& .faq-thumb-2{
+				margin-top: -220px;
+				position: relative;
+				z-index: 5;
+				& img{
+					border: 15px solid #f5faff;
+				}
+			}
+		}
+	}
+}

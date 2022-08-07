@@ -1,0 +1,274 @@
+/*=======  Call to action  =======*/
+.call-to-action {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-color: $primary-color;
+        opacity: 0.8;
+    }
+}
+
+.video-cta {
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    position: relative;
+    padding-top: 120px;
+    padding-bottom: 355px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-color: rgba(16, 16, 40, 0.8);
+    }
+
+    .video-cta-content {
+        border: 10px solid rgba(255, 255, 255, 0.15);
+        padding: 40px 70px 50px;
+        margin-right: 70px;
+
+        @include respond-below(xl) {
+            margin-right: 0;
+        }
+
+        @include respond-below(lg) {
+            padding: 40px 50px 190px;
+        }
+
+        .title {
+            font-size: 55px;
+            color: $white;
+            margin-bottom: 20px;
+
+            @include respond-below(lg) {
+                font-size: 48px;
+            }
+
+            @include respond-below(md) {
+                font-size: 36px;
+            }
+
+
+            @include respond-below(sm) {
+                font-size: 28px;
+            }
+        }
+
+        p {
+            color: $white;
+        }
+    }
+
+    .video-cta-play {
+        @include respond-below(lg) {
+            margin-top: -150px;
+            padding-left: 50px;
+        }
+
+        .video-popup {
+            height: 80px;
+            width: 80px;
+            background: $white;
+            color: $primary-color;
+            text-align: center;
+            line-height: 80px;
+            border-radius: 50%;
+            position: relative;
+            z-index: 2;
+
+            &::before {
+                position: absolute;
+                content: "";
+                height: 100%;
+                width: 100%;
+                border-radius: 50%;
+                border: 1px solid $white;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                @include animation(pulseBtnBefore 1.8s linear infinite);
+            }
+
+            &::after {
+                position: absolute;
+                content: "";
+                height: 100%;
+                width: 100%;
+                border-radius: 50%;
+                border: 1px solid $white;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                @include animation(pulseBtnAfter 1.5s linear infinite);
+            }
+        }
+    }
+}
+
+.call-to-action-two {
+    .call-to-action-inner {
+        position: relative;
+        z-index: 1;
+        background-size: cover;
+        background-position: left center;
+        padding: 90px 100px;
+
+        @include respond-below(xl) {
+            padding: 90px 80px;
+        }
+
+        @include respond-below(md) {
+            padding: 60px;
+        }
+
+        @include respond-below(sm) {
+            padding: 40px;
+        }
+
+        .title {
+            font-size: 50px;
+            color: $white;
+
+            @include respond-below(md) {
+                font-size: 38px;
+            }
+
+            @include respond-below(sm) {
+                font-size: 32px;
+            }
+        }
+    }
+
+    &.cta-mt-negative {
+        margin-top: -150px;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+.call-to-action-three {
+    padding-right: 30px;
+    padding-left: 30px;
+
+    .call-to-action-inner {
+        background-size: cover;
+        background-position: center;
+        border-radius: 30px;
+        padding: 90px 0;
+        background-color: $secondary-color;
+    }
+
+    &.cta-mt-negative {
+        position: relative;
+        z-index: 22;
+        margin-top: -180px;
+    }
+}
+
+.call-to-action-four {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-color: $primary-color;
+        opacity: 0.9;
+    }
+
+    .cta-content {
+        .title-tag {
+            color: $white;
+            font-weight: 700;
+
+            letter-spacing: 2px;
+        }
+
+        .title {
+            color: $white;
+            font-size: 60px;
+
+
+            @include respond-below(md) {
+                font-size: 46px;
+            }
+        }
+    }
+
+    .cta-btns {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        margin: -15px;
+
+        @include respond-below(lg) {
+            justify-content: flex-start;
+            margin-top: 40px;
+        }
+
+        @include respond-below(sm) {
+            flex-wrap: wrap;
+        }
+
+        .cta-btn {
+            background: #ff5f6e;
+            text-align: center;
+            padding: 20px 45px;
+            position: relative;
+            z-index: 5;
+            margin: 15px;
+
+            i {
+                position: absolute;
+                top: 8px;
+                left: 10px;
+                opacity: 0.05;
+                color: $white;
+                font-size: 60px;
+                z-index: -1;
+            }
+            p {
+                color: $white;
+                font-size: 14px;
+            }
+
+            span {
+                color: $white;
+                font-weight: 700;
+                font-size: 22px;
+                @include respond-below(xl) {
+                    font-size: 18px;
+                }
+            }
+
+            &.cta-btn-2 {
+                background: $primary-color;
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+/*=======  Privacy  =======*/
+.privacy-area {
+    .content-box {
+        padding-bottom: 25px;
+        border-bottom: 1px solid $border-color;
+        color: $text-color-2;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        h4 {
+            max-width: 80%;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        ul.list {
+            margin-top: 15px;
+
+            li {
+                position: relative;
+                padding-left: 20px;
+                padding-bottom: 15px;
+                line-height: 20px;
+
+                &:before {
+                    position: absolute;
+                    top: 5px;
+                    left: 0;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 10px;
+                    background: $secondary-color;
+                    content: "";
+                }
+            }
+        }
+    }
+}

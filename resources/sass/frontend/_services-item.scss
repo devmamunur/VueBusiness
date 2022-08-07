@@ -1,0 +1,113 @@
+
+
+
+/*===========================
+    24.SERVICES ITEM css 
+===========================*/
+
+.services-item-area{
+	& .section-title{
+		& .title{
+			font-size: 60px;
+			margin-bottom: 13px;
+			@media #{$xs} {
+				font-size: 30px;
+			}
+			@media #{$sm} {
+				font-size: 46px;
+			}
+			&::before{
+				display: none;
+			}
+
+		}
+			& p{
+				padding: 0 22px 45px;
+			}
+	}
+	& .single-services-item{
+		position: relative;
+		overflow: hidden;
+		display: block;
+		height: 370px;
+		& .img{
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			width: 100%;
+			height: 100%;
+			@include transition(0.5s);
+		}
+		& .services-overlay{
+			position: absolute;
+			bottom: -110px;
+			left: 0;
+			width: 100%;
+			background-color: rgba(0, 34, 73,.7);
+			padding: 20px 40px 30px;
+			@include transition(0.3s);
+			@media #{$lg} {
+				padding: 20px 10px 30px;
+			}
+			@media #{$md} {
+				padding: 20px 30px 30px;
+			}
+			@media #{$xs} {
+				padding: 20px 5px 30px;
+			}
+			@media #{$sm} {
+				padding: 20px 26px 30px;
+			}
+			& i{
+				position: absolute;
+				top: -20px;
+				left: 20px;
+				height: 70px;
+				width: 70px;
+				background: $theme-color;
+				text-align: center;
+				line-height: 70px;
+				color: $white;
+				font-size: 30px;
+			}
+			& p{
+				color: $white;
+				font-size: 14px;
+				padding-top: 20px;
+			}
+			& .title{
+				padding-left: 80px;
+				color: $white;
+				font-size: 20px;
+				font-weight: 600;
+				@media #{$lg} {
+					padding-left: 90px;
+				}
+				@media #{$xs} {
+					padding-left: 95px;
+					font-size: 18px;
+				}
+				@media #{$sm} {
+					padding-left: 80px;
+					font-size: 20px;
+				}
+			}
+		}
+		&:hover{
+			.img{
+                transform: scale(1.2) rotate(5deg);
+            }
+			& .services-overlay{
+				bottom: 0;
+				background: rgba(0,102,255,.9);
+				@media #{$sm} {
+					bottom: -20px;
+				}
+			}
+		}
+	}
+}
+
+
+
+

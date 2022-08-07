@@ -1,0 +1,146 @@
+
+
+
+/*===========================
+    FOOTER css
+===========================*/
+
+
+.footer-area{
+	overflow: hidden;
+	& .footer-overlay{
+		background-color: rgba(#002249, 0.9);
+		padding-top: 88px;
+	}
+	& .widget-item-1{
+		& p{
+			padding-top: 30px;
+            color: #c2d1e2;
+		}
+	}
+	& .widget-item-2{
+		.title{
+
+			font-weight: 700;
+			font-size: 34px;
+			margin-top: -8px;
+			padding-bottom: 17px;
+			color: $white;
+		}
+
+		& ul{
+			display: inline-block;
+			& li{
+				line-height: 50px;
+				color: #c2d1e2;
+				& i{
+					padding-right: 6px;
+				}
+				& a{
+					color: #c2d1e2;
+					@include transition(0.3s);
+					&:hover{
+						color: $primary-color;
+					}
+				}
+			}
+		}
+	}
+	& .widget-item-3{
+		.title{
+
+			font-weight: 700;
+			font-size: 30px;
+			margin-top: -8px;
+			padding-bottom: 17px;
+			color: $white;
+		}
+		& .features-sub{
+            background: none;
+            padding: 0px;
+			& p{
+				color: #c2d1e2;
+				padding-bottom: 25px;
+			}
+			& .input-box{
+				& input{
+					background-color: transparent;
+					border: 2px solid rgba(255, 255, 255,.3);
+					width: 100%;
+					line-height: 60px;
+					padding-left: 30px;
+					color: $white;
+					font-size: 14px;
+					&::placeholder{
+						font-size: 14px;
+						opacity: 1;
+						color: #c2d1e2;
+					}
+				}
+				& button{
+					border-radius: 0;
+					margin-top: 10px;
+					width: 100%;
+					padding: 0;
+					font-weight: 600;
+				}
+			}
+		}
+
+		& ul{
+			display: inline-block;
+			& li{
+				line-height: 50px;
+				color: #c2d1e2;
+				& i{
+					padding-right: 6px;
+				}
+				& a{
+					color: #c2d1e2;
+					@include transition(0.3s);
+					&:hover{
+						color: $primary-color;
+					}
+				}
+			}
+		}
+	}
+	& .footer-copyright{
+		border-top: 1px solid rgba(255, 255, 255,.2);
+		margin-top: 100px;
+		text-align: center;
+		& p{
+            color: #c2d1e2;
+			& span{
+				font-weight: 700;
+				color: $secondary-color;
+				line-height: 55px;
+			}
+		}
+	}
+
+}
+
+/*===========================
+    BACK TO TOP CSS
+===========================*/
+
+.back-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    display: none;
+    z-index: 999999;
+
+    & a {
+        color: $white;
+        background: $primary-color;
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        line-height: 40px;
+        font-size: 16px;
+		border-radius: 50%;
+		box-shadow: 2px 2px 7px 0px #1a1b1d4b;
+    }
+}

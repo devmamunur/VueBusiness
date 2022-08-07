@@ -1,0 +1,423 @@
+/*=======  Team  =======*/
+.team-member {
+    text-align: center;
+    filter: drop-shadow(0px 3px 20px rgba(0, 0, 0, 0.06));
+
+    .member-photo {
+        position: relative;
+        z-index: 1;
+
+        img {
+            border-radius: 5px;
+        }
+
+        .social-icon {
+            position: absolute;
+            bottom: 0;
+            z-index: 2;
+            left: 0;
+            width: 100%;
+            @include transition(0.3s);
+            opacity: 0;
+            visibility: hidden;
+            text-align: center;
+
+            a {
+                width: 36px;
+                height: 36px;
+                margin: 0px 5px;
+                line-height: 36px;
+                color: $primary-color;
+                text-align: center;
+                background-color: $white;
+                border-radius: 50%;
+                font-size: 15px;
+
+                &:hover {
+                    background-color: $primary-color;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    &:hover {
+        .social-icon {
+            bottom: 20px;
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    .team-content {
+        background-color: $white;
+        padding: 30px;
+
+        .name {
+            font-size: 20px;
+            margin-bottom: 5px;
+
+            a {
+                color: $black;
+
+                &:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+
+        .position {
+            line-height: 1;
+        }
+    }
+}
+
+.team-member-two {
+    position: relative;
+
+    img {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .team-content {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        border-radius: 6px;
+        background: $primary-color;
+        text-align: center;
+        padding: 25px 0px;
+        opacity: 0;
+        @include transition(0.3s);
+
+        .social-icon {
+            margin-bottom: 10px;
+
+            a {
+                font-size: 15px;
+                color: $white;
+                margin: 0 7px;
+                @include transition(0.3s);
+            }
+        }
+
+        .name {
+            font-size: 21px;
+
+            margin-bottom: 5px;
+            font-weight: 600;
+
+            @include respond-below(sm) {
+                font-size: 18px;
+            }
+
+            a {
+                color: $white;
+            }
+        }
+
+        .position {
+            font-size: 14px;
+            color: #9cbef7;
+            font-weight: 700;
+
+            letter-spacing: 3px;
+
+            @include respond-below(sm) {
+                letter-spacing: 2px;
+            }
+        }
+    }
+
+    &:hover {
+        .team-content {
+            left: 20px;
+            bottom: -20px;
+            opacity: 1;
+
+            @include respond-below(sm) {
+                left: 15px;
+            }
+        }
+    }
+}
+
+.team-member-three {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .member-inner {
+        position: relative;
+        padding-bottom: 60px;
+    }
+
+    img {
+        border: 10px solid $white;
+    }
+
+    .team-content {
+        position: absolute;
+        right: 0;
+        bottom: 0px;
+        width: 90%;
+        background: $white;
+        padding-top: 20px;
+        padding-bottom: 23px;
+        padding-left: 40px;
+        box-shadow: 0px 8px 16px 0px rgba(132, 190, 255, 0.1);
+    }
+
+    .name {
+        font-size: 24px;
+
+        a {
+            color: $secondary-color;
+        }
+    }
+
+    .position {
+        color: $primary-color;
+        font-weight: 700;
+        padding-top: 9px;
+    }
+}
+
+.team-member-four {
+    .member-photo {
+        position: relative;
+        margin-bottom: 35px;
+
+        &::before {
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            top: 0;
+            left: 0;
+            z-index: 5;
+            border-left: 5px solid $primary-color;
+            border-bottom: 5px solid $primary-color;
+            transition: all 0.3s ease-out 0s;
+            transform: rotate(0deg);
+        }
+
+        img {
+            border: 15px solid $white;
+            border-radius: 50%;
+            width: 100%;
+        }
+    }
+
+    &:hover .member-photo::before {
+        transform: rotate(180deg);
+    }
+
+    .member-content {
+        .title {
+            font-size: 21px;
+            font-weight: 600;
+
+            a {
+                color: $secondary-color;
+            }
+        }
+
+        .position {
+            font-size: 14px;
+            font-weight: 700;
+
+            letter-spacing: 2px;
+            color: $primary-color;
+            padding-top: 6px;
+            padding-bottom: 15px;
+        }
+    }
+}
+
+.team-slider-two-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -155px;
+    position: relative;
+    z-index: 2;
+    margin-top: 100px;
+
+    .slick-arrow {
+        height: 80px;
+        width: 80px;
+        background: #fff;
+        text-align: center;
+        line-height: 80px;
+        box-shadow: 0px 8px 16px 0px rgba(132, 190, 255, 0.1);
+        cursor: pointer;
+        font-size: 20px;
+        position: relative;
+
+        &.next::before {
+            position: absolute;
+            content: "";
+            width: 2px;
+            height: 50px;
+            left: -1px;
+            bottom: -12%;
+            background: #e9f1ff;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+.team-area {
+    &.team-section-extra-padding {
+        padding-top: 120px;
+        padding-bottom: 300px;
+    }
+
+    &.team-with-shape-two {
+        position: relative;
+        z-index: 2;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 480px;
+            z-index: -1;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+}
+
+/*=======  Team Join  =======*/
+.team-join {
+    margin-top: -180px;
+    position: relative;
+    z-index: 99;
+
+    .join-bg {
+        background: #dcecff;
+        border-radius: 30px;
+        padding: 120px 160px 0;
+
+        @include respond-below(xl) {
+            padding: 120px 100px 0;
+        }
+
+        @include respond-below(lg) {
+            padding: 120px 60px 0;
+        }
+
+        @include respond-below(md) {
+            padding: 100px 60px 0;
+        }
+
+        @include respond-below(sm) {
+            padding: 80px 20px;
+        }
+
+        .team-join-title {
+            span {
+                font-size: 14px;
+                font-weight: 700;
+                color: $primary-color;
+                position: relative;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    right: -100px;
+                    top: 10px;
+                    height: 2px;
+                    width: 70px;
+                    background: $primary-color;
+                }
+            }
+            .title {
+                font-size: 60px;
+                padding-top: 20px;
+
+                @include respond-below(xl) {
+                    font-size: 46px;
+                }
+
+                @include respond-below(md) {
+                    font-size: 46px;
+                }
+
+                @include respond-below(sm) {
+                    font-size: 32px;
+                }
+            }
+        }
+        .team-join-thumb {
+            margin-bottom: -6px;
+        }
+    }
+}
+
+/*=======  Team Details  =======*/
+.team-details-content {
+    padding-left: 50px;
+
+    @include respond-below(xl) {
+        padding-left: 0;
+    }
+
+    .title {
+        font-size: 34px;
+        padding-bottom: 5px;
+
+        @include respond-below(sm) {
+            font-size: 24px;
+        }
+    }
+
+    span {
+        font-weight: 700;
+        color: $primary-color;
+        padding-bottom: 24px;
+    }
+
+    p {
+        color: $text-color-2;
+    }
+
+    ul {
+        margin-top: 35px;
+
+        li {
+            display: inline-block;
+        }
+
+        a {
+            height: 60px;
+            width: 60px;
+            text-align: center;
+            line-height: 60px;
+            border-radius: 50%;
+            background: $soft-blue;
+            color: $text-color-2;
+            margin-right: 8px;
+            transition: all 0.3s ease-out 0s;
+
+            &:hover {
+                background-color: $primary-color;
+                color: $white;
+            }
+
+            @include respond-below(sm) {
+                height: 40px;
+                width: 40px;
+                line-height: 40px;
+                font-size: 12px;
+            }
+        }
+    }
+}

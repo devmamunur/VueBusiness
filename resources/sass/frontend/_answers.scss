@@ -1,0 +1,107 @@
+
+
+
+/*===========================
+    16.ANSWERS css 
+===========================*/
+
+.faq-accordion-2{
+	& .accordion{
+		border: 2px solid transparent;
+		& .card{
+			border-radius: 0;
+			border: 0;
+			border-top: 2px solid transparent;
+			margin-bottom: 20px;
+			box-shadow: 0px 8px 16px 0px rgba(132, 190, 255, 0.1);
+			&:first-child{
+				border-top: 0;
+			}
+			& .card-header{
+				border-bottom: 0;
+				padding: 0;
+				margin: 0;
+				background-color: transparent;
+				& a{
+					line-height: 80px;
+					padding: 0 0 0 40px;
+					text-decoration: none;
+					font-weight: 700;
+					font-size: 16px;
+					width: 100%;
+					color: $heading-color;
+					position: relative;
+					@media #{$xs} {
+						padding: 10px 30px 10px 20px;
+						line-height: 20px;
+						font-size: 15px;
+					}
+					@media #{$sm} {
+						
+						padding: 0 0 0 40px;
+						line-height: 60px;
+						font-size: 16px;
+					}
+					&.collapsed{
+						color: #7a95b4;
+						&::before{
+							content: '\f107';
+							color: #cddae8;
+						}
+					}
+					&::before{
+						position: absolute;
+						content: '\f106';
+						right: 36px;
+						font-family: 'Font Awesome 5 Pro';
+						@media #{$xs} {
+							right: 18px;
+						}
+
+					}
+				}
+			}
+			& .card-body{
+				padding: 0 40px 14px 40px !important;
+				@media #{$xs} {
+					padding: 0 40px 14px 20px !important;
+				}
+				@media #{$sm} {
+					padding: 0 40px 14px 40px !important;
+				}
+				& p{
+					margin-top: -10px;
+					font-size: 14px;
+				}
+			}
+			&.show{
+				.card-body{
+					padding: 0 40px 14px 40px !important;
+					& p{
+						margin-top: -10px;
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.asnwers-area{
+	& .section-title-2{
+		& p{
+			padding-right: 42px;
+		}
+	}
+	& .answers-thumb{
+		margin-top: 100px;
+		& .answers-thumb-2{
+			margin-top: -220px;
+			& img{
+				border: 15px solid #f5faff;
+			}
+		}
+	}
+}
+
+

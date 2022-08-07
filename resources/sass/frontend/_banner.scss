@@ -1,0 +1,695 @@
+/*=======  Banner  =======*/
+.banner-slider {
+    overflow: hidden;
+
+    .banner-text {
+        .title-tag {
+            color: $secondary-color;
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            padding-bottom: 10px;
+            animation:fadeOut 1s both;
+
+            @include respond-below(sm) {
+                font-size: 18px;
+            }
+        }
+
+        .title {
+            font-size: 80px;
+            line-height: 1.1;
+            animation:fadeOut 1s both;
+            @include respond-below(xxl) {
+                font-size: 80px;
+            }
+
+            @include respond-below(xl) {
+                font-size: 62px;
+            }
+
+            @include respond-below(md) {
+                font-size: 48px;
+            }
+
+            @include respond-below(sm) {
+                font-size: 32px;
+                line-height: 1.2;
+            }
+        }
+
+        p {
+            font-weight: 600;
+            font-size: 19px;
+            color: $secondary-color;
+            padding-right: 30px;
+            padding-top: 40px;
+            padding-bottom: 45px;
+            animation:fadeOut 1s both;
+
+            @include respond-below(md) {
+                font-size: 16px;
+            }
+
+            @include respond-below(md) {
+                font-size: 15px;
+            }
+        }
+        .main-btn{
+            animation:fadeOut 1s both;
+        }
+    }
+    .banner-img {
+        text-align: right;
+        position: relative;
+        z-index: 2;
+        animation:fadeOut 1s both;
+    }
+    .slick-slide.slick-active{
+        .banner-text{
+            .title-tag{
+                animation:fadeInUp 1s both .3s;
+            }
+            .title{
+                animation:slideInLeft 1s both .4s;
+            }
+            p{
+                animation:slideInLeft 1s both .5s;
+            }
+            .main-btn{
+                animation:fadeInUp 1s both .6s;
+            }
+        }
+        .banner-img{
+            animation:fadeInRight 1s both .5s;
+        }
+    }
+
+
+
+    .slick-arrow {
+        position: absolute;
+        top: 50%;
+        height: 60px;
+        width: 60px;
+        text-align: center;
+        line-height: 60px;
+        background: rgba($primary-color, 0.5);
+        color: $white;
+        z-index: 2;
+        font-size: 20px;
+        cursor: pointer;
+        transform: translateY(-50%);
+        visibility: hidden;
+        opacity: 0;
+        @include transition(0.3s);
+
+        @include respond-below(lg) {
+            top: auto;
+            bottom: 0;
+            transform: translate(0);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &.slick-prev {
+            left: 0;
+
+            @include respond-below(lg) {
+                left: auto;
+                right: 75px;
+            }
+        }
+
+        &.slick-next {
+            right: 0;
+
+            @include respond-below(lg) {
+                right: 15px;
+            }
+        }
+
+        &:hover {
+            background: $primary-color;
+        }
+    }
+
+    &:hover {
+        .slick-arrow {
+            opacity: 1;
+            visibility: visible;
+
+            &.slick-prev {
+                left: 20px;
+
+                @include respond-below(lg) {
+                    left: auto;
+                    right: 75px;
+                }
+            }
+
+            &.slick-next {
+                right: 20px;
+
+                @include respond-below(lg) {
+                    right: 15px;
+                }
+            }
+        }
+    }
+
+    &.banner-slider-one {
+
+        .single-banner{
+            height: 800px;
+            display: flex !important;
+            align-items: center;
+            background-color: $soft-blue;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+
+            @include respond-below(lg) {
+                height: 550px;
+            }
+        }
+
+    }
+
+    &.banner-slider-two {
+        .single-banner {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+            padding: 190px 0;
+
+            @include respond-below(lg) {
+                padding: 140px 0;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                background-color: $primary-color;
+                opacity: 0.8;
+            }
+        }
+
+        .banner-text {
+            .title-tag,
+            .title,
+            p {
+                color: $white;
+            }
+
+            .main-btn {
+                background-color: $white;
+                color: $primary-color;
+
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+
+        .slick-arrow {
+            background-color: rgba($white, 0.8);
+            color: $primary-color;
+
+            &:hover {
+                background-color: $white;
+            }
+        }
+    }
+
+    &.banner-slider-three {
+        .single-banner {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            z-index: 1;
+            padding: 200px 0;
+
+            @include respond-below(lg) {
+                padding: 140px 0;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                background-image: linear-gradient(
+                    90deg,
+                    #0c5adb 0%,
+                    rgba(12, 90, 219, 0.6) 50%,
+                    rgba(255, 255, 255, 0) 100%
+                );
+                opacity: 0.8;
+            }
+        }
+
+        .banner-text {
+            .title-tag,
+            .title,
+            p {
+                color: $white;
+            }
+
+            .main-btn {
+                background-color: $white;
+                color: $primary-color;
+
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+
+        .slick-arrow {
+            background-color: rgba($white, 0.8);
+            color: $primary-color;
+
+            &:hover {
+                background-color: $white;
+            }
+        }
+    }
+}
+
+.banner-section {
+    background: #a9c7ec;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    padding-top: 300px;
+    padding-bottom: 200px;
+
+    @include respond-below(xl) {
+        padding-bottom: 150px;
+    }
+
+    @include respond-below(md) {
+        padding-top: 250px;
+        padding-bottom: 140px;
+    }
+
+    @include respond-below(sm) {
+        padding-top: 200px;
+        padding-bottom: 120px;
+    }
+
+    &::before {
+        position: absolute;
+        z-index: -1;
+        content: "";
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .banner-content {
+        .title-tag {
+            font-size: 24px;
+            color: #69a1bb;
+
+            @include respond-below(md) {
+                font-size: 18px;
+            }
+
+            @include respond-below(sm) {
+                font-size: 16px;
+            }
+        }
+
+        .title {
+            font-size: 80px;
+            padding-top: 18px;
+            padding-bottom: 34px;
+
+            @include respond-between(lg, xl) {
+                font-size: 60px;
+            }
+
+            @include respond-below(lg) {
+                font-size: 74px;
+            }
+
+            @include respond-below(md) {
+                font-size: 62px;
+            }
+
+            @include respond-below(sm) {
+                font-size: 42px;
+            }
+        }
+
+        .banner-btns {
+            li {
+                display: inline-block;
+
+                &:not(:last-child) {
+                    margin-right: 75px;
+
+                    @include respond-below(xl) {
+                        margin-right: 40px;
+                    }
+
+                    @include respond-below(sm) {
+                        margin-right: 20px;
+                    }
+
+                    @media (max-width: 400px) {
+                        margin-bottom: 20px;
+                    }
+                }
+
+                a {
+                    font-size: 24px;
+                    color: $black;
+                    font-weight: 700;
+
+                    @include respond-below(xl) {
+                        font-size: 20px;
+                    }
+
+                    @include respond-below(sm) {
+                        font-size: 16px;
+                    }
+
+                    .icon {
+                        height: 80px;
+                        width: 80px;
+                        border-radius: 50%;
+                        background: $white;
+                        text-align: center;
+                        margin-right: 30px;
+                        box-shadow: 0px 8px 16px 0px rgba(0, 109, 232, 0.1);
+                        position: relative;
+                        border: 4px solid transparent;
+                        border-top-color: #ff4f74;
+                        border-bottom-color: #ff4f74;
+                        background-color: #f5faff;
+                        color: #ff4f74;
+                        font-size: 18px;
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        @include respond-below(md) {
+                            height: 60px;
+                            width: 60px;
+                            margin-right: 20px;
+                        }
+
+                        &::before {
+                            position: absolute;
+                            content: "";
+                            height: 5px;
+                            width: 5px;
+                            border-radius: 50%;
+                            left: -5px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            background: #ff4f74;
+                        }
+
+                        &::after {
+                            position: absolute;
+                            content: "";
+                            height: 5px;
+                            width: 5px;
+                            border-radius: 50%;
+                            right: -5px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            background: #ff4f74;
+                        }
+                    }
+
+                    &.btn-2 {
+                        .icon {
+                            border-top-color: $primary-color;
+                            border-bottom-color: $primary-color;
+                            color: $primary-color;
+
+                            &::before {
+                                background: $primary-color;
+                            }
+
+                            &::after {
+                                background: $primary-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .banner-img {
+        position: absolute;
+        right: -70px;
+        bottom: -222px;
+        height: 630px;
+        width: 630px;
+        background: #f3faff;
+        border-radius: 50%;
+        border: 60px solid #ebf4ff;
+        z-index: 1;
+
+        @include respond-below(xl) {
+            height: 500px;
+            width: 500px;
+        }
+
+        @include respond-below(lg) {
+            // display: none;
+        }
+
+        &::before {
+            position: absolute;
+            content: "";
+            top: 50%;
+            left: 50%;
+            height: 400px;
+            width: 400px;
+            border-radius: 50%;
+            background: #fff;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+        }
+
+        img {
+            position: absolute;
+            top: -135px;
+            left: 0;
+        }
+    }
+}
+
+.banner-section-two {
+    position: relative;
+    z-index: 1;
+    padding-top: 390px;
+    padding-bottom: 200px;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+
+    @include respond-below(lg) {
+        padding-top: 270px;
+        padding-bottom: 160px;
+    }
+
+    @include respond-below(sm) {
+        padding-top: 250px;
+        padding-bottom: 140px;
+    }
+
+    &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        content: "";
+        background-color: $secondary-color;
+        opacity: 0.8;
+    }
+
+    .banner-content {
+        .title-tag {
+            font-size: 28px;
+            color: $white;
+            opacity: 0.8;
+            position: relative;
+            margin-bottom: 20px;
+            @include respond-below(md) {
+                font-size: 22px;
+            }
+
+            @include respond-below(sm) {
+                padding: 0;
+                font-size: 20px;
+            }
+        }
+
+        .title {
+            margin-bottom: 30px;
+            font-size: 80px;
+            color: $white;
+
+            @include respond-below(xl) {
+                font-size: 80px;
+            }
+
+            @include respond-below(md) {
+                font-size: 50px;
+                padding-bottom: 10px;
+            }
+
+            @include respond-below(sm) {
+                font-size: 30px;
+            }
+        }
+
+        p {
+            font-size: 24px;
+            color: $white;
+            opacity: 0.8;
+            margin-top: -10px;
+            padding-bottom: 26px;
+
+            @include respond-below(md) {
+                font-size: 20px;
+            }
+
+            @include respond-below(sm) {
+                font-size: 18px;
+            }
+        }
+
+        .banner-btns {
+            margin-top: 15px;
+            margin-left: -8px;
+            margin-right: -8px;
+
+            li {
+                display: inline-block;
+                padding-left: 8px;
+                padding-right: 8px;
+
+                @include respond-below(sm) {
+                    padding-bottom: 5px;
+                }
+            }
+        }
+    }
+}
+
+.banner-section-three {
+    position: relative;
+    z-index: 5;
+    height: 1010px;
+    @include respond-below(xxl) {
+        height: 700px;
+    }
+
+    // @include respond-below(sm) {
+    //     padding-top: 250px;
+    //     padding-bottom: 140px;
+    // }
+
+    .overlay{
+        background-color: rgba($secondary-color, 0.6);
+        border-block-end-width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .banner-content {
+        .title-tag {
+            font-size: 28px;
+            color: $white;
+            opacity: 0.8;
+            position: relative;
+            margin-bottom: 20px;
+            @include respond-below(md) {
+                font-size: 22px;
+            }
+
+            @include respond-below(sm) {
+                padding: 0;
+                font-size: 20px;
+            }
+        }
+
+        .title {
+            margin-bottom: 30px;
+            font-size: 80px;
+            color: $white;
+
+            @include respond-below(xl) {
+                font-size: 80px;
+            }
+
+            @include respond-below(md) {
+                font-size: 50px;
+                padding-bottom: 10px;
+            }
+
+            @include respond-below(sm) {
+                font-size: 30px;
+            }
+        }
+
+        p {
+            font-size: 24px;
+            color: $white;
+            opacity: 0.8;
+            margin-top: -10px;
+            padding-bottom: 26px;
+
+            @include respond-below(md) {
+                font-size: 20px;
+            }
+
+            @include respond-below(sm) {
+                font-size: 18px;
+            }
+        }
+
+        .banner-btns {
+            margin-top: 15px;
+            margin-left: -8px;
+            margin-right: -8px;
+
+            li {
+                display: inline-block;
+                padding-left: 8px;
+                padding-right: 8px;
+
+                @include respond-below(sm) {
+                    padding-bottom: 5px;
+                }
+            }
+        }
+    }
+
+
+}

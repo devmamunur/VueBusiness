@@ -1,0 +1,354 @@
+
+
+
+/*===========================
+    23.ABOUT HISTORY css 
+===========================*/
+
+.about-history-area{
+	padding-top: 100px;
+	padding-bottom: 170px;
+	& .section-title{
+		padding-bottom: 60px;
+		& .title{
+			margin-bottom: 13px;
+			&::before{
+				display: none;
+			}
+		}
+		& p{
+			@media #{$xs} {
+				font-size: 15px;
+			}
+		}
+	}
+	& .history-item{
+		box-shadow: 0px 8px 16px 0px rgba(132, 190, 255, 0.1);
+		margin-right: 55px;
+		position: relative;
+		@media #{$xs} {
+			padding-top: 0;
+			margin-right: 0;
+		}
+
+		& .history-thumb{
+			& img{
+				width: 100%;
+			}
+
+		}
+		& .history-content{
+			padding: 33px 40px 38px;
+			@media #{$md} {
+				padding: 25px 20px 25px;
+			}
+			@media #{$xs} {
+				padding: 15px;
+			}
+			@media #{$sm} {
+				padding: 33px 40px 38px;
+			}
+			& span{
+				color: $theme-color;
+				font-weight: 700;
+			}
+			& .title{
+				font-size: 26px;
+				padding-top: 9px;
+				@media #{$lg} {
+					font-size: 22px;
+				}
+				@media #{$md} {
+					font-size: 17px;
+				}
+				@media #{$xs} {
+					font-size: 18px;
+				}
+				@media #{$sm} {
+					font-size: 26px;
+				}
+			}
+		}
+		&.history-item-2{
+			margin-right: 0;
+			margin-left: 55px;
+			@media #{$xs} {
+				margin-left: 0;
+			}
+			&::after{
+				left: -72px;
+			}
+			& .number-box{
+				left: -100px;
+			}
+		}
+		&::after{
+			position: absolute;
+			content: '';
+			right: -70px;
+			top: 0;
+			height: 100%;
+			width: 2px;
+			background: $border-color;
+			@media #{$xs} {
+				display: none;
+			}
+		}
+		& .number-box{
+			height: 60px;
+			width: 60px;
+			border-radius: 50%;
+			border: 4px solid #9edbff;
+			position: absolute;
+			top: -25px;
+			right: -99px;
+			background: $white;
+			z-index: 5;
+			text-align: center;
+			@media #{$xs} {
+				display: none;
+			}
+			& span{
+				line-height: 55px;
+				font-weight: 700;
+				color: $heading-color;
+			}
+		}
+		& .number-box-2{
+			height: 60px;
+			width: 60px;
+			text-align: center;
+			border-radius: 50%;
+			background: $theme-color;
+			position: absolute;
+			right: -99px;
+			bottom: -50px;
+			z-index: 9;
+			@media #{$xs} {
+				display: none;
+			}
+			& i{
+				color: $white;
+				font-size: 20px;
+				line-height: 60px;
+			}
+		}
+	}
+}
+.pt-240{
+	padding-top: 240px;
+}
+.about-faq-area{
+	padding-top: 113px;
+	& .faq-video-thumb{
+		position: relative;
+		& img{
+			@media #{$md} {
+				width: 100%;
+			}
+			@media #{$xs} {
+				width: 100%;
+			}
+		}
+		& a{
+			position: absolute;
+			left: 45%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			height: 120px;
+			width: 120px;
+			border-radius: 50%;
+			text-align: center;
+			line-height: 120px;
+			background: $theme-color;
+			color: $white;
+			font-size: 20px;
+			@media #{$md} {
+				left: 50%;
+			}
+			@media #{$xs} {
+				left: 50%;
+			}
+		}
+	}
+	& .about-faq-content{
+		& span{
+			font-size: 16px;
+			color: $theme-color;
+			font-weight: 700;
+			position: relative;
+			&::before{
+				position: absolute;
+				content: '';
+				height: 2px;
+				width: 70px;
+				background: $theme-color;
+				right: -100px;
+				top: 10px;
+			}
+		}
+		& .title{
+			font-size: 60px;
+			line-height: 70px;
+			padding-top: 20px;
+			@media #{$lg} {
+				font-size: 52px;
+				line-height: 62px;
+			}
+			@media #{$md} {
+				padding-right: 170px;
+			}
+			@media #{$xs} {
+				font-size: 32px;
+				line-height: 42px;
+			}
+
+		}
+	}
+	&.about-faq-area-page{
+		& .faq-video-thumb-area{
+			& .faq-video-thumb-1{
+				margin-bottom: -210px;
+				@media #{$md} {
+					margin-bottom: 30px;
+				}
+				@media #{$xs} {
+					margin-bottom: 30px;
+				}
+				& img{
+					@media #{$md} {
+						width: 100%;
+					}
+					@media #{$xs} {
+						width: 100%;
+					}
+				}
+			}
+			& .faq-video-thumb-2{
+				& img{
+					@media #{$md} {
+						width: 100%;
+					}
+					@media #{$xs} {
+						width: 100%;
+					}
+				}
+			}
+		}
+		& .faq-accordion-3{
+			& .accordion{
+				& .card{
+					border-radius: 0 !important;
+					border: 2px solid $border-color;
+					box-shadow: none;
+				}
+			}
+		}
+	}
+}
+
+
+.faq-accordion-3{
+	padding-top: 35px;
+	& .accordion{
+		border: 2px solid transparent;
+		& .card{
+			border-radius: 40px !important;
+			border: 0;
+			border-top: 2px solid transparent;
+			margin-bottom: 20px;
+			box-shadow: 0px 8px 16px 0px rgba(132, 190, 255, 0.1);
+			&:first-child{
+				border-top: 0;
+			}
+			& .card-header{
+				border-bottom: 0;
+				padding: 0;
+				margin: 0;
+				background-color: transparent;
+				& a{
+					line-height: 80px;
+					padding: 0 0 0 40px;
+					text-decoration: none;
+					font-weight: 700;
+					font-size: 16px;
+					width: 100%;
+					color: #7a95b4;
+					position: relative;
+					@media #{$lg} {
+						padding: 0 0 0 20px;
+						font-size: 14px;
+					}
+					& i{
+						color: $theme-color;
+						padding-right: 20px;
+						@media #{$lg} {
+							padding-right: 10px;
+						}
+					}
+					@media #{$xs} {
+						padding: 10px 30px 10px 20px;
+						line-height: 20px;
+						font-size: 15px;
+					}
+					@media #{$sm} {
+						
+						padding: 0 0 0 40px;
+						line-height: 60px;
+						font-size: 16px;
+					}
+					&.collapsed{
+						font-size: 16px;
+						color: #436584;
+						@media #{$lg} {
+							padding: 0 0 0 20px;
+							font-size: 14px;
+						}
+
+						&::before{
+							content: '\f067';
+							color: #99b1c8;
+						}
+					}
+					&::before{
+						position: absolute;
+						content: '\f068';
+						right: 36px;
+						font-size: 16px;
+						font-family: 'Font Awesome 5 Pro';
+						color: #99b1c8;
+						@media #{$xs} {
+							right: 18px;
+						}
+
+					}
+				}
+			}
+			& .card-body{
+				padding: 0 30px 14px 40px !important;
+				@media #{$lg} {
+					padding: 0 30px 14px 45px !important;
+				}
+				@media #{$xs} {
+					padding: 10px 40px 20px 20px !important;
+				}
+				@media #{$sm} {
+					padding: 0 40px 14px 40px !important;
+				}
+				& p{
+					margin-top: -10px;
+					font-size: 14px;
+				}
+			}
+			&.show{
+				.card-body{
+					padding: 0 40px 14px 40px !important;
+					& p{
+						margin-top: -10px;
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,84 @@
+
+
+
+/*===============================
+    27.TEAM JOIN css 
+================================*/
+
+.team-join{
+	margin-top: -135px;
+	position: relative;
+	z-index: 99;
+	& .join-bg{
+		background: #dcecff;
+		border-radius: 30px;
+		padding: 120px 160px 0;
+		@media #{$lg} {
+			padding: 120px 100px 0;
+		}
+		@media #{$md} {
+			padding: 120px 60px 0;
+		}
+		@media #{$xs} {
+			padding: 120px 5px 0;
+		}
+		@media #{$sm} {
+			padding: 120px 60px 0;
+		}
+		& .team-join-title{
+			& span{
+				font-size: 14px;
+				font-weight: 700;
+				color: $theme-color;
+				position: relative;
+				&::before{
+					position: absolute;
+					content: '';
+					right: -100px;
+					top: 10px;
+					height: 2px;
+					width: 70px;
+					background: $theme-color;
+				}
+			}
+			& .title{
+				font-size: 60px;
+				line-height: 70px;
+				padding-top: 20px;
+				@media #{$lg} {
+					font-size: 46px;
+					line-height: 56px;
+				}
+				@media #{$xs} {
+					font-size: 32px;
+					line-height: 42px;
+				}
+				@media #{$sm} {
+					font-size: 46px;
+					line-height: 56px;
+				}
+			}
+		}
+		& .team-join-btn{
+			@media #{$md} {
+				margin-top: 30px;
+			}
+			@media #{$xs} {
+				margin-top: 30px;
+			}
+			& a{
+				border-radius: 0;
+				background: $theme-color;
+				border-color: $theme-color;
+				color: $white;
+				&:hover{
+					background-color: transparent;
+					color: $theme-color;
+				}
+			}
+		}
+		& .team-join-thumb{
+			margin-bottom: -6px;
+		}
+	}
+}

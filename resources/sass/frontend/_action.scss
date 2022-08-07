@@ -1,0 +1,76 @@
+
+
+
+/*===========================
+    9.ACTION css 
+===========================*/
+
+
+
+.action-area{
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-top: -200px;
+	@media #{$xs} {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	@media #{$sm} {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	& .action-overlay {
+		background: $heading-color;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+		border-radius: 30px;
+		padding: 93px 0px 83px;
+	}
+	& .action-bg{
+		padding-left: 35px;
+		padding-right: 35px;
+		@media #{$xs} {
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+		@media #{$sm} {
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+
+		& .action-content{
+			& span{
+				color: $white;
+			}
+			& .title{
+				font-size: 70px;
+				color: $white;
+				@media #{$lg} {
+					font-size: 54px;
+				}
+				@media #{$md} {
+					font-size: 54px;
+				}
+				@media #{$xs} {
+					font-size: 40px;
+				}
+				@media #{$sm} {
+					font-size: 46px;
+				}
+			}
+		}
+		& .action-btn{
+			@media #{$md} {
+				margin-top: 20px;
+			}
+			@media #{$xs} {
+				margin-top: 20px;
+			}
+			& i{
+				padding-right: 6px;
+			}
+		}
+	}
+}
+

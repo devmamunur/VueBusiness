@@ -1,0 +1,200 @@
+
+
+
+/*===============================
+    36.LATEST SERVICES css 
+================================*/
+
+
+
+.services-title-area{
+	margin-top: -235px;
+	background: $theme-color;
+	padding:  100px 0px 250px;
+	margin-left: 70px;
+	margin-right: 70px;
+    @media #{$lg} {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    @media #{$md} {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    @media #{$xs} {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    @media #{$sm} {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+	& .services-title-item{
+		position: relative;
+		z-index: 5;
+		& span{
+			color: $white;
+			font-weight: 700;
+			
+			letter-spacing: 3px;
+		}
+		& .title{
+			font-size: 55px;
+			line-height: 65px;
+			color: $white;
+			padding-top: 15px;
+            @media #{$lg} {
+                font-size: 40px;
+                line-height: 50px;
+            }
+            @media #{$md} {
+                font-size: 36px;
+                line-height: 46px;
+            }
+            @media #{$xs} {
+                font-size: 30px;
+                line-height: 40px;
+                padding: 20px 0px 0;
+            }
+            @media #{$sm} {
+                font-size: 36px;
+                line-height: 46px;
+                padding:  20px 0;
+            }
+		}
+		&::before{
+			position: absolute;
+			content: '';
+			height: 145px;
+			width: 145px;
+			border: 10px solid rgba(255, 255, 255,.1);
+			top: -11px;
+			left: -155px;
+			@include transform(rotate(-15deg));
+			z-index: -1;
+			@include animation(rotate 30s linear infinite);
+
+		}
+		&::after{
+			position: absolute;
+			content: '';
+			height: 80px;
+			width: 80px;
+			border: 10px solid rgba(255, 255, 255,.1);
+			top: 68px;
+			right: -87px;
+			@include transform(rotate(-15deg));
+			z-index: -1;
+			@include animation(rotate-2 30s linear infinite);
+
+		}
+		& .ring-shape{
+			position: absolute;
+			height: 60px;
+			width: 60px;
+			border-radius: 50%;
+			border: 5px solid rgba(255, 255, 255,.1);
+			top: -43px;
+			right: 14px;
+			@include transform(scale(0));
+			@include animation(scale 15s linear infinite);
+			z-index: -1;
+		}
+	}
+}
+
+@keyframes rotate {
+	 0% {
+	    @include transform(rotate(-15deg));
+	}
+	  100% {
+	    @include transform(rotate(360deg)); 
+	} 
+}
+
+
+
+@keyframes rotate-2 {
+	 0% {
+	    @include transform(rotate(15deg));
+	}
+	  100% {
+	    @include transform(rotate(-360deg)); 
+	} 
+}
+
+
+@keyframes scale {
+	 0% {
+	    @include transform(scale(0));
+	}
+	  50% {
+	    @include transform(scale(2)); 
+	} 
+	  100% {
+	    @include transform(scale(0)); 
+	} 
+}
+
+
+
+.latest-services-area{
+	margin-bottom: 65px;
+	margin-top: -215px;
+	position: relative;
+	z-index: 10;
+    @media #{$lg} {
+        margin-top: -170px;
+    }
+    @media #{$md} {
+        margin-top: -200px;
+    }
+	& .single-services{
+		& .services-thumb{
+			& img{
+				width: 100%;
+			}
+		}
+		& .services-content{
+			& .title{
+				font-size: 26px;
+				color: $black;
+				padding-top: 45px;
+				border-bottom: 2px $border-color solid;
+				padding-bottom: 25px;
+				position: relative;
+				&::before{
+					position: absolute;
+					content: '';
+					width: 80px;
+					height: 3px;
+					background: $theme-color;
+					left: 0;
+					bottom: -3px;
+				}
+			}
+			& p{
+				font-size: 15px;
+				color: #616161;
+				line-height: 32px;
+				padding-top: 32px;
+			}
+			& a{
+				font-weight: 600;
+				color: $black;
+				line-height: 50px;
+				padding: 0 30px;
+				border: 3px solid $theme-color;
+				border-radius: 5px;
+				margin-top: 37px;
+				@include transition(0.3s);
+				&:hover{
+					background: $theme-color;
+					color: $white;
+					border-color: $theme-color;
+				}
+			}
+		}
+	}
+}
+

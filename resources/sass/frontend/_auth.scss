@@ -1,0 +1,46 @@
+/*=======  Auth  =======*/
+
+.auth{
+    .sign-form{
+        border: 2px solid #ededed;
+        padding: 35px 40px;
+        .heading{
+            text-align: center;
+            margin-bottom: 30px;
+            .title{
+                font-size: 30px;
+                line-height: 40px;
+                font-weight: 600;
+            }
+        }
+        form{
+            .input-group{
+                margin-bottom: 15px;
+                input{
+                    background: none;
+                    border: 1px solid #ededed;
+                    padding: 0px 30px;
+                    height: 60px;
+                    border-radius: 0px;
+                }
+            }
+            .fp{
+                display: block;
+                color: $primary-color;
+                font-weight: 500;
+            }
+            .main-btn{
+                margin-top: 20px;
+                display: block;
+                margin: 20px auto 0px;
+            }
+            .reg-text{
+                margin-top: 15px;
+                a{
+                     font-weight: 600;
+                }
+            }
+        }
+    }
+   
+}

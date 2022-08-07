@@ -1,0 +1,122 @@
+
+
+
+/*===========================
+    22.ABOUT INTRO css 
+===========================*/
+
+
+.about-intro-area{
+	background: #f5faff;
+	padding-bottom: 128px;
+	& .intro-thumb{
+		position: relative;
+		z-index: 5;
+		& img{
+			@media #{$md} {
+				width: 100%;
+			}
+			@media #{$xs} {
+				width: 100%;
+				margin-bottom: 40px;
+			}
+			@media #{$sm} {
+				width: 100%;
+			}
+		}
+		& a{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-75%, -50%);
+			height: 120px;
+			width: 120px;
+			text-align: center;
+			border-radius: 50%;
+			line-height: 120px;
+			background: $theme-color;
+			color: #c5d5e7;
+			font-size: 20px;
+			@media #{$md} {
+				transform: translate(-50%, -50%);
+			}
+			@media #{$xs} {
+				transform: translate(-50%, -50%);
+			}
+		}
+		&::before{
+			position: absolute;
+			content: '';
+			bottom: -20px;
+			left: -20px;
+			width: 0;
+			height: 0;
+			border-bottom: 400px solid #4f9fff;
+			border-right: 400px solid transparent;
+			z-index: -1;
+			@media #{$xs} {
+				display: none;
+			}
+			@media #{$sm} {
+				display: block;
+				bottom: 20px;
+			}
+		}
+	}
+	& .intri-content{
+		margin-top: -7px;
+		& span{
+			color: $theme-color;
+			font-weight: 700;
+			position: relative;
+			padding-bottom: 20px;
+			&::before{
+				position: absolute;
+				content: '';
+				right: -100px;
+				top: 10px;
+				height: 2px;
+				width: 70px;
+				background: $theme-color;
+
+			}
+		}
+		& .title{
+			font-size: 60px;
+			line-height: 70px;
+			padding-bottom: 18px;
+			@media #{$lg} {
+				font-size: 50px;
+				line-height: 60px;
+			}
+			@media #{$xs} {
+				font-size: 36px;
+				line-height: 46px;
+			}
+		}
+		& .text-1{
+			font-size: 24px;
+			color: #4f859e;
+			line-height: 36px;
+			margin-bottom: 25px;
+			@media #{$lg} {
+				font-size: 18px;
+			}
+			@media #{$xs} {
+				font-size: 16px;
+			}
+		}
+		& a{
+			border-radius: 0;
+			padding: 0 45px;
+			margin-top: 45px;
+			background: $theme-color;
+			color: $white;
+			border-color: $theme-color;
+			&:hover{
+				background-color: transparent;
+				color: $theme-color;
+			}
+		}
+	}
+}

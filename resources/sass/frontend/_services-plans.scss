@@ -1,0 +1,231 @@
+
+
+
+/*===========================
+    24.SERVICES PLAns css 
+===========================*/
+
+
+.services-plans-area{
+	padding-top: 111px;
+	padding-bottom: 120px;
+	& .services-title{
+		text-align: center;
+		& span{
+			color: $theme-color;
+			font-weight: 700;
+			letter-spacing: 2px;
+		}
+		& .title{
+			font-size: 60px;
+			padding-top: 25px;
+			@media #{$md} {
+				font-size: 50px;
+			}
+			@media #{$xs} {
+				font-size: 42px;
+			}
+			@media #{$sm} {
+				font-size: 60px;
+			}
+		}
+	}
+	& .plans-item{
+		position: relative;
+		z-index: 5;
+		padding: 55px 30px 60px;
+		
+		@media #{$lg} {
+			padding: 55px 10px 60px;
+		}
+		@media #{$md} {
+			padding: 55px 41px 60px;
+		}
+
+		&::before{
+			position: absolute;
+			content: '';
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: #f4fbff;
+			z-index: -1;
+			@include transition(0.3s);
+		}
+		& b{
+			font-weight: 700;
+			color: $theme-color;
+			font-size: 16px;
+			
+			display: block;
+			padding-bottom: 10px;
+			@include transition(0.3s);
+		}
+		& .title{
+			font-size: 16px;
+			@include transition(0.3s);
+			& span{
+				font-size: 70px;
+				@include transition(0.3s);
+			}
+		}
+		& > span{
+			color: #88a2bf;
+			font-size: 14px;
+			
+			position: relative;
+			margin-bottom: 33px;
+			@include transition(0.3s);
+			&::before{
+				position: absolute;
+				content: '';
+				height: 2px;
+				width: 42px;
+				left: 50%;
+				bottom: -20px;
+				background: #13335a;
+				transform: translateX(-50%);
+				@include transition(0.3s);
+
+			}
+		}
+		& .list{
+			li{
+				display: block;
+				list-style: none;
+				p{
+					line-height: 40px;
+				}
+			}
+		}
+		& p{
+			font-size: 16px;
+			color: #69a1bb;
+			@include transition(0.3s);
+		}
+		& a{
+			background-color: transparent;
+			border-color: rgba(0, 0, 0, 0.1);
+			color: $theme-color;
+			border-radius: 0;
+			font-size: 16px;
+			margin-top: 35px;
+			padding: 0;
+			width: 100%;
+			@include transition(0.3s);
+		}
+		&:hover{
+			&::before{
+				background: $theme-color;
+			}
+			& b{
+				color: $white;
+			}
+			& span{
+				&::before{
+					width: 100px;
+					background: $white;
+				}
+			}
+			& .title{
+				color: $white;
+			}
+			& p{
+				color: $white;
+			}
+			& a{
+				color: $white;
+				border-color: rgba(255, 255, 255, 0.2);
+			}
+		}
+	}
+	& .plans-tab-btn{
+		& .nav{
+			background: $white;
+			padding: 10px;
+			& li{
+				& a{
+					border-radius: 0;
+					padding: 0 35px;
+					line-height: 60px;
+					color: #69a1bb;
+					font-weight: 700;
+					&.active{
+						color: $white;
+						background: $theme-color;
+					}
+
+				}
+			}
+		}
+	}
+	// &.services-plans-dark-area{
+	// 	background: $heading-color;
+	// 	& .services-title{
+	// 		& .title{
+	// 			font-size: 60px;
+	// 			padding-top: 25px;
+	// 			color: $white;
+	// 		}
+	// 	}
+	// 	& .plans-tab-btn{
+	// 		& .nav{
+	// 			background: #002c5f;
+	// 		}
+	// 	}
+	// 	& .plans-item{
+	// 		&::before{
+	// 			background: #00152e;
+	// 		}
+	// 		& b{
+	// 			color: #ffc78a;
+	// 			&.item-2{
+	// 				color: #69a1bb;
+	// 			}
+	// 			&.item-3{
+	// 				color: #ff578e;
+	// 			}
+	// 			&.item-4{
+	// 				color: #bb72ff;
+	// 			}
+	// 		}
+	// 		& .title{
+	// 			color: $white;
+	// 		}
+	// 		& > span{
+	// 			&::before{
+	// 				background: #13335a;
+	// 			}
+	// 		}
+	// 		& a{
+	// 			border-color: #1d3d63;
+	// 		}
+	// 		&:hover{
+	// 			&::before{
+	// 				background: rgba(0,102,255,.9);
+	// 			}
+	// 			& b{
+	// 				color: $white;
+	// 			}
+	// 			& span{
+	// 				&::before{
+	// 					width: 100px;
+	// 					background: $white;
+	// 				}
+	// 			}
+	// 			& p{
+	// 				color: $white;
+	// 			}
+	// 			& a{
+	// 				background: #003d95;
+	// 				border-color: #003d95;
+	// 				color: $white;
+	// 				@include transition(0.3s);
+	// 			}
+	// 		}
+	// 	}
+	// }
+}
+
+

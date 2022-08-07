@@ -1,0 +1,159 @@
+
+
+
+/*===========================
+    19.CHOOSE css 
+===========================*/
+
+.choose-area{
+	padding-top: 113px; 
+	padding-bottom: 120px;
+	background: #f5f7ff;
+	& .section-title{
+		& .title{
+			padding-bottom: 25px;
+			@media #{$lg} {
+				font-size: 50px;
+			}
+			@media #{$md} {
+				font-size: 50px;
+			}
+			&::before{
+				display: none;
+			}
+		}
+	}
+	& .choose-cat{
+		& .choose-cat-item{
+			position: relative;
+			padding-left: 80px;
+			@media #{$xs} {
+				padding-left: 60px;
+			}
+			& .title{
+				font-size: 24px;
+				@media #{$xs} {
+					font-size: 18px;
+				}
+			}
+			& p{
+				color: #81a3bb;
+				padding-top: 13px;
+				padding-right: 80px;
+				@media #{$xs} {
+					padding-right: 0;
+				}
+			}
+			& i{
+				height: 50px;
+				width: 50px;
+				text-align: center;
+				line-height: 50px;
+				border-radius: 50%;
+				background: $white;
+				box-shadow: 0px 4px 8px 0px rgba(160, 194, 255, 0.2);
+				font-size: 20px;
+				color: $theme-color;
+				@include transition(0.3s);
+				position: absolute;
+				top: -10px;
+				left: 0;
+				@media #{$xs} {
+					top: -15px;
+				}
+				@media #{$sm} {
+					top: -10px;
+				}
+
+			}
+			&:hover{
+				& i{
+					background: $theme-color;
+					color: $white;
+				}
+			}
+		}
+	}
+	& .choose-thumb-area{
+		position: relative;
+		& .choose-thumb-2{
+			position: absolute;
+			right: 0;
+			bottom: -150px;
+			z-index: 55;
+			@media #{$xs} {
+				position: inherit;
+				top: 30px;
+			}
+			&::before{
+				position: absolute;
+				content: '';
+				width: 0;
+				height: 0;
+				border-bottom: 370px solid $theme-color;
+				border-left: 370px solid transparent;
+				z-index: -1;
+				right: -20px;
+				bottom: -20px;
+				@media #{$xs} {
+					display: none;
+				}
+
+			}
+		}
+	}
+	& .choose-video-thumb{
+		position: relative;
+		@media #{$md} {
+			margin-top: 200px;
+		}
+		@media #{$xs} {
+			margin-top: 60px;
+		}
+		@media #{$sm} {
+			margin-top: 200px;
+		}
+		& a{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			@include transform(translate(-50%, -50%));
+			height: 100px;
+			width: 100px;
+			text-align: center;
+			line-height: 100px;
+			color: $white;
+			border-radius: 50%;
+			background: $theme-color;
+			&::before{
+				position: absolute;
+				content: '';
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				border-radius: 50%;
+				border: 2px solid rgba(227, 238, 255,1);
+				-webkit-animation: play-btn-1 2.5s linear infinite;
+				-moz-animation: play-btn-1 2.5s linear infinite;
+				-o-animation: play-btn-1 2.5s linear infinite;
+				animation: play-btn-1 2.5s linear infinite;
+			}
+			&::after{
+				position: absolute;
+				content: '';
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				border-radius: 50%;
+				border: 2px solid rgba(227, 238, 255,1);
+				-webkit-animation: play-btn-2 1.5s linear infinite;
+				-moz-animation: play-btn-2 1.5s linear infinite;
+				-o-animation: play-btn-2 1.5s linear infinite;
+				animation: play-btn-2 1.5s linear infinite;
+			}
+		}
+	}
+}
+

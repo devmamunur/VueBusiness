@@ -1,0 +1,126 @@
+
+
+
+/*===============================
+    39.OUR CHOOSE css 
+================================*/
+
+.our-choose-area{
+    padding-bottom: 90px;
+    & .section-title{
+        & span{
+            letter-spacing: 3px;
+        }
+        & .title{
+            font-size: 55px;
+            margin-bottom: 46px;
+            @media #{$xs} {
+            	font-size: 30px;
+            	line-height: 40px;
+            	margin-right: 70px;
+            }
+            @media #{$sm} {
+            	font-size: 36px;
+            	line-height: 46px;
+            	margin-right: 70px;
+            }
+            &::before{
+                display: none;
+            }
+        }
+    }
+	& .accordion{
+		border: 2px solid transparent;
+		& .card{
+			border-radius: 0;
+			border: 0;
+			&:first-child{
+				border-top: 0;
+			}
+			& .card-header{
+				border-bottom: 0;
+				padding: 0;
+				margin: 0;
+                padding-bottom: 13px;
+				background-color: transparent;
+				& a{
+					line-height: 50px;
+					padding: 0 0 0 0px;
+					text-decoration: none;
+					font-weight: 700;
+					font-size: 18px;
+                    
+					width: 100%;
+					color: $theme-color;
+					position: relative;
+                    & i{
+                        padding-right: 5px;
+                    }
+					@media #{$xs} {
+						font-size: 15px;
+					}
+					@media #{$sm} {
+						line-height: 60px;
+						font-size: 16px;
+					}
+					&.collapsed{
+						color: #616161;
+					}
+				}
+			}
+			& .card-body{
+				padding: 0 9px 4px 0px !important;
+				@media #{$xs} {
+					padding: 0 9px 4px 0px !important;
+				}
+				@media #{$sm} {
+					padding: 0 9px 4px 0px !important;
+				}
+				& p{
+					margin-top: -10px;
+					font-size: 15px;
+                    padding-left: 25px;
+                    color: #616161;
+				}
+			}
+			&.show{
+				.card-body{
+					padding: 0 40px 14px 40px !important;
+					& p{
+						margin-top: -10px;
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+    & .our-choose-counter-area{
+        & .our-choose-counter{
+            & sub{
+                font-size: 55px;
+                font-weight: 500;
+                color: $theme-color;
+                
+                line-height: 33px;
+            }
+            & > span{
+                font-size: 18px;
+                color: $black;
+                display: block;
+                font-weight: 700;
+                padding-top: 20px;
+            }
+			& .c-wrap{
+				font-weight: 700;
+			}
+            & p{
+                font-size: 15px;
+                color: #616161;
+                padding-right: 30px;
+                padding-top: 18px;
+                line-height: 26px;
+            }
+        }
+    }
+
+}

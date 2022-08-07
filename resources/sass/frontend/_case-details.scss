@@ -1,0 +1,180 @@
+
+
+
+/*===============================
+    26.CASE DETAILS css 
+================================*/
+
+
+.case-details-area{
+	.case-details-thumb{
+		position: relative;
+		& img{
+			width: 100%;
+
+		}
+		& .case-live{
+			box-shadow: 0px 8px 16px 0px rgba(0, 26, 55, 0.3);
+			position: absolute;
+			background: $white;
+			top: 20px;
+			right: 20px;
+			padding: 45px 0px 45px 40px;
+			@media #{$xs} {
+				left: 0;
+				top: 0px;
+				position: inherit;
+			}
+			@media #{$sm} {
+				left: 0;
+				top: 0px;
+				position: inherit;
+			}
+			& .case-live-item-area{
+				@media #{$xs} {
+					display: block !important;
+					margin-top: 0;
+				}
+				@media #{$sm} {
+					display: flex !important;
+				}
+				& .case-live-item{
+					padding-left: 30px;
+					padding-right: 40px;
+					position: relative;
+					@media #{$xs} {
+						padding-bottom: 20px;
+					}
+					@media #{$sm} {
+						padding-bottom: 0px;
+					}
+					& .title{
+						font-size: 20px;
+
+					}
+					& span{
+						font-size: 14px;
+						color: #69a1bb;
+
+					}
+					& i{
+						position: absolute;
+						top: 2px;
+						left: 0;
+						font-size: 20px;
+						color: $theme-color;
+
+					}
+				}
+			}
+			& .case-live-btn{
+				margin-right: 40px;
+				margin-top: 37px;
+				& a{
+					border-radius: 0;
+					background: $theme-color;
+					color: $white;
+					border-color: $theme-color;
+				}
+			}
+		}
+	}
+	& .case-details-content{
+		& .case-details-case{
+			position: relative;
+			& img{
+				position: absolute;
+				left: 0;
+				top: 5px;
+				@media #{$xs} {
+					position: inherit;
+					top: 0;
+					left: 0;
+					width: 100%;
+				}
+			}
+			& p{
+				padding-left: 265px;
+				@media #{$xs} {
+					padding-left: 0;
+					margin-top: 20px;
+				}
+
+			}
+		}
+	}
+	& .case-content-2{
+		& .title{
+			font-size: 24px;
+			padding-top: 13px;
+			padding-bottom: 14px;
+		}
+	}
+	& .case-video-thumb{
+		position: relative;
+		& a{
+			height: 120px;
+			width: 120px;
+			border-radius: 50%;
+			text-align: center;
+			line-height: 120px;
+			background: $theme-color;
+			font-size: 24px;
+			color: $white;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			@media #{$xs} {
+				height: 80px;
+				width: 80px;
+				line-height: 80px;	
+			}
+		}
+	}
+	& .case-next-prev{
+		position: relative;
+		& .case-prev{
+			& span{
+				font-weight: 700;
+				font-size: 14px;
+				letter-spacing: 2px;
+				color: #90b5c0;
+			}
+			& .title{
+				font-size: 28px;
+			}
+		}
+		& .case-next{
+			& span{
+				font-weight: 700;
+				font-size: 14px;
+				letter-spacing: 2px;
+				color: #90b5c0;
+			}
+			& .title{
+				font-size: 28px;
+			}
+		}
+		& > a{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			@include transform(translate(-50%, 0%));
+			@media #{$xs} {
+				display: none;
+
+			}
+		}
+	}
+	& .case-details-item{
+		& img{
+			@media #{$xs} {
+				width: 100%;
+			}
+		}
+	}
+}
+
+
+
