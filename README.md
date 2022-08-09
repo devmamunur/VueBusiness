@@ -12,8 +12,6 @@ VueBusiness gives you infinite possibilities to make your site. If you have plan
 [Live Demo](http://vuebusiness.geniusdevs.com/)
 
 
-### Note: This project has some issues. If you want to contribute then you are welcome.
-
 ## Features
 
 - 3 Home Page Theme
@@ -32,6 +30,7 @@ VueBusiness gives you infinite possibilities to make your site. If you have plan
 ## Tech Stack
 PHP, Laravel, Vue, ElementUI, HTML, CSS, SCSS, jQuery, Bootstrap
 
+### Note: This project has some issues. If you want to contribute then you are welcome.
 
 ## License
 
