@@ -12,7 +12,7 @@ VueBusiness gives you infinite possibilities to make your site. If you have plan
 [Live Demo](http://vuebusiness.geniusdevs.com/)
 
 
-##Note: This project has some issues. If you want to contribute then you are welcome.
+## Note: This project has some issues. If you want to contribute then you are welcome.
 
 ## Features
 
