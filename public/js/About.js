@@ -1,10 +1,10 @@
 "use strict";
 (self["webpackChunk"] = self["webpackChunk"] || []).push([["About"],{
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/app/AppAbout.vue?vue&type=script&lang=js&":
-/*!*******************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/app/AppAbout.vue?vue&type=script&lang=js& ***!
-  \*******************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/app/AppAbout.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/app/AppAbout.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -14,147 +14,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 /* harmony import */ var vue_cool_lightbox__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-cool-lightbox */ "./node_modules/vue-cool-lightbox/dist/vue-cool-lightbox.esm.js");
 /* harmony import */ var vue_cool_lightbox_dist_vue_cool_lightbox_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-cool-lightbox/dist/vue-cool-lightbox.min.css */ "./node_modules/vue-cool-lightbox/dist/vue-cool-lightbox.min.css");
+function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
 
 
 
@@ -196,6 +61,248 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     this.items[0].src = this.sectionInfo.about_intro_video;
   }
 });
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/app/AppAbout.vue?vue&type=template&id=20448905&":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/app/AppAbout.vue?vue&type=template&id=20448905& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function render() {
+  var _vm = this,
+    _c = _vm._self._c;
+  return _c("div", [_vm.visibility.is_about_about ? _c("section", {
+    staticClass: "about-section section-gap"
+  }, [_c("div", {
+    staticClass: "container"
+  }, [_c("div", {
+    staticClass: "row justify-content-center align-items-center"
+  }, [_c("div", {
+    staticClass: "col-lg-6 col-md-8",
+    attrs: {
+      "data-wow-delay": "0.3s"
+    }
+  }, [_c("div", {
+    staticClass: "about-thumb"
+  }, [_c("img", {
+    directives: [{
+      name: "lazy",
+      rawName: "v-lazy",
+      value: "/uploads/".concat(_vm.sectionInfo.about_image),
+      expression: "`/uploads/${sectionInfo.about_image}`"
+    }]
+  })])]), _vm._v(" "), _c("div", {
+    staticClass: "col-lg-6 col-md-10 wow fadeInRight",
+    attrs: {
+      "data-wow-delay": "0.3s"
+    }
+  }, [_c("div", {
+    staticClass: "about-text-block pl-lg-5 mt-md-gap-60"
+  }, [_c("div", {
+    staticClass: "section-title mb-40"
+  }, [_c("span", {
+    staticClass: "title-tag"
+  }, [_vm._v(_vm._s(_vm.sectionInfo.about_experince_yers) + " - " + _vm._s(_vm.$t("Years Of Experience")))]), _vm._v(" "), _c("h2", {
+    staticClass: "title"
+  }, [_vm._v(_vm._s(_vm.sectionInfo.about_title))])]), _vm._v(" "), _c("p", {
+    staticClass: "text-color-3"
+  }, [_vm._v("\n                            " + _vm._s(_vm.sectionInfo.about_text) + "\n                        ")])])])])])]) : _vm._e(), _vm._v(" "), _vm.visibility.is_about_featured_work ? _c("section", {
+    staticClass: "who-we-are-area pb-120"
+  }, [_c("div", {
+    staticClass: "container"
+  }, [_c("div", {
+    staticClass: "row justify-content-center"
+  }, _vm._l(_vm.features, function (item, i) {
+    return _c("div", {
+      key: i,
+      staticClass: "col-lg-3 col-md-6 col-sm-6 wow fadeInLeft",
+      attrs: {
+        "data-wow-delay": "0.3s"
+      }
+    }, [_c("div", {
+      staticClass: "service-item-three text-center mt-30"
+    }, [_c("div", {
+      staticClass: "icon"
+    }, [_c("i", {
+      "class": item.icon
+    })]), _vm._v(" "), _c("h5", {
+      staticClass: "title"
+    }, [_vm._v(_vm._s(item.title))]), _vm._v(" "), _c("p", [_vm._v(_vm._s(item.text))])])]);
+  }), 0)])]) : _vm._e(), _vm._v(" "), _vm.visibility.is_about_choose_us ? _c("section", {
+    staticClass: "whu-section section-gap soft-blue-bg"
+  }, [_c("div", {
+    staticClass: "container"
+  }, [_c("div", {
+    staticClass: "row justify-content-center align-content-center"
+  }, [_c("div", {
+    staticClass: "col-lg-6 col-md-10 order-lg-2"
+  }, [_c("div", {
+    staticClass: "tile-gallery-two mb-md-gap-50"
+  }, [_c("div", {
+    staticClass: "img-one wow fadeInRight",
+    attrs: {
+      "data-wow-delay": "0.3s"
+    }
+  }, [_c("img", {
+    directives: [{
+      name: "lazy",
+      rawName: "v-lazy",
+      value: "/uploads/".concat(_vm.sectionInfo.w_c_us_image1),
+      expression: "`/uploads/${sectionInfo.w_c_us_image1}`"
+    }]
+  })]), _vm._v(" "), _c("div", {
+    staticClass: "img-two text-right wow fadeInUp",
+    attrs: {
+      "data-wow-delay": "0.5s"
+    }
+  }, [_c("img", {
+    directives: [{
+      name: "lazy",
+      rawName: "v-lazy",
+      value: "/uploads/".concat(_vm.sectionInfo.w_c_us_image2),
+      expression: "`/uploads/${sectionInfo.w_c_us_image2}`"
+    }]
+  })])])]), _vm._v(" "), _c("div", {
+    staticClass: "col-lg-6 col-md-10 order-lg-1"
+  }, [_c("div", {
+    staticClass: "section-title mb-50 wow fadeInUp",
+    attrs: {
+      "data-wow-delay": "0.3s"
+    }
+  }, [_c("span", {
+    staticClass: "title-tag"
+  }, [_vm._v(_vm._s(_vm.sectionInfo.w_c_us_sub_title))]), _vm._v(" "), _c("h2", {
+    staticClass: "title"
+  }, [_vm._v(_vm._s(_vm.sectionInfo.w_c_us_title))])]), _vm._v(" "), _c("ul", {
+    staticClass: "feature-list"
+  }, _vm._l(_vm.whayChooses, function (whayChoose, i) {
+    return _c("li", {
+      key: i,
+      staticClass: "wow fadeInUp",
+      attrs: {
+        "data-wow-duration": ".5s",
+        "data-wow-delay": ".4s"
+      }
+    }, [_c("h4", [_vm._v(_vm._s(whayChoose.title))]), _vm._v(" "), _c("p", [_vm._v(_vm._s(whayChoose.text))])]);
+  }), 0)])]), _vm._v(" "), _c("div", {
+    staticClass: "feature-intro-video mt-100"
+  }, [_c("img", {
+    directives: [{
+      name: "lazy",
+      rawName: "v-lazy",
+      value: "/uploads/".concat(_vm.sectionInfo.video_bg_image),
+      expression: "`/uploads/${sectionInfo.video_bg_image}`"
+    }]
+  }), _vm._v(" "), _c("span", {
+    staticClass: "video-popup",
+    on: {
+      click: function click($event) {
+        _vm.index = 0;
+      }
+    }
+  }, [_c("i", {
+    staticClass: "fal fa-play"
+  })])])])]) : _vm._e(), _vm._v(" "), _vm.visibility.is_about_history ? _c("div", {
+    staticClass: "about-history-area"
+  }, [_c("div", {
+    staticClass: "container"
+  }, [_c("div", {
+    staticClass: "row justify-content-center"
+  }, [_c("div", {
+    staticClass: "col-lg-6 col-md-8"
+  }, [_c("div", {
+    staticClass: "section-title text-center"
+  }, [_c("h2", {
+    staticClass: "title"
+  }, [_vm._v(_vm._s(_vm.sectionInfo.our_history_title))]), _vm._v(" "), _c("p", [_vm._v(_vm._s(_vm.sectionInfo.our_history_text))])])])]), _vm._v(" "), _c("div", {
+    staticClass: "row justify-content-center"
+  }, [_c("div", {
+    staticClass: "col-lg-12"
+  }, [_vm._l(_vm.histories, function (history, i) {
+    return [i % 2 == 0 ? _c("div", {
+      key: i,
+      staticClass: "row justify-content-start"
+    }, [_c("div", {
+      staticClass: "col-md-6"
+    }, [_c("div", {
+      staticClass: "history-item"
+    }, [_c("div", {
+      staticClass: "history-thumb wow fadeInUp",
+      attrs: {
+        "data-wow-duration": ".8s",
+        "data-wow-delay": ".1s"
+      }
+    }, [_c("img", {
+      directives: [{
+        name: "lazy",
+        rawName: "v-lazy",
+        value: "/uploads/".concat(history.image),
+        expression: "`/uploads/${history.image}`"
+      }]
+    })]), _vm._v(" "), _c("div", {
+      staticClass: "history-content wow fadeInUp",
+      attrs: {
+        "data-wow-duration": ".8s",
+        "data-wow-delay": ".1s"
+      }
+    }, [_c("span", [_vm._v(_vm._s(history.date) + " - " + _vm._s(history.position))]), _vm._v(" "), _c("h4", {
+      staticClass: "title"
+    }, [_vm._v(_vm._s(history.title))])]), _vm._v(" "), _c("div", {
+      staticClass: "number-box"
+    }, [_c("span", [_vm._v(_vm._s(++i))])])])])]) : _c("div", {
+      key: i,
+      staticClass: "row justify-content-end"
+    }, [_c("div", {
+      staticClass: "col-md-6"
+    }, [_c("div", {
+      staticClass: "history-item history-item-2"
+    }, [_c("div", {
+      staticClass: "history-thumb wow fadeInUp",
+      attrs: {
+        "data-wow-duration": ".8s",
+        "data-wow-delay": ".1s"
+      }
+    }, [_c("img", {
+      directives: [{
+        name: "lazy",
+        rawName: "v-lazy",
+        value: "/uploads/".concat(history.image),
+        expression: "`/uploads/${history.image}`"
+      }]
+    })]), _vm._v(" "), _c("div", {
+      staticClass: "history-content wow fadeInUp",
+      attrs: {
+        "data-wow-duration": ".8s",
+        "data-wow-delay": ".1s"
+      }
+    }, [_c("span", [_vm._v(_vm._s(history.date) + " - " + _vm._s(history.position))]), _vm._v(" "), _c("h4", {
+      staticClass: "title"
+    }, [_vm._v(_vm._s(history.title))])]), _vm._v(" "), _c("div", {
+      staticClass: "number-box"
+    }, [_c("span", [_vm._v(_vm._s(++i))])])])])])];
+  })], 2)])])]) : _vm._e(), _vm._v(" "), _c("CoolLightBox", {
+    attrs: {
+      items: _vm.items,
+      index: _vm.index,
+      effect: "fade"
+    },
+    on: {
+      close: function close($event) {
+        _vm.index = null;
+      }
+    }
+  })], 1);
+};
+var staticRenderFns = [];
+render._withStripped = true;
+
 
 /***/ }),
 
@@ -427,10 +534,10 @@ var enableBodyScroll = function enableBodyScroll(targetElement) {
 
 /***/ }),
 
-/***/ "./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-10[0].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10[0].rules[0].use[2]!./node_modules/vue-cool-lightbox/dist/vue-cool-lightbox.min.css":
-/*!**********************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-10[0].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10[0].rules[0].use[2]!./node_modules/vue-cool-lightbox/dist/vue-cool-lightbox.min.css ***!
-  \**********************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/vue-cool-lightbox/dist/vue-cool-lightbox.min.css":
+/*!**********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/vue-cool-lightbox/dist/vue-cool-lightbox.min.css ***!
+  \**********************************************************************************************************************************************************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -462,7 +569,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 /* harmony import */ var _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _laravel_mix_node_modules_css_loader_dist_cjs_js_clonedRuleSet_10_0_rules_0_use_1_postcss_loader_dist_cjs_js_clonedRuleSet_10_0_rules_0_use_2_vue_cool_lightbox_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-10[0].rules[0].use[1]!../../postcss-loader/dist/cjs.js??clonedRuleSet-10[0].rules[0].use[2]!./vue-cool-lightbox.min.css */ "./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-10[0].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10[0].rules[0].use[2]!./node_modules/vue-cool-lightbox/dist/vue-cool-lightbox.min.css");
+/* harmony import */ var _laravel_mix_node_modules_css_loader_dist_cjs_js_clonedRuleSet_10_use_1_postcss_loader_dist_cjs_js_clonedRuleSet_10_use_2_vue_cool_lightbox_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!../../postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./vue-cool-lightbox.min.css */ "./node_modules/laravel-mix/node_modules/css-loader/dist/cjs.js??clonedRuleSet-10.use[1]!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-10.use[2]!./node_modules/vue-cool-lightbox/dist/vue-cool-lightbox.min.css");
 
             
 
@@ -471,11 +578,11 @@ var options = {};
 options.insert = "head";
 options.singleton = false;
 
-var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_laravel_mix_node_modules_css_loader_dist_cjs_js_clonedRuleSet_10_0_rules_0_use_1_postcss_loader_dist_cjs_js_clonedRuleSet_10_0_rules_0_use_2_vue_cool_lightbox_min_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+var update = _style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_laravel_mix_node_modules_css_loader_dist_cjs_js_clonedRuleSet_10_use_1_postcss_loader_dist_cjs_js_clonedRuleSet_10_use_2_vue_cool_lightbox_min_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_laravel_mix_node_modules_css_loader_dist_cjs_js_clonedRuleSet_10_0_rules_0_use_1_postcss_loader_dist_cjs_js_clonedRuleSet_10_0_rules_0_use_2_vue_cool_lightbox_min_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_laravel_mix_node_modules_css_loader_dist_cjs_js_clonedRuleSet_10_use_1_postcss_loader_dist_cjs_js_clonedRuleSet_10_use_2_vue_cool_lightbox_min_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 
@@ -2415,8 +2522,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AppAbout_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./AppAbout.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/app/AppAbout.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AppAbout_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AppAbout_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./AppAbout.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/app/AppAbout.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_AppAbout_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -2428,486 +2535,10 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppAbout_vue_vue_type_template_id_20448905___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppAbout_vue_vue_type_template_id_20448905___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_AppAbout_vue_vue_type_template_id_20448905___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_AppAbout_vue_vue_type_template_id_20448905___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_AppAbout_vue_vue_type_template_id_20448905___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./AppAbout.vue?vue&type=template&id=20448905& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/app/AppAbout.vue?vue&type=template&id=20448905&");
-
-
-/***/ }),
-
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/app/AppAbout.vue?vue&type=template&id=20448905&":
-/*!************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/app/AppAbout.vue?vue&type=template&id=20448905& ***!
-  \************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* binding */ render),
-/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
-/* harmony export */ });
-var render = function () {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _vm.visibility.is_about_about
-        ? _c("section", { staticClass: "about-section section-gap" }, [
-            _c("div", { staticClass: "container" }, [
-              _c(
-                "div",
-                {
-                  staticClass: "row justify-content-center align-items-center",
-                },
-                [
-                  _c(
-                    "div",
-                    {
-                      staticClass: "col-lg-6 col-md-8",
-                      attrs: { "data-wow-delay": "0.3s" },
-                    },
-                    [
-                      _c("div", { staticClass: "about-thumb" }, [
-                        _c("img", {
-                          directives: [
-                            {
-                              name: "lazy",
-                              rawName: "v-lazy",
-                              value: "/uploads/" + _vm.sectionInfo.about_image,
-                              expression:
-                                "`/uploads/${sectionInfo.about_image}`",
-                            },
-                          ],
-                        }),
-                      ]),
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "div",
-                    {
-                      staticClass: "col-lg-6 col-md-10 wow fadeInRight",
-                      attrs: { "data-wow-delay": "0.3s" },
-                    },
-                    [
-                      _c(
-                        "div",
-                        {
-                          staticClass: "about-text-block pl-lg-5 mt-md-gap-60",
-                        },
-                        [
-                          _c("div", { staticClass: "section-title mb-40" }, [
-                            _c("span", { staticClass: "title-tag" }, [
-                              _vm._v(
-                                _vm._s(_vm.sectionInfo.about_experince_yers) +
-                                  " - " +
-                                  _vm._s(_vm.$t("Years Of Experience"))
-                              ),
-                            ]),
-                            _vm._v(" "),
-                            _c("h2", { staticClass: "title" }, [
-                              _vm._v(_vm._s(_vm.sectionInfo.about_title)),
-                            ]),
-                          ]),
-                          _vm._v(" "),
-                          _c("p", { staticClass: "text-color-3" }, [
-                            _vm._v(
-                              "\n                            " +
-                                _vm._s(_vm.sectionInfo.about_text) +
-                                "\n                        "
-                            ),
-                          ]),
-                        ]
-                      ),
-                    ]
-                  ),
-                ]
-              ),
-            ]),
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _vm.visibility.is_about_featured_work
-        ? _c("section", { staticClass: "who-we-are-area pb-120" }, [
-            _c("div", { staticClass: "container" }, [
-              _c(
-                "div",
-                { staticClass: "row justify-content-center" },
-                _vm._l(_vm.features, function (item, i) {
-                  return _c(
-                    "div",
-                    {
-                      key: i,
-                      staticClass: "col-lg-3 col-md-6 col-sm-6 wow fadeInLeft",
-                      attrs: { "data-wow-delay": "0.3s" },
-                    },
-                    [
-                      _c(
-                        "div",
-                        { staticClass: "service-item-three text-center mt-30" },
-                        [
-                          _c("div", { staticClass: "icon" }, [
-                            _c("i", { class: item.icon }),
-                          ]),
-                          _vm._v(" "),
-                          _c("h5", { staticClass: "title" }, [
-                            _vm._v(_vm._s(item.title)),
-                          ]),
-                          _vm._v(" "),
-                          _c("p", [_vm._v(_vm._s(item.text))]),
-                        ]
-                      ),
-                    ]
-                  )
-                }),
-                0
-              ),
-            ]),
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _vm.visibility.is_about_choose_us
-        ? _c(
-            "section",
-            { staticClass: "whu-section section-gap soft-blue-bg" },
-            [
-              _c("div", { staticClass: "container" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "row justify-content-center align-content-center",
-                  },
-                  [
-                    _c(
-                      "div",
-                      { staticClass: "col-lg-6 col-md-10 order-lg-2" },
-                      [
-                        _c(
-                          "div",
-                          { staticClass: "tile-gallery-two mb-md-gap-50" },
-                          [
-                            _c(
-                              "div",
-                              {
-                                staticClass: "img-one wow fadeInRight",
-                                attrs: { "data-wow-delay": "0.3s" },
-                              },
-                              [
-                                _c("img", {
-                                  directives: [
-                                    {
-                                      name: "lazy",
-                                      rawName: "v-lazy",
-                                      value:
-                                        "/uploads/" +
-                                        _vm.sectionInfo.w_c_us_image1,
-                                      expression:
-                                        "`/uploads/${sectionInfo.w_c_us_image1}`",
-                                    },
-                                  ],
-                                }),
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              {
-                                staticClass: "img-two text-right wow fadeInUp",
-                                attrs: { "data-wow-delay": "0.5s" },
-                              },
-                              [
-                                _c("img", {
-                                  directives: [
-                                    {
-                                      name: "lazy",
-                                      rawName: "v-lazy",
-                                      value:
-                                        "/uploads/" +
-                                        _vm.sectionInfo.w_c_us_image2,
-                                      expression:
-                                        "`/uploads/${sectionInfo.w_c_us_image2}`",
-                                    },
-                                  ],
-                                }),
-                              ]
-                            ),
-                          ]
-                        ),
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "div",
-                      { staticClass: "col-lg-6 col-md-10 order-lg-1" },
-                      [
-                        _c(
-                          "div",
-                          {
-                            staticClass: "section-title mb-50 wow fadeInUp",
-                            attrs: { "data-wow-delay": "0.3s" },
-                          },
-                          [
-                            _c("span", { staticClass: "title-tag" }, [
-                              _vm._v(_vm._s(_vm.sectionInfo.w_c_us_sub_title)),
-                            ]),
-                            _vm._v(" "),
-                            _c("h2", { staticClass: "title" }, [
-                              _vm._v(_vm._s(_vm.sectionInfo.w_c_us_title)),
-                            ]),
-                          ]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "ul",
-                          { staticClass: "feature-list" },
-                          _vm._l(_vm.whayChooses, function (whayChoose, i) {
-                            return _c(
-                              "li",
-                              {
-                                key: i,
-                                staticClass: "wow fadeInUp",
-                                attrs: {
-                                  "data-wow-duration": ".5s",
-                                  "data-wow-delay": ".4s",
-                                },
-                              },
-                              [
-                                _c("h4", [_vm._v(_vm._s(whayChoose.title))]),
-                                _vm._v(" "),
-                                _c("p", [_vm._v(_vm._s(whayChoose.text))]),
-                              ]
-                            )
-                          }),
-                          0
-                        ),
-                      ]
-                    ),
-                  ]
-                ),
-                _vm._v(" "),
-                _c("div", { staticClass: "feature-intro-video mt-100" }, [
-                  _c("img", {
-                    directives: [
-                      {
-                        name: "lazy",
-                        rawName: "v-lazy",
-                        value: "/uploads/" + _vm.sectionInfo.video_bg_image,
-                        expression: "`/uploads/${sectionInfo.video_bg_image}`",
-                      },
-                    ],
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "span",
-                    {
-                      staticClass: "video-popup",
-                      on: {
-                        click: function ($event) {
-                          _vm.index = 0
-                        },
-                      },
-                    },
-                    [_c("i", { staticClass: "fal fa-play" })]
-                  ),
-                ]),
-              ]),
-            ]
-          )
-        : _vm._e(),
-      _vm._v(" "),
-      _vm.visibility.is_about_history
-        ? _c("div", { staticClass: "about-history-area" }, [
-            _c("div", { staticClass: "container" }, [
-              _c("div", { staticClass: "row justify-content-center" }, [
-                _c("div", { staticClass: "col-lg-6 col-md-8" }, [
-                  _c("div", { staticClass: "section-title text-center" }, [
-                    _c("h2", { staticClass: "title" }, [
-                      _vm._v(_vm._s(_vm.sectionInfo.our_history_title)),
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [_vm._v(_vm._s(_vm.sectionInfo.our_history_text))]),
-                  ]),
-                ]),
-              ]),
-              _vm._v(" "),
-              _c("div", { staticClass: "row justify-content-center" }, [
-                _c(
-                  "div",
-                  { staticClass: "col-lg-12" },
-                  [
-                    _vm._l(_vm.histories, function (history, i) {
-                      return [
-                        i % 2 == 0
-                          ? _c(
-                              "div",
-                              {
-                                key: i,
-                                staticClass: "row justify-content-start",
-                              },
-                              [
-                                _c("div", { staticClass: "col-md-6" }, [
-                                  _c("div", { staticClass: "history-item" }, [
-                                    _c(
-                                      "div",
-                                      {
-                                        staticClass:
-                                          "history-thumb wow fadeInUp",
-                                        attrs: {
-                                          "data-wow-duration": ".8s",
-                                          "data-wow-delay": ".1s",
-                                        },
-                                      },
-                                      [
-                                        _c("img", {
-                                          directives: [
-                                            {
-                                              name: "lazy",
-                                              rawName: "v-lazy",
-                                              value:
-                                                "/uploads/" + history.image,
-                                              expression:
-                                                "`/uploads/${history.image}`",
-                                            },
-                                          ],
-                                        }),
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c(
-                                      "div",
-                                      {
-                                        staticClass:
-                                          "history-content wow fadeInUp",
-                                        attrs: {
-                                          "data-wow-duration": ".8s",
-                                          "data-wow-delay": ".1s",
-                                        },
-                                      },
-                                      [
-                                        _c("span", [
-                                          _vm._v(
-                                            _vm._s(history.date) +
-                                              " - " +
-                                              _vm._s(history.position)
-                                          ),
-                                        ]),
-                                        _vm._v(" "),
-                                        _c("h4", { staticClass: "title" }, [
-                                          _vm._v(_vm._s(history.title)),
-                                        ]),
-                                      ]
-                                    ),
-                                    _vm._v(" "),
-                                    _c("div", { staticClass: "number-box" }, [
-                                      _c("span", [_vm._v(_vm._s(++i))]),
-                                    ]),
-                                  ]),
-                                ]),
-                              ]
-                            )
-                          : _c(
-                              "div",
-                              {
-                                key: i,
-                                staticClass: "row justify-content-end",
-                              },
-                              [
-                                _c("div", { staticClass: "col-md-6" }, [
-                                  _c(
-                                    "div",
-                                    {
-                                      staticClass:
-                                        "history-item history-item-2",
-                                    },
-                                    [
-                                      _c(
-                                        "div",
-                                        {
-                                          staticClass:
-                                            "history-thumb wow fadeInUp",
-                                          attrs: {
-                                            "data-wow-duration": ".8s",
-                                            "data-wow-delay": ".1s",
-                                          },
-                                        },
-                                        [
-                                          _c("img", {
-                                            directives: [
-                                              {
-                                                name: "lazy",
-                                                rawName: "v-lazy",
-                                                value:
-                                                  "/uploads/" + history.image,
-                                                expression:
-                                                  "`/uploads/${history.image}`",
-                                              },
-                                            ],
-                                          }),
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "div",
-                                        {
-                                          staticClass:
-                                            "history-content wow fadeInUp",
-                                          attrs: {
-                                            "data-wow-duration": ".8s",
-                                            "data-wow-delay": ".1s",
-                                          },
-                                        },
-                                        [
-                                          _c("span", [
-                                            _vm._v(
-                                              _vm._s(history.date) +
-                                                " - " +
-                                                _vm._s(history.position)
-                                            ),
-                                          ]),
-                                          _vm._v(" "),
-                                          _c("h4", { staticClass: "title" }, [
-                                            _vm._v(_vm._s(history.title)),
-                                          ]),
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c("div", { staticClass: "number-box" }, [
-                                        _c("span", [_vm._v(_vm._s(++i))]),
-                                      ]),
-                                    ]
-                                  ),
-                                ]),
-                              ]
-                            ),
-                      ]
-                    }),
-                  ],
-                  2
-                ),
-              ]),
-            ]),
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _c("CoolLightBox", {
-        attrs: { items: _vm.items, index: _vm.index, effect: "fade" },
-        on: {
-          close: function ($event) {
-            _vm.index = null
-          },
-        },
-      }),
-    ],
-    1
-  )
-}
-var staticRenderFns = []
-render._withStripped = true
-
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_lib_loaders_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_lib_index_js_vue_loader_options_AppAbout_vue_vue_type_template_id_20448905___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!../../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./AppAbout.vue?vue&type=template&id=20448905& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/lib/loaders/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/app/AppAbout.vue?vue&type=template&id=20448905&");
 
 
 /***/ })

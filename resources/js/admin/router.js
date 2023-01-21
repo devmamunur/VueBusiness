@@ -71,7 +71,7 @@ import HistorySection from "../components/admin/home/section/History";
 import HeroStatic from "../components/admin/home/hero/Static";
 import HeroVideo from "../components/admin/home/hero/Video";
 
-import ContactPage from "../components/admin/innerpage/contact";
+import ContactPage from "../components/admin/Innerpage/Contact";
 
 // Import Feature Components
 import FeatureList from "../components/admin/home/feature/List";

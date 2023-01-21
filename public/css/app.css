@@ -123,11 +123,6 @@ textarea {
   opacity: 1;
 }
 
-:-ms-input-placeholder {
-  color: inherit;
-  opacity: 1;
-}
-
 ::placeholder {
   color: inherit;
   opacity: 1;
@@ -913,14 +908,6 @@ div#preloader .image img {
 }
 
 /*=======  Animations  =======*/
-@-webkit-keyframes sticky {
-  0% {
-    top: -200px;
-  }
-  100% {
-    top: 0;
-  }
-}
 @keyframes sticky {
   0% {
     top: -200px;
@@ -929,28 +916,9 @@ div#preloader .image img {
     top: 0;
   }
 }
-@-webkit-keyframes spin {
-  100% {
-    transform: rotate(360deg);
-  }
-}
 @keyframes spin {
   100% {
     transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes sk-foldCubeAngle {
-  0%, 10% {
-    transform: perspective(140px) rotateX(-180deg);
-    opacity: 0;
-  }
-  25%, 75% {
-    transform: perspective(140px) rotateX(0);
-    opacity: 1;
-  }
-  100%, 90% {
-    transform: perspective(140px) rotateY(180deg);
-    opacity: 0;
   }
 }
 @keyframes sk-foldCubeAngle {
@@ -967,16 +935,6 @@ div#preloader .image img {
     opacity: 0;
   }
 }
-@-webkit-keyframes pulseBtnBefore {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1.5);
-    opacity: 0;
-  }
-}
 @keyframes pulseBtnBefore {
   0% {
     transform: scale(1);
@@ -984,16 +942,6 @@ div#preloader .image img {
   }
   100% {
     transform: scale(1.5);
-    opacity: 0;
-  }
-}
-@-webkit-keyframes pulseBtnAfter {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(2);
     opacity: 0;
   }
 }
@@ -1007,14 +955,6 @@ div#preloader .image img {
     opacity: 0;
   }
 }
-@-webkit-keyframes rotate {
-  0% {
-    transform: rotate(-15deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 @keyframes rotate {
   0% {
     transform: rotate(-15deg);
@@ -1023,31 +963,12 @@ div#preloader .image img {
     transform: rotate(360deg);
   }
 }
-@-webkit-keyframes rotateTwo {
-  0% {
-    transform: rotate(15deg);
-  }
-  100% {
-    transform: rotate(-360deg);
-  }
-}
 @keyframes rotateTwo {
   0% {
     transform: rotate(15deg);
   }
   100% {
     transform: rotate(-360deg);
-  }
-}
-@-webkit-keyframes scale {
-  0% {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(2);
-  }
-  100% {
-    transform: scale(0);
   }
 }
 @keyframes scale {
@@ -2623,7 +2544,7 @@ div#preloader .image img {
 }
 @media (max-width: 991px) {
   .header-navigation .primary-menu li.current > a,
-.header-navigation .primary-menu li a:hover {
+  .header-navigation .primary-menu li a:hover {
     color: #fff;
   }
 }
@@ -3113,7 +3034,7 @@ div#preloader .image img {
 }
 @media (max-width: 991px) {
   .header-two .header-navigation .primary-menu li.current > a,
-.header-two .header-navigation .primary-menu li a:hover {
+  .header-two .header-navigation .primary-menu li a:hover {
     color: #fff;
   }
 }
@@ -3143,8 +3064,7 @@ div#preloader .image img {
   top: 0;
   width: 100%;
   z-index: 999;
-  -webkit-animation: sticky 1.2s;
-          animation: sticky 1.2s;
+  animation: sticky 1.2s;
   background-color: #fff;
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.04);
 }
@@ -3271,8 +3191,7 @@ div#preloader .image img {
   font-weight: 700;
   letter-spacing: 2px;
   padding-bottom: 10px;
-  -webkit-animation: fadeOut 1s both;
-          animation: fadeOut 1s both;
+  animation: fadeOut 1s both;
 }
 @media (max-width: 575px) {
   .banner-slider .banner-text .title-tag {
@@ -3282,8 +3201,7 @@ div#preloader .image img {
 .banner-slider .banner-text .title {
   font-size: 80px;
   line-height: 1.1;
-  -webkit-animation: fadeOut 1s both;
-          animation: fadeOut 1s both;
+  animation: fadeOut 1s both;
 }
 @media (max-width: 1399px) {
   .banner-slider .banner-text .title {
@@ -3313,8 +3231,7 @@ div#preloader .image img {
   padding-right: 30px;
   padding-top: 40px;
   padding-bottom: 45px;
-  -webkit-animation: fadeOut 1s both;
-          animation: fadeOut 1s both;
+  animation: fadeOut 1s both;
 }
 @media (max-width: 767px) {
   .banner-slider .banner-text p {
@@ -3327,35 +3244,28 @@ div#preloader .image img {
   }
 }
 .banner-slider .banner-text .main-btn {
-  -webkit-animation: fadeOut 1s both;
-          animation: fadeOut 1s both;
+  animation: fadeOut 1s both;
 }
 .banner-slider .banner-img {
   text-align: right;
   position: relative;
   z-index: 2;
-  -webkit-animation: fadeOut 1s both;
-          animation: fadeOut 1s both;
+  animation: fadeOut 1s both;
 }
 .banner-slider .slick-slide.slick-active .banner-text .title-tag {
-  -webkit-animation: fadeInUp 1s both 0.3s;
-          animation: fadeInUp 1s both 0.3s;
+  animation: fadeInUp 1s both 0.3s;
 }
 .banner-slider .slick-slide.slick-active .banner-text .title {
-  -webkit-animation: slideInLeft 1s both 0.4s;
-          animation: slideInLeft 1s both 0.4s;
+  animation: slideInLeft 1s both 0.4s;
 }
 .banner-slider .slick-slide.slick-active .banner-text p {
-  -webkit-animation: slideInLeft 1s both 0.5s;
-          animation: slideInLeft 1s both 0.5s;
+  animation: slideInLeft 1s both 0.5s;
 }
 .banner-slider .slick-slide.slick-active .banner-text .main-btn {
-  -webkit-animation: fadeInUp 1s both 0.6s;
-          animation: fadeInUp 1s both 0.6s;
+  animation: fadeInUp 1s both 0.6s;
 }
 .banner-slider .slick-slide.slick-active .banner-img {
-  -webkit-animation: fadeInRight 1s both 0.5s;
-          animation: fadeInRight 1s both 0.5s;
+  animation: fadeInRight 1s both 0.5s;
 }
 .banner-slider .slick-arrow {
   position: absolute;
@@ -4512,7 +4422,6 @@ div#preloader .image img {
   top: -40px;
   right: 50px;
   transform: scale(0);
-  -webkit-animation: scale 15s linear infinite;
   animation: scale 15s linear infinite;
   z-index: -1;
 }
@@ -4532,7 +4441,6 @@ div#preloader .image img {
   left: 10px;
   transform: rotate(-15deg);
   z-index: -1;
-  -webkit-animation: rotate 30s linear infinite;
   animation: rotate 30s linear infinite;
 }
 @media (max-width: 991px) {
@@ -4558,7 +4466,6 @@ div#preloader .image img {
   right: 10px;
   transform: rotate(-15deg);
   z-index: -1;
-  -webkit-animation: rotateTwo 30s linear infinite;
   animation: rotateTwo 30s linear infinite;
 }
 @media (max-width: 575px) {
@@ -4593,7 +4500,6 @@ div#preloader .image img {
   left: 50px;
   transform: rotate(-15deg);
   z-index: -1;
-  -webkit-animation: rotate 30s linear infinite;
   animation: rotate 30s linear infinite;
 }
 .service-section.service-with-shape-two .square-shape-two {
@@ -4606,7 +4512,6 @@ div#preloader .image img {
   top: 200px;
   transform: rotate(-15deg);
   z-index: -1;
-  -webkit-animation: rotateTwo 30s linear infinite;
   animation: rotateTwo 30s linear infinite;
 }
 .service-section.service-with-shape-two .section-title {
@@ -4645,7 +4550,6 @@ div#preloader .image img {
   top: -40px;
   right: 50px;
   transform: scale(0);
-  -webkit-animation: scale 15s linear infinite;
   animation: scale 15s linear infinite;
   z-index: -1;
 }
@@ -4941,7 +4845,6 @@ div#preloader .image img {
   top: 0;
   left: 0;
   z-index: -1;
-  -webkit-animation: pulseBtnBefore 1.8s linear infinite;
   animation: pulseBtnBefore 1.8s linear infinite;
 }
 .feature-intro-video .video-popup::after {
@@ -4954,7 +4857,6 @@ div#preloader .image img {
   top: 0;
   left: 0;
   z-index: -1;
-  -webkit-animation: pulseBtnAfter 1.5s linear infinite;
   animation: pulseBtnAfter 1.5s linear infinite;
 }
 
@@ -5553,7 +5455,6 @@ div#preloader .image img {
   top: 0;
   left: 0;
   z-index: -1;
-  -webkit-animation: pulseBtnBefore 1.8s linear infinite;
   animation: pulseBtnBefore 1.8s linear infinite;
 }
 .case-details-area .case-video-thumb a::after {
@@ -5566,7 +5467,6 @@ div#preloader .image img {
   top: 0;
   left: 0;
   z-index: -1;
-  -webkit-animation: pulseBtnAfter 1.5s linear infinite;
   animation: pulseBtnAfter 1.5s linear infinite;
 }
 .case-details-area .case-next-prev {
@@ -6519,7 +6419,6 @@ div#preloader .image img {
   top: 0;
   left: 0;
   z-index: -1;
-  -webkit-animation: pulseBtnBefore 1.8s linear infinite;
   animation: pulseBtnBefore 1.8s linear infinite;
 }
 .video-cta .video-cta-play .video-popup::after {
@@ -6532,7 +6431,6 @@ div#preloader .image img {
   top: 0;
   left: 0;
   z-index: -1;
-  -webkit-animation: pulseBtnAfter 1.5s linear infinite;
   animation: pulseBtnAfter 1.5s linear infinite;
 }
 
@@ -7157,7 +7055,6 @@ div#preloader .image img {
   width: 100%;
   border-radius: 50%;
   z-index: -1;
-  -webkit-animation: rotateTwo 30s linear infinite;
   animation: rotateTwo 30s linear infinite;
 }
 .why-choose-area .single-choose .icon-box .rotate-dot::before {
@@ -7317,9 +7214,6 @@ div#preloader .image img {
 .conatct-section-two .contact-form ::-moz-placeholder {
   color: #c1d0de;
 }
-.conatct-section-two .contact-form :-ms-input-placeholder {
-  color: #c1d0de;
-}
 .conatct-section-two .contact-form ::placeholder {
   color: #c1d0de;
 }
@@ -7475,8 +7369,7 @@ div#preloader .image img {
   left: 0;
   z-index: -2;
   opacity: 0.6;
-  -webkit-animation: pulseBtnBefore 1.5s linear infinite;
-          animation: pulseBtnBefore 1.5s linear infinite;
+  animation: pulseBtnBefore 1.5s linear infinite;
 }
 .contact-video .video-popup::after {
   position: absolute;
@@ -7610,7 +7503,6 @@ div#preloader .image img {
   top: 0;
   left: 0;
   z-index: -1;
-  -webkit-animation: pulseBtnBefore 1.8s linear infinite;
   animation: pulseBtnBefore 1.8s linear infinite;
 }
 .intro-video-area .intro-thumb .video-popup::after {
@@ -7623,7 +7515,6 @@ div#preloader .image img {
   top: 0;
   left: 0;
   z-index: -1;
-  -webkit-animation: pulseBtnAfter 1.5s linear infinite;
   animation: pulseBtnAfter 1.5s linear infinite;
 }
 
@@ -7653,7 +7544,6 @@ div#preloader .image img {
   top: 0;
   left: 0;
   z-index: -1;
-  -webkit-animation: pulseBtnBefore 1.8s linear infinite;
   animation: pulseBtnBefore 1.8s linear infinite;
 }
 .intro-video-area-two .video-popup::after {
@@ -7666,7 +7556,6 @@ div#preloader .image img {
   top: 0;
   left: 0;
   z-index: -1;
-  -webkit-animation: pulseBtnAfter 1.5s linear infinite;
   animation: pulseBtnAfter 1.5s linear infinite;
 }
 .intro-video-area-two .video-thumb-1 {
@@ -7755,7 +7644,6 @@ div#preloader .image img {
   top: 0;
   left: 0;
   z-index: -1;
-  -webkit-animation: pulseBtnBefore 1.8s linear infinite;
   animation: pulseBtnBefore 1.8s linear infinite;
 }
 .intro-video-with-shape .video-popup::after {
@@ -7768,7 +7656,6 @@ div#preloader .image img {
   top: 0;
   left: 0;
   z-index: -1;
-  -webkit-animation: pulseBtnAfter 1.5s linear infinite;
   animation: pulseBtnAfter 1.5s linear infinite;
 }
 
@@ -8131,11 +8018,6 @@ div#preloader .image img {
   font-size: 14px;
 }
 .footer-area .widget-item-3 .features-sub .input-box input::-moz-placeholder {
-  font-size: 14px;
-  opacity: 1;
-  color: #c2d1e2;
-}
-.footer-area .widget-item-3 .features-sub .input-box input:-ms-input-placeholder {
   font-size: 14px;
   opacity: 1;
   color: #c2d1e2;
@@ -9223,7 +9105,7 @@ div#preloader .image img {
 }
 @media (max-width: 575px) {
   .billing-details .title,
-.order-details .title {
+  .order-details .title {
     font-size: 22px;
   }
 }
@@ -11021,10 +10903,6 @@ div#preloader .image img {
   opacity: 1;
   color: #c1d0de;
 }
-.quote-area .quote-overlay .quote-form .input-box input:-ms-input-placeholder {
-  opacity: 1;
-  color: #c1d0de;
-}
 .quote-area .quote-overlay .quote-form .input-box input::placeholder {
   opacity: 1;
   color: #c1d0de;
@@ -11040,10 +10918,6 @@ div#preloader .image img {
   resize: none;
 }
 .quote-area .quote-overlay .quote-form .input-box textarea::-moz-placeholder {
-  opacity: 1;
-  color: #c1d0de;
-}
-.quote-area .quote-overlay .quote-form .input-box textarea:-ms-input-placeholder {
   opacity: 1;
   color: #c1d0de;
 }
