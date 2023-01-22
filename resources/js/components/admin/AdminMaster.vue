@@ -21,11 +21,6 @@ import AdminBreadcrumb from "./inc/AdminBreadcrumb";
 import { mapGetters, mapActions } from "vuex";
 export default {
   name: "AdminMaster",
-  data() {
-    return {
-      isAdmin: "",
-    };
-  },
   components: {
     AdminFooter,
     AdminHeader,

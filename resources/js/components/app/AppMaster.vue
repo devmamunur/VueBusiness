@@ -30,6 +30,7 @@ export default {
         })
     },
     created (){
+ 
         this.getSetting();
         this.getSectionInfo();
         this.getSocialLinks();

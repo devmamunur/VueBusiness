@@ -14,8 +14,7 @@ import i18n from './locales/appLocal'
 import library from './common/library'
 
 
-import VueLazyload from 'vue-lazyload'
-
+import VueLazyload from 'vue-lazyload';
 
 
 Vue.use(VueLazyload, {

@@ -24,15 +24,7 @@ use Illuminate\Support\Facades\Auth;
 class DashboardController extends Controller
 {
 
-    public function isAdmin(){
-        $user = Auth::user();
-        if($user){
-            $data = "yes";
-        }else{
-            $data = "no";
-        }
-        return $data;
-    }
+
 
     public function adminProfile(){
         $user = User::first();

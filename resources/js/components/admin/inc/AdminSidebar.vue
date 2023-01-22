@@ -1035,11 +1035,13 @@ export default {
   methods: {
     logout() {
       axios
-        .get("/api/logout")
+        .get("/api/admin/logout")
         .then((response) => {
+          localStorage.removeItem('token');
           this.$router.push({ name: "AdminLogin" });
         })
         .catch((errors) => {
+          localStorage.removeItem('token');
           this.$router.push({ name: "AdminLogin" });
           console.log(errors);
         });

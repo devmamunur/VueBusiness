@@ -4,7 +4,6 @@ export const dashboard = {
     namespaced: true,
     state:{
         data: {},
-        isAdmin: {},
         adminInfo: {},
         adminPassword: {},
     },
@@ -12,9 +11,7 @@ export const dashboard = {
         getData(state){
             return state.data;
         },
-        getIsAdmin(state){
-            return state.isAdmin;
-        },
+   
         getAdminInfo(state){
             return state.adminInfo;
         },
@@ -23,13 +20,6 @@ export const dashboard = {
         }
     },
     actions: {
-        getIsAdmin(context, payload){
-            return Axios.get('/api/admin/isadmin')
-            .then((result) => {
-                context.commit('getIsAdmin', result.data);
-            }).catch((err) => {
-            });
-        },
         getData(context, payload){
             return Axios.get('/api/admin/dashboards')
             .then((result) => {
@@ -59,9 +49,7 @@ export const dashboard = {
         },
     },
     mutations: {
-        getIsAdmin(state, payload){
-            return state.isAdmin = payload;
-        },
+    
         getData(state, payload){
             return state.data = payload;
         },

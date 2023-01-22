@@ -32,7 +32,7 @@
             <div class="g-wrapper mb-3">
               <div class="input-group">
                 <input
-                  type="password"
+                  type="text"
                   class="form-control"
                   :placeholder="$t('Password')"
                   v-model="form.password"
@@ -72,16 +72,22 @@ export default {
     return {
       loading: false,
       errors: {},
-      form: {},
+      form: {
+        email : '',
+        password : ''
+      },
     };
   },
   methods: {
-    login() {
+    async login() {
       this.loading = true;
-      axios
+        await axios
         .post("/api/login", this.form)
         .then((result) => {
           this.loading = false;
+          localStorage.setItem('token', result.data.access_token);
+          console.log("Login 6666 response data is : ", result.data.access_token);
+
           this.$notify({
             title: "Success",
             message: "Login Successfully !",
@@ -92,7 +98,14 @@ export default {
         .catch((err) => {
           this.errors = err.response.data.errors;
         });
+   
     },
   },
+  created () {
+    let token = localStorage.getItem('token');
+      if(token){
+          this.$router.push({ name: "AdminDashboard" });
+      }
+  }
 };
-</script>
+</script> 

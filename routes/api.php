@@ -35,15 +35,14 @@ use App\Http\Controllers\Api\QuoteController;
 use App\Http\Controllers\Api\TestimonialController;
 
 
-    Route::post('login', [AuthController::class, 'login'])->name('loginPage');
-
-    Route::get('logout', [AuthController::class, 'logout']);
+     Route::post('login', [AuthController::class, 'login'])->name('loginPage');
 
 
 
 
 
-Route::group(['prefix' => 'admin', 'middleware' => ['auth:sanctum']], function(){
+
+Route::group(['prefix' => 'admin', 'middleware' => ['auth:sanctum']], function(){ 
 
     Route::apiResources([
         'settings' => SettingController::class,
@@ -76,6 +75,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth:sanctum']], function()
         'languages' => LanguageController::class,
         'dashboards' => DashboardController::class,
     ]);
+
+    Route::get('/logout', [AuthController::class, 'logout']);
 
     // Language Route
     Route::post('/languages/frontend/update', [LanguageController::class, 'frontendUpdate']);
@@ -187,7 +188,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth:sanctum']], function()
     Route::post('/quotes/multiple-delete', [QuoteController::class, 'multipleDelete']);
     Route::get('/quotes/status/{id}/{status}', [QuoteController::class, 'status']);
 });
-Route::get('admin/isadmin', [DashboardController::class, 'isAdmin']);
+
 
 
 // *************************************************
