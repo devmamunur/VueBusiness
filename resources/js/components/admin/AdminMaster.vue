@@ -27,6 +27,12 @@ export default {
     AdminSidebar,
     AdminBreadcrumb,
   },
+  created (){
+    let token = localStorage.getItem('token');
+      if(!token){
+          this.$router.push({ name: "AdminLogin" });
+      }
+  }
 };
 </script>
 

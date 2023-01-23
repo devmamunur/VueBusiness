@@ -40,7 +40,10 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
   },
   computed: _objectSpread({}, (0,vuex__WEBPACK_IMPORTED_MODULE_3__.mapGetters)({
     setting: "index/getSetting"
-  }))
+  })),
+  mounted: function mounted() {
+    this.$store.dispatch('index/getLoading', false);
+  }
 });
 
 /***/ }),

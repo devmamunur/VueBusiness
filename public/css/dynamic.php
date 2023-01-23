@@ -305,3 +305,7 @@ td.product-remove a{
 }
 
 
+.spinner {
+	border: 2px solid #f3f3f3;
+	border-top: 3px solid <?php echo $color ?> !important;
+}

@@ -24,7 +24,10 @@ try {
  */
 
 window.axios = require('axios');
+<<<<<<< HEAD
+=======
 axios.defaults.withCredentials = true;
+>>>>>>> parent of 7ed6d217 (add htaccess file)
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 

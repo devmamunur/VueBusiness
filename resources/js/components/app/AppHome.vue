@@ -28,6 +28,9 @@ export default {
         ...mapGetters({
             setting : "index/getSetting"
         })
+    },
+    mounted (){
+        this.$store.dispatch('index/getLoading', false);
     }
 };
 </script>

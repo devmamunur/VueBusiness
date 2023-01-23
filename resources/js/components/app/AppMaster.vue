@@ -1,11 +1,16 @@
 <template>
     <div id="app_master">
-        <app-header></app-header>
-        <Breadcrumb v-if="$route.name !='Home'"></Breadcrumb>
-        <transition name="fade-transform" mode="out-in">
-            <router-view></router-view>
-        </transition>
-        <app-footer></app-footer>
+        <div class="myPreloader" v-if="$store.state.index.loading">
+            <div class="spinner"></div>
+        </div>
+        <div>
+            <app-header></app-header>
+            <Breadcrumb v-if="$route.name !='Home'"></Breadcrumb>
+            <transition name="fade-transform" mode="out-in">
+                <router-view></router-view>
+            </transition>
+            <app-footer></app-footer>
+        </div>
     </div>
 </template>
 
@@ -30,7 +35,7 @@ export default {
         })
     },
     created (){
- 
+
         this.getSetting();
         this.getSectionInfo();
         this.getSocialLinks();

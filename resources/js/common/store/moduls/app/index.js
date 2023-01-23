@@ -3,6 +3,7 @@ import Axios from "axios"
 export const index = {
     namespaced: true,
     state:{
+        loading : true,
         sectionInfo : {},
         setting : {},
         visibility : {},
@@ -144,6 +145,9 @@ export const index = {
         },
         getClients(state){
             return state.clients;
+        },
+        getLoading(state){
+            return state.loading;
         },
     },
     actions: {
@@ -357,9 +361,15 @@ export const index = {
                 context.commit('getClients', result.data);
             })
         },
+        getLoading(context, payload){
+                context.commit('getLoading', payload);
+        },
 
     },
     mutations: {
+        getLoading(state, payload){
+            return state.loading = payload;
+        },
         getSectionInfo(state, payload){
             return state.sectionInfo = payload;
         },

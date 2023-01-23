@@ -259,10 +259,6 @@ export default {
     })
   },
   created() {
-    let token = localStorage.getItem('token');
-      if(!token){
-          this.$router.push({ name: "AdminLogin" });
-      }
     this.getData();
   }
 };
