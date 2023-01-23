@@ -98,7 +98,7 @@ var render = function render() {
     staticClass: "col-lg-8"
   }, [_c("div", {
     staticClass: "row blog-grid-items"
-  }, _vm._l(_vm.portfolios.data, function (item, i) {
+  }, [_vm.portfolios.data.length > 0 ? _vm._l(_vm.portfolios.data, function (item, i) {
     return _c("div", {
       key: i,
       staticClass: "col-lg-6"
@@ -128,7 +128,57 @@ var render = function render() {
     }, [_c("h5", {
       staticClass: "title"
     }, [_vm._v(_vm._s(item.title))])])])], 1);
-  }), 0), _vm._v(" "), _vm.portfolios.meta ? [_vm.portfolios.meta.total > 8 ? _c("div", {
+  }) : _vm._l(6, function (l, i) {
+    return _c("div", {
+      key: i,
+      staticClass: "col-lg-6 mb-30"
+    }, [_c("el-skeleton", {
+      staticStyle: {
+        width: "100%"
+      }
+    }, [_c("template", {
+      slot: "template"
+    }, [_c("el-skeleton-item", {
+      staticStyle: {
+        width: "100%",
+        height: "240px"
+      },
+      attrs: {
+        variant: "image"
+      }
+    }), _vm._v(" "), _c("div", {
+      staticStyle: {
+        padding: "14px"
+      }
+    }, [_c("el-skeleton-item", {
+      staticStyle: {
+        width: "50%"
+      },
+      attrs: {
+        variant: "p"
+      }
+    }), _vm._v(" "), _c("div", {
+      staticStyle: {
+        display: "flex",
+        "align-items": "center",
+        "justify-items": "space-between"
+      }
+    }, [_c("el-skeleton-item", {
+      staticStyle: {
+        "margin-right": "16px"
+      },
+      attrs: {
+        variant: "text"
+      }
+    }), _vm._v(" "), _c("el-skeleton-item", {
+      staticStyle: {
+        width: "30%"
+      },
+      attrs: {
+        variant: "text"
+      }
+    })], 1)], 1)], 1)], 2)], 1);
+  })], 2), _vm._v(" "), _vm.portfolios.meta ? [_vm.portfolios.meta.total > 8 ? _c("div", {
     staticClass: "row"
   }, [_c("div", {
     staticClass: "col-lg-12 text-center"

@@ -4,21 +4,58 @@
       <div class="row">
         <div class="col-lg-8">
           <div class="row blog-grid-items">
-            <div v-for="(item, i) in portfolios.data" :key="i" class="col-lg-6">
-              <router-link
-                :to="{ name: 'PortfolioDetails', params: { slug: item.slug } }"
-                class="single-blog-grid mb-30"
+            <template v-if="portfolios.data.length > 0">
+              <div
+                v-for="(item, i) in portfolios.data"
+                :key="i"
+                class="col-lg-6"
               >
-                <div
-                  class="img"
-                  v-lazy:background-image="`/uploads/${item.featured_image}`"
-                ></div>
-                <span class="cat">{{ item.service.title }}</span>
-                <div class="blog-grid-overlay">
-                  <h5 class="title">{{ item.title }}</h5>
-                </div>
-              </router-link>
-            </div>
+                <router-link
+                  :to="{
+                    name: 'PortfolioDetails',
+                    params: { slug: item.slug },
+                  }"
+                  class="single-blog-grid mb-30"
+                >
+                  <div
+                    class="img"
+                    v-lazy:background-image="`/uploads/${item.featured_image}`"
+                  ></div>
+                  <span class="cat">{{ item.service.title }}</span>
+                  <div class="blog-grid-overlay">
+                    <h5 class="title">{{ item.title }}</h5>
+                  </div>
+                </router-link>
+              </div>
+            </template>
+            <template v-else>
+              <div v-for="(l, i) in 6" :key="i" class="col-lg-6 mb-30">
+                <el-skeleton style="width: 100%">
+                  <template slot="template">
+                    <el-skeleton-item
+                      variant="image"
+                      style="width: 100%; height: 240px"
+                    />
+                    <div style="padding: 14px">
+                      <el-skeleton-item variant="p" style="width: 50%" />
+                      <div
+                        style="
+                          display: flex;
+                          align-items: center;
+                          justify-items: space-between;
+                        "
+                      >
+                        <el-skeleton-item
+                          variant="text"
+                          style="margin-right: 16px"
+                        />
+                        <el-skeleton-item variant="text" style="width: 30%" />
+                      </div>
+                    </div>
+                  </template>
+                </el-skeleton>
+              </div>
+            </template>
           </div>
           <template v-if="portfolios.meta">
             <div class="row" v-if="portfolios.meta.total > 8">

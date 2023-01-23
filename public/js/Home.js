@@ -1746,7 +1746,11 @@ __webpack_require__.r(__webpack_exports__);
 var render = function render() {
   var _vm = this,
     _c = _vm._self._c;
-  return _c("div", [_vm.setting.theme_version == 1 ? _c("ThemeOne") : _vm._e(), _vm._v(" "), _vm.setting.theme_version == 2 ? _c("ThemeTwo") : _vm._e(), _vm._v(" "), _vm.setting.theme_version == 3 ? _c("ThemeThree") : _vm._e()], 1);
+  return _c("div", [_vm.$store.state.index.loading ? _c("div", {
+    staticClass: "myPreloader"
+  }, [_c("div", {
+    staticClass: "spinner"
+  })]) : _vm._e(), _vm._v(" "), _vm.setting.theme_version == 1 ? _c("ThemeOne") : _vm._e(), _vm._v(" "), _vm.setting.theme_version == 2 ? _c("ThemeTwo") : _vm._e(), _vm._v(" "), _vm.setting.theme_version == 3 ? _c("ThemeThree") : _vm._e()], 1);
 };
 var staticRenderFns = [];
 render._withStripped = true;

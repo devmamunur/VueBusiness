@@ -63,7 +63,7 @@ var render = function render() {
     staticClass: "container"
   }, [_c("div", {
     staticClass: "row"
-  }, _vm._l(_vm.teams.data, function (team, i) {
+  }, [_vm.teams.data.length > 0 ? _vm._l(_vm.teams.data, function (team, i) {
     return _c("div", {
       key: i,
       staticClass: "col-lg-4 col-md-6 col-sm-6"
@@ -126,7 +126,57 @@ var render = function render() {
     }, [_vm._v(_vm._s(team.name))])], 1), _vm._v(" "), _c("span", {
       staticClass: "position"
     }, [_vm._v(_vm._s(team.dagenation))])])])]);
-  }), 0), _vm._v(" "), _vm.teams.meta ? _c("div", {
+  }) : _vm._l(6, function (l, i) {
+    return _c("div", {
+      key: i,
+      staticClass: "col-lg-4 col-md-6 col-sm-6 mb-30"
+    }, [_c("el-skeleton", {
+      staticStyle: {
+        width: "100%"
+      }
+    }, [_c("template", {
+      slot: "template"
+    }, [_c("el-skeleton-item", {
+      staticStyle: {
+        width: "100%",
+        height: "240px"
+      },
+      attrs: {
+        variant: "image"
+      }
+    }), _vm._v(" "), _c("div", {
+      staticStyle: {
+        padding: "14px"
+      }
+    }, [_c("el-skeleton-item", {
+      staticStyle: {
+        width: "50%"
+      },
+      attrs: {
+        variant: "p"
+      }
+    }), _vm._v(" "), _c("div", {
+      staticStyle: {
+        display: "flex",
+        "align-items": "center",
+        "justify-items": "space-between"
+      }
+    }, [_c("el-skeleton-item", {
+      staticStyle: {
+        "margin-right": "16px"
+      },
+      attrs: {
+        variant: "text"
+      }
+    }), _vm._v(" "), _c("el-skeleton-item", {
+      staticStyle: {
+        width: "30%"
+      },
+      attrs: {
+        variant: "text"
+      }
+    })], 1)], 1)], 1)], 2)], 1);
+  })], 2), _vm._v(" "), _vm.teams.meta ? _c("div", {
     staticClass: "row mt-30"
   }, [_c("div", {
     staticClass: "col-lg-12 text-center"

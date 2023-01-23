@@ -155,7 +155,7 @@ var render = function render() {
     }
   }, [_vm._v(_vm._s(_vm.$t("View All Blog")))])], 1), _vm._v(" "), _c("div", {
     staticClass: "col-lg-12"
-  }, [_c("div", {
+  }, [_vm.blog.description ? _c("div", {
     staticClass: "blog-dteails-content"
   }, [_c("img", {
     directives: [{
@@ -228,7 +228,52 @@ var render = function render() {
     }
   }, [_c("i", {
     staticClass: "fab fa-whatsapp"
-  })])], 1)])])])])])])]);
+  })])], 1)])])]) : _c("el-skeleton", {
+    staticStyle: {
+      width: "100%"
+    }
+  }, [_c("template", {
+    slot: "template"
+  }, [_c("el-skeleton-item", {
+    staticStyle: {
+      width: "100%",
+      height: "540px"
+    },
+    attrs: {
+      variant: "image"
+    }
+  }), _vm._v(" "), _c("div", {
+    staticStyle: {
+      padding: "14px"
+    }
+  }, [_c("el-skeleton-item", {
+    staticStyle: {
+      width: "50%"
+    },
+    attrs: {
+      variant: "p"
+    }
+  }), _vm._v(" "), _c("div", {
+    staticStyle: {
+      display: "flex",
+      "align-items": "center",
+      "justify-items": "space-between"
+    }
+  }, [_c("el-skeleton-item", {
+    staticStyle: {
+      "margin-right": "16px"
+    },
+    attrs: {
+      variant: "text"
+    }
+  }), _vm._v(" "), _c("el-skeleton-item", {
+    staticStyle: {
+      width: "30%"
+    },
+    attrs: {
+      variant: "text"
+    }
+  })], 1)], 1)], 1)], 2)], 1)])])]);
 };
 var staticRenderFns = [];
 render._withStripped = true;

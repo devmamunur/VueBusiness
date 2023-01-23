@@ -1,16 +1,11 @@
 <template>
     <div id="app_master">
-        <div class="myPreloader" v-if="$store.state.index.loading">
-            <div class="spinner"></div>
-        </div>
-        <div>
             <app-header></app-header>
             <Breadcrumb v-if="$route.name !='Home'"></Breadcrumb>
             <transition name="fade-transform" mode="out-in">
                 <router-view></router-view>
             </transition>
             <app-footer></app-footer>
-        </div>
     </div>
 </template>
 

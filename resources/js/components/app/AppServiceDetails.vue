@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8">
-          <div class="service-details-content">
+          <div class="service-details-content" v-if="service.content">
             <div class="img">
               <img v-lazy="`/uploads/${service.image}`" />
             </div>
@@ -11,6 +11,27 @@
               {{ service.content }}
             </div>
           </div>
+          <el-skeleton v-else style="width: 100%">
+            <template slot="template">
+              <el-skeleton-item
+                variant="image"
+                style="width: 100%; height: 540px"
+              />
+              <div style="padding: 14px">
+                <el-skeleton-item variant="p" style="width: 50%" />
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    justify-items: space-between;
+                  "
+                >
+                  <el-skeleton-item variant="text" style="margin-right: 16px" />
+                  <el-skeleton-item variant="text" style="width: 30%" />
+                </div>
+              </div>
+            </template>
+          </el-skeleton>
         </div>
         <div class="col-lg-4 blog-sidebar order-first order-lg-last">
           <div class="widget categories-widget">

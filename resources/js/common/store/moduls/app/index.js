@@ -151,217 +151,217 @@ export const index = {
         },
     },
     actions: {
-        getSectionInfo(context){
-             Axios.get('/api/section-infos')
+        async getSectionInfo(context){
+            await Axios.get('/api/section-infos')
             .then((result) => {
                 context.commit('getSectionInfo', result.data);
             })
         },
-        getSetting(context){
-             Axios.get('/api/settings')
+        async getSetting(context){
+            await Axios.get('/api/settings')
             .then((result) => {
                 context.commit('getSetting', result.data);
             })
         },
-        getVisibility(context){
-             Axios.get('/api/visibilities')
+        async getVisibility(context){
+            await Axios.get('/api/visibilities')
             .then((result) => {
                 context.commit('getVisibility', result.data);
             })
         },
-        getSlider(context){
-             Axios.get('/api/sliders')
+        async getSlider(context){
+            await Axios.get('/api/sliders')
             .then((result) => {
                 context.commit('getSlider', result.data);
             })
         },
-        getFooterLink(context){
-             Axios.get('/api/footerlinks')
+        async getFooterLink(context){
+            await Axios.get('/api/footerlinks')
             .then((result) => {
                 context.commit('getFooterLink', result.data);
             })
         },
-        getFeatures(context){
-            Axios.get('/api/features')
+        async getFeatures(context){
+            await Axios.get('/api/features')
             .then((result) => {
                 context.commit('getFeatures', result.data);
             })
         },
-        getWhyChoose(context){
-            Axios.get('/api/why-chooses')
+        async getWhyChoose(context){
+            await Axios.get('/api/why-chooses')
             .then((result) => {
                 context.commit('getWhyChoose', result.data);
             })
         },
-        getServiceSection(context){
-            Axios.get('/api/section/service')
+        async getServiceSection(context){
+            await Axios.get('/api/section/service')
             .then((result) => {
                 context.commit('getServiceSection', result.data);
             })
         },
-        getPortfolioSection(context){
-            Axios.get('/api/section/portfolio')
+        async getPortfolioSection(context){
+            await Axios.get('/api/section/portfolio')
             .then((result) => {
                 context.commit('getPortfolioSection', result.data);
             })
         },
-        getTeamSection(context){
-            Axios.get('/api/section/team')
+        async getTeamSection(context){
+            await Axios.get('/api/section/team')
             .then((result) => {
                 context.commit('getTeamSection', result.data);
             })
         },
-        getClientSection(context){
-            Axios.get('/api/section/client')
+        async getClientSection(context){
+            await Axios.get('/api/section/client')
             .then((result) => {
                 context.commit('getClientSection', result.data);
             })
         },
-        getBlogSection(context){
-            Axios.get('/api/section/blog')
+        async getBlogSection(context){
+            await Axios.get('/api/section/blog')
             .then((result) => {
                 context.commit('getBlogSection', result.data);
             })
         },
-        getCounters(context){
-            Axios.get('/api/counters')
+        async getCounters(context){
+            await Axios.get('/api/counters')
             .then((result) => {
                 context.commit('getCounters', result.data);
             })
         },
-        getTestimonials(context){
-            Axios.get('/api/testimonials')
+        async getTestimonials(context){
+            await Axios.get('/api/testimonials')
             .then((result) => {
                 context.commit('getTestimonials', result.data);
             })
         },
-        getWhayChooses(context){
-            Axios.get('/api/whay-chooses')
+        async getWhayChooses(context){
+            await Axios.get('/api/whay-chooses')
             .then((result) => {
                 context.commit('getWhayChooses', result.data);
             })
         },
-        getHistories(context){
-            Axios.get('/api/histories')
+        async getHistories(context){
+            await Axios.get('/api/histories')
             .then((result) => {
                 context.commit('getHistories', result.data);
             })
         },
-        getServices(context){
-            Axios.get('/api/services')
+        async getServices(context){
+            await Axios.get('/api/services')
             .then((result) => {
                 context.commit('getServices', result.data);
             })
         },
-        getSingleService(context, payload){
-            Axios.get(`/api/services/${payload}`)
+        async getSingleService(context, payload){
+            await Axios.get(`/api/services/${payload}`)
             .then(res=>{
                 context.commit('getSingleService', res.data)
             })
         },
-        getPortfolios(context, payload){
-            Axios.get('/api/portfolios?page='+payload.page+'&category='+payload.category,)
+        async getPortfolios(context, payload){
+            await Axios.get('/api/portfolios?page='+payload.page+'&category='+payload.category,)
             .then((result) => {
                 context.commit('getPortfolios', result.data);
             })
         },
-        getSinglePortfolio(context, payload){
-            Axios.get(`/api/portfolios/${payload}`)
+        async getSinglePortfolio(context, payload){
+            await Axios.get(`/api/portfolios/${payload}`)
             .then(res=>{
                 context.commit('getSinglePortfolio', res.data)
             })
         },
-        getSinglePortfolioImages(context, payload){
-            Axios.get(`/api/portfolios/images/${payload}`)
+        async getSinglePortfolioImages(context, payload){
+            await Axios.get(`/api/portfolios/images/${payload}`)
             .then(res=>{
                 context.commit('getSinglePortfolioImages', res.data)
             })
         },
-        getBlogs(context, payload){
-            Axios.get('/api/blogs?page='+payload.page+'&category='+payload.category+'&search='+payload.search,)
+        async getBlogs(context, payload){
+            await Axios.get('/api/blogs?page='+payload.page+'&category='+payload.category+'&search='+payload.search,)
             .then((result) => {
                 context.commit('getBlogs', result.data);
             })
         },
-        getSingleBlog(context, payload){
-            Axios.get(`/api/blogs/${payload}`)
+        async getSingleBlog(context, payload){
+            await Axios.get(`/api/blogs/${payload}`)
             .then(res=>{
                 context.commit('getSingleBlog', res.data)
             })
         },
-        getBcategories(context, payload){
-            Axios.get('/api/bcategories')
+        async getBcategories(context, payload){
+            await Axios.get('/api/bcategories')
             .then((result) => {
                 context.commit('getBcategories', result.data);
             })
         },
-        getSocialLinks(context){
-            Axios.get('/api/social-links')
+        async getSocialLinks(context){
+            await Axios.get('/api/social-links')
             .then((result) => {
                 context.commit('getSocialLinks', result.data);
             })
         },
-        getPackages(context){
-            Axios.get('/api/packages')
+        async getPackages(context){
+            await Axios.get('/api/packages')
             .then((result) => {
                 context.commit('getPackages', result.data);
             })
         },
-        getTeams(context, payload){
-            Axios.get('/api/teams/?page='+payload, )
+        async getTeams(context, payload){
+            await Axios.get('/api/teams/?page='+payload, )
             .then((result) => {
                 context.commit('getTeams', result.data);
             })
         },
-        getSingleTeam(context, payload){
-            Axios.get(`/api/teams/${payload}`)
+        async getSingleTeam(context, payload){
+            await Axios.get(`/api/teams/${payload}`)
             .then((result) => {
                 context.commit('getSingleTeam', result.data);
             })
         },
-        getFaqs(context){
-            Axios.get('/api/faqs' )
+        async getFaqs(context){
+            await Axios.get('/api/faqs' )
             .then((result) => {
                 context.commit('getFaqs', result.data);
             })
         },
-        getGalleries(context){
-            Axios.get('/api/galleries' )
+        async getGalleries(context){
+            await Axios.get('/api/galleries' )
             .then((result) => {
                 context.commit('getGalleries', result.data);
             })
         },
-        getGalleryItems(context, payload){
-            Axios.get(`/api/gallery/${payload}`)
+        async getGalleryItems(context, payload){
+            await Axios.get(`/api/gallery/${payload}`)
             .then((result) => {
                 context.commit('getGalleryItems', result.data);
             })
         },
-        getJobCategories(context){
-            Axios.get('/api/careers/categories' )
+        async getJobCategories(context){
+            await Axios.get('/api/careers/categories' )
             .then((result) => {
                 context.commit('getJobCategories', result.data);
             })
         },
-        getJobs(context, payload){
-            Axios.get('/api/careers?page='+payload.page+'&category='+payload.category,)
+        async getJobs(context, payload){
+            await Axios.get('/api/careers?page='+payload.page+'&category='+payload.category,)
             .then((result) => {
                 context.commit('getJobs', result.data);
             })
         },
-        getSingleJob(context, payload){
-            Axios.get(`/api/careers/${payload}`)
+        async getSingleJob(context, payload){
+            await Axios.get(`/api/careers/${payload}`)
             .then(res=>{
                 context.commit('getSingleJob', res.data)
             })
         },
-        getClients(context){
-            Axios.get('/api/clients')
+        async getClients(context){
+            await Axios.get('/api/clients')
             .then((result) => {
                 context.commit('getClients', result.data);
             })
         },
-        getLoading(context, payload){
+        async getLoading(context, payload){
                 context.commit('getLoading', payload);
         },
 

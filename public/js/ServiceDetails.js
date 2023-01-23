@@ -79,7 +79,7 @@ var render = function render() {
     staticClass: "row"
   }, [_c("div", {
     staticClass: "col-lg-8"
-  }, [_c("div", {
+  }, [_vm.service.content ? _c("div", {
     staticClass: "service-details-content"
   }, [_c("div", {
     staticClass: "img"
@@ -92,7 +92,52 @@ var render = function render() {
     }]
   })]), _vm._v(" "), _c("div", {
     staticClass: "content"
-  }, [_vm._v("\n            " + _vm._s(_vm.service.content) + "\n          ")])])]), _vm._v(" "), _c("div", {
+  }, [_vm._v("\n            " + _vm._s(_vm.service.content) + "\n          ")])]) : _c("el-skeleton", {
+    staticStyle: {
+      width: "100%"
+    }
+  }, [_c("template", {
+    slot: "template"
+  }, [_c("el-skeleton-item", {
+    staticStyle: {
+      width: "100%",
+      height: "540px"
+    },
+    attrs: {
+      variant: "image"
+    }
+  }), _vm._v(" "), _c("div", {
+    staticStyle: {
+      padding: "14px"
+    }
+  }, [_c("el-skeleton-item", {
+    staticStyle: {
+      width: "50%"
+    },
+    attrs: {
+      variant: "p"
+    }
+  }), _vm._v(" "), _c("div", {
+    staticStyle: {
+      display: "flex",
+      "align-items": "center",
+      "justify-items": "space-between"
+    }
+  }, [_c("el-skeleton-item", {
+    staticStyle: {
+      "margin-right": "16px"
+    },
+    attrs: {
+      variant: "text"
+    }
+  }), _vm._v(" "), _c("el-skeleton-item", {
+    staticStyle: {
+      width: "30%"
+    },
+    attrs: {
+      variant: "text"
+    }
+  })], 1)], 1)], 1)], 2)], 1), _vm._v(" "), _c("div", {
     staticClass: "col-lg-4 blog-sidebar order-first order-lg-last"
   }, [_c("div", {
     staticClass: "widget categories-widget"

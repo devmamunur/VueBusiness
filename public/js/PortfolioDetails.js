@@ -81,7 +81,7 @@ var render = function render() {
     staticClass: "row"
   }, [_c("div", {
     staticClass: "col-lg-8"
-  }, [_c("div", {
+  }, [_vm.portfolio.content ? _c("div", {
     staticClass: "service-details-content"
   }, [_vm.portfolioImages.length > 0 ? [_c("div", {
     staticClass: "portfolio-details-slider"
@@ -136,7 +136,52 @@ var render = function render() {
     }
   })])], _vm._v(" "), _c("div", {
     staticClass: "content"
-  }, [_vm._v("\n                      " + _vm._s(_vm.portfolio.content) + "\n                    ")])], 2)]), _vm._v(" "), _c("div", {
+  }, [_vm._v("\n            " + _vm._s(_vm.portfolio.content) + "\n          ")])], 2) : _c("el-skeleton", {
+    staticStyle: {
+      width: "100%"
+    }
+  }, [_c("template", {
+    slot: "template"
+  }, [_c("el-skeleton-item", {
+    staticStyle: {
+      width: "100%",
+      height: "540px"
+    },
+    attrs: {
+      variant: "image"
+    }
+  }), _vm._v(" "), _c("div", {
+    staticStyle: {
+      padding: "14px"
+    }
+  }, [_c("el-skeleton-item", {
+    staticStyle: {
+      width: "50%"
+    },
+    attrs: {
+      variant: "p"
+    }
+  }), _vm._v(" "), _c("div", {
+    staticStyle: {
+      display: "flex",
+      "align-items": "center",
+      "justify-items": "space-between"
+    }
+  }, [_c("el-skeleton-item", {
+    staticStyle: {
+      "margin-right": "16px"
+    },
+    attrs: {
+      variant: "text"
+    }
+  }), _vm._v(" "), _c("el-skeleton-item", {
+    staticStyle: {
+      width: "30%"
+    },
+    attrs: {
+      variant: "text"
+    }
+  })], 1)], 1)], 1)], 2)], 1), _vm._v(" "), _c("div", {
     staticClass: "col-lg-4 blog-sidebar order-first order-lg-last"
   }, [_c("div", {
     staticClass: "case-live"
@@ -192,7 +237,7 @@ var render = function render() {
       name: "lazy",
       rawName: "v-lazy:background-image",
       value: "/uploads/".concat(_vm.sectionInfo.meeet_us_bg_image),
-      expression: "`/uploads/${sectionInfo.meeet_us_bg_image}`",
+      expression: "\n            `/uploads/${sectionInfo.meeet_us_bg_image}`\n          ",
       arg: "background-image"
     }],
     staticClass: "side-bar-contact mt-30"
@@ -209,7 +254,7 @@ var render = function render() {
     attrs: {
       href: "tel:".concat(JSON.parse(_vm.setting.number)[0])
     }
-  }, [_vm._v("\n                                " + _vm._s(JSON.parse(_vm.setting.number)[0]) + "\n                            ")])]) : _vm._e()])])])])])]);
+  }, [_vm._v("\n                " + _vm._s(JSON.parse(_vm.setting.number)[0]) + "\n              ")])]) : _vm._e()])])])])])]);
 };
 var staticRenderFns = [];
 render._withStripped = true;

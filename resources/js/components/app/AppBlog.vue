@@ -4,47 +4,80 @@
       <div class="row">
         <div class="col-lg-8">
           <div class="row justify-content-center">
-            <div
-              v-for="(blog, i) in blogs.data"
-              :key="i"
-              class="col-md-6 about-contnent wow fadeInUp"
-              data-wow-delay="0.3s"
-            >
-              <div class="latest-news-box mt-30">
-                <div class="post-thumb">
-                  <img v-lazy="`/uploads/${blog.image}`" />
-                </div>
-                <div class="post-content">
-                  <ul class="post-meta">
-                    <li>
-                      <span>{{ $t("By Admin") }},</span>
-                    </li>
-                    <li>
-                      <span>{{ blog.created_at | timeFormat }}</span>
-                    </li>
-                  </ul>
-                  <h4 class="title">
+            <template v-if="blogs.data.length > 0">
+              <div
+                v-for="(blog, i) in blogs.data"
+                :key="i"
+                class="col-md-6 about-contnent wow fadeInUp"
+                data-wow-delay="0.3s"
+              >
+                <div class="latest-news-box mt-30">
+                  <div class="post-thumb">
+                    <img v-lazy="`/uploads/${blog.image}`" />
+                  </div>
+                  <div class="post-content">
+                    <ul class="post-meta">
+                      <li>
+                        <span>{{ $t("By Admin") }},</span>
+                      </li>
+                      <li>
+                        <span>{{ blog.created_at | timeFormat }}</span>
+                      </li>
+                    </ul>
+                    <h4 class="title">
+                      <router-link
+                        router-link
+                        :to="{
+                          name: 'BlogDetails',
+                          params: { slug: blog.slug },
+                        }"
+                      >
+                        {{
+                          blog.title && blog.title.length > 40
+                            ? blog.title.substring(0, 40) + "..."
+                            : blog.title
+                        }}
+                      </router-link>
+                    </h4>
                     <router-link
                       router-link
                       :to="{ name: 'BlogDetails', params: { slug: blog.slug } }"
-                    >
-                      {{
-                        blog.title && blog.title.length > 40
-                          ? blog.title.substring(0, 40) + "..."
-                          : blog.title
-                      }}
-                    </router-link>
-                  </h4>
-                  <router-link
-                    router-link
-                    :to="{ name: 'BlogDetails', params: { slug: blog.slug } }"
-                    class="read-more-btn"
-                    >{{ $t("Read More") }}
-                    <i class="fal fa-long-arrow-right"></i
-                  ></router-link>
+                      class="read-more-btn"
+                      >{{ $t("Read More") }}
+                      <i class="fal fa-long-arrow-right"></i
+                    ></router-link>
+                  </div>
                 </div>
               </div>
-            </div>
+            </template>
+            <template v-else>
+              <div v-for="(l, i) in 6" :key="i" class="col-md-6 mb-30">
+                <el-skeleton style="width: 100%">
+                  <template slot="template">
+                    <el-skeleton-item
+                      variant="image"
+                      style="width: 100%; height: 240px"
+                    />
+                    <div style="padding: 14px">
+                      <el-skeleton-item variant="p" style="width: 50%" />
+                      <div
+                        style="
+                          display: flex;
+                          align-items: center;
+                          justify-items: space-between;
+                        "
+                      >
+                        <el-skeleton-item
+                          variant="text"
+                          style="margin-right: 16px"
+                        />
+                        <el-skeleton-item variant="text" style="width: 30%" />
+                      </div>
+                    </div>
+                  </template>
+                </el-skeleton>
+              </div>
+            </template>
           </div>
           <template v-if="blogs.meta">
             <div class="row" v-if="blogs.meta.total > 6">

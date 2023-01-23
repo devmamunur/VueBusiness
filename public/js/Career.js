@@ -250,7 +250,7 @@ var render = function render() {
     staticClass: "col-lg-8"
   }, [_c("div", {
     staticClass: "row justify-content-center"
-  }, _vm._l(_vm.blogs.data, function (blog, i) {
+  }, [_vm.blogs.data.length > 0 ? _vm._l(_vm.blogs.data, function (blog, i) {
     return _c("div", {
       key: i,
       staticClass: "col-md-6 about-contnent wow fadeInUp",
@@ -284,7 +284,7 @@ var render = function render() {
           }
         }
       }
-    }, [_vm._v("\n                    " + _vm._s(blog.title && blog.title.length > 40 ? blog.title.substring(0, 40) + "..." : blog.title) + "\n                  ")])], 1), _vm._v(" "), _c("router-link", {
+    }, [_vm._v("\n                      " + _vm._s(blog.title && blog.title.length > 40 ? blog.title.substring(0, 40) + "..." : blog.title) + "\n                    ")])], 1), _vm._v(" "), _c("router-link", {
       staticClass: "read-more-btn",
       attrs: {
         "router-link": "",
@@ -295,10 +295,60 @@ var render = function render() {
           }
         }
       }
-    }, [_vm._v(_vm._s(_vm.$t("Read More")) + "\n                  "), _c("i", {
+    }, [_vm._v(_vm._s(_vm.$t("Read More")) + "\n                    "), _c("i", {
       staticClass: "fal fa-long-arrow-right"
     })])], 1)])]);
-  }), 0), _vm._v(" "), _vm.blogs.meta ? [_vm.blogs.meta.total > 6 ? _c("div", {
+  }) : _vm._l(6, function (l, i) {
+    return _c("div", {
+      key: i,
+      staticClass: "col-md-6 mb-30"
+    }, [_c("el-skeleton", {
+      staticStyle: {
+        width: "100%"
+      }
+    }, [_c("template", {
+      slot: "template"
+    }, [_c("el-skeleton-item", {
+      staticStyle: {
+        width: "100%",
+        height: "240px"
+      },
+      attrs: {
+        variant: "image"
+      }
+    }), _vm._v(" "), _c("div", {
+      staticStyle: {
+        padding: "14px"
+      }
+    }, [_c("el-skeleton-item", {
+      staticStyle: {
+        width: "50%"
+      },
+      attrs: {
+        variant: "p"
+      }
+    }), _vm._v(" "), _c("div", {
+      staticStyle: {
+        display: "flex",
+        "align-items": "center",
+        "justify-items": "space-between"
+      }
+    }, [_c("el-skeleton-item", {
+      staticStyle: {
+        "margin-right": "16px"
+      },
+      attrs: {
+        variant: "text"
+      }
+    }), _vm._v(" "), _c("el-skeleton-item", {
+      staticStyle: {
+        width: "30%"
+      },
+      attrs: {
+        variant: "text"
+      }
+    })], 1)], 1)], 1)], 2)], 1);
+  })], 2), _vm._v(" "), _vm.blogs.meta ? [_vm.blogs.meta.total > 6 ? _c("div", {
     staticClass: "row"
   }, [_vm.blogs.meta ? _c("div", {
     staticClass: "col-lg-12 text-center"

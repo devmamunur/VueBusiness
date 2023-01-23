@@ -2,11 +2,13 @@
   <div class="blog-area blog-details section-gap">
     <div class="container">
       <div class="row">
-          <div class="col-lg-12 text-right">
-              <router-link :to="{name : 'Blog'}" class="main-btn">{{ $t('View All Blog') }}</router-link>
-          </div>
+        <div class="col-lg-12 text-right">
+          <router-link :to="{ name: 'Blog' }" class="main-btn">{{
+            $t("View All Blog")
+          }}</router-link>
+        </div>
         <div class="col-lg-12">
-          <div class="blog-dteails-content">
+          <div v-if="blog.description" class="blog-dteails-content">
             <img v-lazy="`/uploads/${blog.image}`" alt="" />
             <div class="content">
               <h3 class="title">
@@ -69,6 +71,27 @@
               </div>
             </div>
           </div>
+          <el-skeleton v-else style="width: 100%">
+            <template slot="template">
+              <el-skeleton-item
+                variant="image"
+                style="width: 100%; height: 540px"
+              />
+              <div style="padding: 14px">
+                <el-skeleton-item variant="p" style="width: 50%" />
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    justify-items: space-between;
+                  "
+                >
+                  <el-skeleton-item variant="text" style="margin-right: 16px" />
+                  <el-skeleton-item variant="text" style="width: 30%" />
+                </div>
+              </div>
+            </template>
+          </el-skeleton>
         </div>
       </div>
     </div>

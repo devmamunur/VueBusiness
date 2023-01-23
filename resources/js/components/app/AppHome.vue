@@ -1,5 +1,8 @@
 <template>
     <div>
+        <div class="myPreloader" v-if="$store.state.index.loading">
+            <div class="spinner"></div>
+        </div>
         <ThemeOne v-if="setting.theme_version == 1"></ThemeOne>
         <ThemeTwo v-if="setting.theme_version == 2"></ThemeTwo>
         <ThemeThree v-if="setting.theme_version == 3"></ThemeThree>
