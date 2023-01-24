@@ -1,11 +1,11 @@
 <?php
 
-use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\FaqController;
 use App\Http\Controllers\Api\JobController;
 use App\Http\Controllers\Api\BlogController;
 use App\Http\Controllers\Api\TeamController;
+use App\Http\Controllers\Api\QuoteController;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Api\ClientController;
 use App\Http\Controllers\Api\SliderController;
@@ -17,8 +17,10 @@ use App\Http\Controllers\Api\PackageController;
 use App\Http\Controllers\Api\SectionController;
 use App\Http\Controllers\Api\ServiceController;
 use App\Http\Controllers\Api\SettingController;
+use App\Http\Controllers\Api\LanguageController;
 use App\Http\Controllers\App\FrontendController;
 use App\Http\Controllers\Api\BcategoryController;
+use App\Http\Controllers\Api\DashboardController;
 use App\Http\Controllers\Api\GcategoryController;
 use App\Http\Controllers\Api\PortfolioController;
 use App\Http\Controllers\Api\FooterlinkController;
@@ -27,12 +29,9 @@ use App\Http\Controllers\Api\SocialLinkController;
 use App\Http\Controllers\Api\VisibilityController;
 use App\Http\Controllers\Api\WhayChooseController;
 use App\Http\Controllers\Api\ApplicationController;
-use App\Http\Controllers\Api\DashboardController;
 use App\Http\Controllers\Api\JobCategoryController;
-use App\Http\Controllers\Api\LanguageController;
-use App\Http\Controllers\Api\MailConfigurationController;
-use App\Http\Controllers\Api\QuoteController;
 use App\Http\Controllers\Api\TestimonialController;
+use App\Http\Controllers\Api\MailConfigurationController;
 
 
      Route::post('login', [AuthController::class, 'login'])->name('loginPage');

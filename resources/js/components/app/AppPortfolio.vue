@@ -3,60 +3,71 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8">
-          <div class="row blog-grid-items">
-            <template v-if="portfolios.data.length > 0">
-              <div
-                v-for="(item, i) in portfolios.data"
-                :key="i"
-                class="col-lg-6"
-              >
-                <router-link
-                  :to="{
-                    name: 'PortfolioDetails',
-                    params: { slug: item.slug },
-                  }"
-                  class="single-blog-grid mb-30"
-                >
-                  <div
-                    class="img"
-                    v-lazy:background-image="`/uploads/${item.featured_image}`"
-                  ></div>
-                  <span class="cat">{{ item.service.title }}</span>
-                  <div class="blog-grid-overlay">
-                    <h5 class="title">{{ item.title }}</h5>
-                  </div>
-                </router-link>
-              </div>
+          contentLoader = {{ contentLoader }}
+            <template v-if="contentLoader">
+                <div v-for="(l, i) in 6" :key="i" class="col-lg-6 mb-30">
+                  <el-skeleton style="width: 100%">
+                    <template slot="template">
+                      <el-skeleton-item
+                        variant="image"
+                        style="width: 100%; height: 240px"
+                      />
+                      <div style="padding: 14px">
+                        <el-skeleton-item variant="p" style="width: 50%" />
+                        <div
+                          style="display: flex;
+                            align-items: center;
+                            justify-items: space-between;
+                          "
+                        >
+                          <el-skeleton-item
+                            variant="text"
+                            style="margin-right: 16px"
+                          />
+                          <el-skeleton-item variant="text" style="width: 30%" />
+                        </div>
+                      </div>
+                    </template>
+                  </el-skeleton>
+                </div>
             </template>
             <template v-else>
-              <div v-for="(l, i) in 6" :key="i" class="col-lg-6 mb-30">
-                <el-skeleton style="width: 100%">
-                  <template slot="template">
-                    <el-skeleton-item
-                      variant="image"
-                      style="width: 100%; height: 240px"
-                    />
-                    <div style="padding: 14px">
-                      <el-skeleton-item variant="p" style="width: 50%" />
-                      <div
-                        style="
-                          display: flex;
-                          align-items: center;
-                          justify-items: space-between;
-                        "
+                <template v-if="portfolios.data.length > 0">
+                  <div class="row blog-grid-items">
+                    <div
+                      v-for="(item, i) in portfolios.data"
+                      :key="i"
+                      class="col-lg-6"
+                    >
+                      <router-link
+                        :to="{
+                          name: 'PortfolioDetails',
+                          params: { slug: item.slug },
+                        }"
+                        class="single-blog-grid mb-30"
                       >
-                        <el-skeleton-item
-                          variant="text"
-                          style="margin-right: 16px"
-                        />
-                        <el-skeleton-item variant="text" style="width: 30%" />
-                      </div>
+                        <div
+                          class="img"
+                          v-lazy:background-image="
+                            `/uploads/${item.featured_image}`
+                          "
+                        ></div>
+                        <span class="cat">{{ item.service.title }}</span>
+                        <div class="blog-grid-overlay">
+                          <h5 class="title">{{ item.title }}</h5>
+                        </div>
+                      </router-link>
                     </div>
-                  </template>
-                </el-skeleton>
-              </div>
+                  </div>
+                </template>
+                <teamplate v-else>
+                  <div class="col-md-12">
+                    <div class="bg-light py-5">
+                    <h3 class="text-center">{{ $t("NO JOB FOUND") }}</h3>
+                  </div>
+                  </div>
+                </teamplate>
             </template>
-          </div>
           <template v-if="portfolios.meta">
             <div class="row" v-if="portfolios.meta.total > 8">
               <div class="col-lg-12 text-center">
@@ -138,6 +149,7 @@ import { mapGetters, mapActions } from "vuex";
 export default {
   data() {
     return {
+      contentLoader: true,
       currentPage: 1,
       currentService: "",
       number: [],
@@ -148,32 +160,52 @@ export default {
       getServices: "index/getServices",
     }),
     getPortfolios() {
-      this.$store.dispatch("index/getPortfolios", {
-        page: this.currentPage,
-        category: this.currentService,
-      });
+      this.contentLoader = true;
+      this.$store
+        .dispatch("index/getPortfolios", {
+          page: this.currentPage,
+          category: this.currentService,
+        })
+        .then((res) => {
+          this.contentLoader = false;
+        });
     },
     handleCurrentChange() {
-      this.$store.dispatch("index/getPortfolios", {
-        page: this.currentPage,
-        category: this.currentService,
-      });
+      this.contentLoader = true;
+      this.$store
+        .dispatch("index/getPortfolios", {
+          page: this.currentPage,
+          category: this.currentService,
+        })
+        .then((res) => {
+          this.contentLoader = false;
+        });
     },
     portfolioByCategory(service) {
       this.currentService = service;
       this.currentPage = 1;
-      this.$store.dispatch("index/getPortfolios", {
-        page: this.currentPage,
-        category: this.currentService,
-      });
+      this.contentLoader = true;
+      this.$store
+        .dispatch("index/getPortfolios", {
+          page: this.currentPage,
+          category: this.currentService,
+        })
+        .then((res) => {
+          this.contentLoader = false;
+        });
     },
     resortAllPortfolio() {
       this.currentPage = 1;
       this.currentService = "";
-      this.$store.dispatch("index/getPortfolios", {
-        page: this.currentPage,
-        category: this.currentService,
-      });
+      this.contentLoader = true;
+      this.$store
+        .dispatch("index/getPortfolios", {
+          page: this.currentPage,
+          category: this.currentService,
+        })
+        .then((res) => {
+          this.contentLoader = false;
+        });
     },
   },
   computed: {

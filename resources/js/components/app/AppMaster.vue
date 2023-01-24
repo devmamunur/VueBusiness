@@ -29,6 +29,7 @@ export default {
             getVisibility : "index/getVisibility",
         })
     },
+
     created (){
 
         this.getSetting();

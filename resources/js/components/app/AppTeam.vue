@@ -2,7 +2,7 @@
   <div class="leadership-area section-gap">
     <div class="container">
       <div class="row">
-        <template v-if="teams.data.length > 0">
+        <template v-if="teams.data[0]">
           <div
             v-for="(team, i) in teams.data"
             :key="i"
@@ -56,8 +56,7 @@
                 <div style="padding: 14px">
                   <el-skeleton-item variant="p" style="width: 50%" />
                   <div
-                    style="
-                      display: flex;
+                    style="display: flex;
                       align-items: center;
                       justify-items: space-between;
                     "

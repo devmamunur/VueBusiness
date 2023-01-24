@@ -2,7 +2,7 @@
   <section class="service-section-two section-gap-top pb-90">
     <div class="container">
       <div class="row service-items justify-content-center">
-        <template v-if="services.length > 0">
+        <template v-if="services[0]">
           <div
             v-for="(service, i) in services"
             :key="i"
@@ -46,11 +46,7 @@
                 <div style="padding: 14px">
                   <el-skeleton-item variant="p" style="width: 50%" />
                   <div
-                    style="
-                      display: flex;
-                      align-items: center;
-                      justify-items: space-between;
-                    "
+                    style="display: flex; align-items: center; justify-items: space-between;"
                   >
                     <el-skeleton-item
                       variant="text"

@@ -309,3 +309,10 @@ td.product-remove a{
 	border: 2px solid #f3f3f3;
 	border-top: 3px solid <?php echo $color ?> !important;
 }
+
+#nprogress .bar {
+    background: <?php echo $color ?> !important;
+}
+#nprogress .peg {
+    box-shadow: 0 0 10px <?php echo $color ?>, 0 0 5px <?php echo $color ?> !important;
+}

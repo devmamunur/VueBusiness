@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-lg-8">
           <div v-if="portfolio.content" class="service-details-content">
-            <template v-if="portfolioImages.length > 0">
+            <template v-if="portfolioImages?.length > 0">
               <div class="portfolio-details-slider">
                 <VueSlickCarousel v-bind="sliderSettings">
                   <div
@@ -45,8 +45,7 @@
               <div style="padding: 14px">
                 <el-skeleton-item variant="p" style="width: 50%" />
                 <div
-                  style="
-                    display: flex;
+                  style="display: flex;
                     align-items: center;
                     justify-items: space-between;
                   "

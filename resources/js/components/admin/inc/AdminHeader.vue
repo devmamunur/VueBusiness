@@ -9,10 +9,7 @@
         ></a>
       </li>
     </ul>
-<<<<<<< HEAD
     <h6 class="mb-0 text-red">*** You <b>don't</b> have <b>PERMISSION</b> to change and edit Data ***</h6>
-=======
->>>>>>> parent of 7ed6d217 (add htaccess file)
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
         <div class="nav-link">

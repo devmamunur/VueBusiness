@@ -13,9 +13,18 @@ import i18n from './locales/appLocal'
 
 import library from './common/library'
 
-
 import VueLazyload from 'vue-lazyload';
 
+import NProgress from 'nprogress'
+
+NProgress.configure({ showSpinner: false });
+router.beforeEach((to, from, next) => {
+    NProgress.start()
+    next()
+  })
+  router.afterEach(() => {
+    NProgress.done()
+  })
 
 Vue.use(VueLazyload, {
     preLoad: 1.3,

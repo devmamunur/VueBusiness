@@ -250,7 +250,7 @@ var render = function render() {
     staticClass: "col-lg-8"
   }, [_c("div", {
     staticClass: "row justify-content-center"
-  }, [_vm.blogs.data.length > 0 ? _vm._l(_vm.blogs.data, function (blog, i) {
+  }, [_vm.blogs.data[0] ? _vm._l(_vm.blogs.data, function (blog, i) {
     return _c("div", {
       key: i,
       staticClass: "col-md-6 about-contnent wow fadeInUp",
@@ -675,6 +675,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
 /* harmony export */ });
 var render = function render() {
+  var _vm$jobs$data;
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
@@ -683,9 +684,9 @@ var render = function render() {
     staticClass: "container"
   }, [_c("div", {
     staticClass: "row"
-  }, [_vm.jobs.data ? _c("div", {
+  }, [_c("div", {
     staticClass: "col-lg-8"
-  }, [_vm.jobs.data.length <= 0 ? _c("div", {
+  }, [((_vm$jobs$data = _vm.jobs.data) === null || _vm$jobs$data === void 0 ? void 0 : _vm$jobs$data.length) <= 0 ? _c("div", {
     staticClass: "col-md-12"
   }, [_c("div", {
     staticClass: "bg-light py-5"
@@ -740,7 +741,7 @@ var render = function render() {
         _vm.currentPage = $event;
       }
     }
-  })], 1) : _vm._e()]) : _vm._e()] : _vm._e()], 2) : _vm._e(), _vm._v(" "), _c("div", {
+  })], 1) : _vm._e()]) : _vm._e()] : _vm._e()], 2), _vm._v(" "), _c("div", {
     staticClass: "col-lg-4 blog-sidebar order-first order-lg-last"
   }, [_c("div", {
     staticClass: "widget categories-widget"

@@ -63,7 +63,7 @@ var render = function render() {
     staticClass: "container"
   }, [_c("div", {
     staticClass: "row"
-  }, [_vm.teams.data.length > 0 ? _vm._l(_vm.teams.data, function (team, i) {
+  }, [_vm.teams.data[0] ? _vm._l(_vm.teams.data, function (team, i) {
     return _c("div", {
       key: i,
       staticClass: "col-lg-4 col-md-6 col-sm-6"

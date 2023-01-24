@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-lg-8">
           <div class="row justify-content-center">
-            <template v-if="blogs.data.length > 0">
+            <template v-if="blogs.data[0]">
               <div
                 v-for="(blog, i) in blogs.data"
                 :key="i"
@@ -61,8 +61,7 @@
                     <div style="padding: 14px">
                       <el-skeleton-item variant="p" style="width: 50%" />
                       <div
-                        style="
-                          display: flex;
+                        style="display: flex;
                           align-items: center;
                           justify-items: space-between;
                         "

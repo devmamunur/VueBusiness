@@ -2,13 +2,13 @@
   <div class="blog-standard-area pt-120 pb-100">
     <div class="container">
       <div class="row">
-        <div class="col-lg-8" v-if="jobs.data">
-          <div v-if="jobs.data.length <= 0" class="col-md-12">
+        <div class="col-lg-8">
+          <div v-if="jobs.data?.length <= 0" class="col-md-12">
             <div class="bg-light py-5">
               <h3 class="text-center">{{ $t("NO JOB FOUND") }}</h3>
             </div>
           </div>
-
+          
           <template v-else>
             <div v-for="(job, i) in jobs.data" :key="i" class="single-job">
               <router-link

@@ -53,7 +53,7 @@ var render = function render() {
     staticClass: "container"
   }, [_c("div", {
     staticClass: "row service-items justify-content-center"
-  }, [_vm.services.length > 0 ? _vm._l(_vm.services, function (service, i) {
+  }, [_vm.services[0] ? _vm._l(_vm.services, function (service, i) {
     return _c("div", {
       key: i,
       staticClass: "col-lg-4 col-md-6 col-sm-8"

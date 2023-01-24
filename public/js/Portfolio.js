@@ -22,6 +22,7 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
+      contentLoader: true,
       currentPage: 1,
       currentService: "",
       number: []
@@ -31,31 +32,47 @@ function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input ==
     getServices: "index/getServices"
   })), {}, {
     getPortfolios: function getPortfolios() {
+      var _this = this;
+      this.contentLoader = true;
       this.$store.dispatch("index/getPortfolios", {
         page: this.currentPage,
         category: this.currentService
+      }).then(function (res) {
+        _this.contentLoader = false;
       });
     },
     handleCurrentChange: function handleCurrentChange() {
+      var _this2 = this;
+      this.contentLoader = true;
       this.$store.dispatch("index/getPortfolios", {
         page: this.currentPage,
         category: this.currentService
+      }).then(function (res) {
+        _this2.contentLoader = false;
       });
     },
     portfolioByCategory: function portfolioByCategory(service) {
+      var _this3 = this;
       this.currentService = service;
       this.currentPage = 1;
+      this.contentLoader = true;
       this.$store.dispatch("index/getPortfolios", {
         page: this.currentPage,
         category: this.currentService
+      }).then(function (res) {
+        _this3.contentLoader = false;
       });
     },
     resortAllPortfolio: function resortAllPortfolio() {
+      var _this4 = this;
       this.currentPage = 1;
       this.currentService = "";
+      this.contentLoader = true;
       this.$store.dispatch("index/getPortfolios", {
         page: this.currentPage,
         category: this.currentService
+      }).then(function (res) {
+        _this4.contentLoader = false;
       });
     }
   }),
@@ -96,39 +113,7 @@ var render = function render() {
     staticClass: "row"
   }, [_c("div", {
     staticClass: "col-lg-8"
-  }, [_c("div", {
-    staticClass: "row blog-grid-items"
-  }, [_vm.portfolios.data.length > 0 ? _vm._l(_vm.portfolios.data, function (item, i) {
-    return _c("div", {
-      key: i,
-      staticClass: "col-lg-6"
-    }, [_c("router-link", {
-      staticClass: "single-blog-grid mb-30",
-      attrs: {
-        to: {
-          name: "PortfolioDetails",
-          params: {
-            slug: item.slug
-          }
-        }
-      }
-    }, [_c("div", {
-      directives: [{
-        name: "lazy",
-        rawName: "v-lazy:background-image",
-        value: "/uploads/".concat(item.featured_image),
-        expression: "`/uploads/${item.featured_image}`",
-        arg: "background-image"
-      }],
-      staticClass: "img"
-    }), _vm._v(" "), _c("span", {
-      staticClass: "cat"
-    }, [_vm._v(_vm._s(item.service.title))]), _vm._v(" "), _c("div", {
-      staticClass: "blog-grid-overlay"
-    }, [_c("h5", {
-      staticClass: "title"
-    }, [_vm._v(_vm._s(item.title))])])])], 1);
-  }) : _vm._l(6, function (l, i) {
+  }, [_vm._v("\n        contentLoader = " + _vm._s(_vm.contentLoader) + "\n          "), _vm.contentLoader ? _vm._l(6, function (l, i) {
     return _c("div", {
       key: i,
       staticClass: "col-lg-6 mb-30"
@@ -178,7 +163,45 @@ var render = function render() {
         variant: "text"
       }
     })], 1)], 1)], 1)], 2)], 1);
-  })], 2), _vm._v(" "), _vm.portfolios.meta ? [_vm.portfolios.meta.total > 8 ? _c("div", {
+  }) : [_vm.portfolios.data.length > 0 ? [_c("div", {
+    staticClass: "row blog-grid-items"
+  }, _vm._l(_vm.portfolios.data, function (item, i) {
+    return _c("div", {
+      key: i,
+      staticClass: "col-lg-6"
+    }, [_c("router-link", {
+      staticClass: "single-blog-grid mb-30",
+      attrs: {
+        to: {
+          name: "PortfolioDetails",
+          params: {
+            slug: item.slug
+          }
+        }
+      }
+    }, [_c("div", {
+      directives: [{
+        name: "lazy",
+        rawName: "v-lazy:background-image",
+        value: "/uploads/".concat(item.featured_image),
+        expression: "\n                          `/uploads/${item.featured_image}`\n                        ",
+        arg: "background-image"
+      }],
+      staticClass: "img"
+    }), _vm._v(" "), _c("span", {
+      staticClass: "cat"
+    }, [_vm._v(_vm._s(item.service.title))]), _vm._v(" "), _c("div", {
+      staticClass: "blog-grid-overlay"
+    }, [_c("h5", {
+      staticClass: "title"
+    }, [_vm._v(_vm._s(item.title))])])])], 1);
+  }), 0)] : _c("teamplate", [_c("div", {
+    staticClass: "col-md-12"
+  }, [_c("div", {
+    staticClass: "bg-light py-5"
+  }, [_c("h3", {
+    staticClass: "text-center"
+  }, [_vm._v(_vm._s(_vm.$t("NO JOB FOUND")))])])])])], _vm._v(" "), _vm.portfolios.meta ? [_vm.portfolios.meta.total > 8 ? _c("div", {
     staticClass: "row"
   }, [_c("div", {
     staticClass: "col-lg-12 text-center"

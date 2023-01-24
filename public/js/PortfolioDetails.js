@@ -71,6 +71,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
 /* harmony export */ });
 var render = function render() {
+  var _vm$portfolioImages;
   var _vm = this,
     _c = _vm._self._c;
   return _c("div", {
@@ -83,7 +84,7 @@ var render = function render() {
     staticClass: "col-lg-8"
   }, [_vm.portfolio.content ? _c("div", {
     staticClass: "service-details-content"
-  }, [_vm.portfolioImages.length > 0 ? [_c("div", {
+  }, [((_vm$portfolioImages = _vm.portfolioImages) === null || _vm$portfolioImages === void 0 ? void 0 : _vm$portfolioImages.length) > 0 ? [_c("div", {
     staticClass: "portfolio-details-slider"
   }, [_c("VueSlickCarousel", _vm._b({
     scopedSlots: _vm._u([{
