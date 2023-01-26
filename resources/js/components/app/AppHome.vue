@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="myPreloader" v-if="$store.state.index.loading">
+        <div class="myPreloader" v-if="loading">
             <div class="spinner"></div>
         </div>
         <ThemeOne v-if="setting.theme_version == 1"></ThemeOne>
@@ -18,7 +18,7 @@ export default {
   name: "AppHome",
    data() {
         return {
-            loading: false,
+            loading: true,
             theme_version: "",
         };
     },
@@ -33,7 +33,7 @@ export default {
         })
     },
     mounted (){
-        this.$store.dispatch('index/getLoading', false);
+        this.loading = false;
     }
 };
 </script>

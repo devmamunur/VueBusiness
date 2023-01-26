@@ -69,6 +69,9 @@
                   </ShareNetwork>
                 </div>
               </div>
+                <div class="mt-5">
+                    <Disqus />
+                </div>
             </div>
           </div>
           <el-skeleton v-else style="width: 100%">

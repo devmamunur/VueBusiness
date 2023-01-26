@@ -15,7 +15,12 @@ import library from './common/library'
 
 import VueLazyload from 'vue-lazyload';
 
+import VueDisqus from 'vue-disqus'
+
+
+
 import NProgress from 'nprogress'
+
 
 NProgress.configure({ showSpinner: false });
 router.beforeEach((to, from, next) => {
@@ -25,6 +30,11 @@ router.beforeEach((to, from, next) => {
   router.afterEach(() => {
     NProgress.done()
   })
+
+
+Vue.use(VueDisqus, {
+    shortname: 'vuebusiness'
+})
 
 Vue.use(VueLazyload, {
     preLoad: 1.3,

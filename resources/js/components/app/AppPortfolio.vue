@@ -3,36 +3,37 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8">
-          contentLoader = {{ contentLoader }}
             <template v-if="contentLoader">
-                <div v-for="(l, i) in 6" :key="i" class="col-lg-6 mb-30">
-                  <el-skeleton style="width: 100%">
-                    <template slot="template">
-                      <el-skeleton-item
-                        variant="image"
-                        style="width: 100%; height: 240px"
-                      />
-                      <div style="padding: 14px">
-                        <el-skeleton-item variant="p" style="width: 50%" />
-                        <div
-                          style="display: flex;
+                <div class="row">
+                    <div v-for="(l, i) in 6" :key="i" class="col-lg-6 mb-30">
+                        <el-skeleton style="width: 100%">
+                            <template slot="template">
+                                <el-skeleton-item
+                                    variant="image"
+                                    style="width: 100%; height: 240px"
+                                />
+                                <div style="padding: 14px">
+                                    <el-skeleton-item variant="p" style="width: 50%" />
+                                    <div
+                                        style="display: flex;
                             align-items: center;
                             justify-items: space-between;
                           "
-                        >
-                          <el-skeleton-item
-                            variant="text"
-                            style="margin-right: 16px"
-                          />
-                          <el-skeleton-item variant="text" style="width: 30%" />
-                        </div>
-                      </div>
-                    </template>
-                  </el-skeleton>
+                                    >
+                                        <el-skeleton-item
+                                            variant="text"
+                                            style="margin-right: 16px"
+                                        />
+                                        <el-skeleton-item variant="text" style="width: 30%" />
+                                    </div>
+                                </div>
+                            </template>
+                        </el-skeleton>
+                    </div>
                 </div>
             </template>
             <template v-else>
-                <template v-if="portfolios.data.length > 0">
+                <template v-if="portfolios.data?.length > 0">
                   <div class="row blog-grid-items">
                     <div
                       v-for="(item, i) in portfolios.data"
@@ -60,13 +61,13 @@
                     </div>
                   </div>
                 </template>
-                <teamplate v-else>
+                <template v-else>
                   <div class="col-md-12">
                     <div class="bg-light py-5">
                     <h3 class="text-center">{{ $t("NO JOB FOUND") }}</h3>
                   </div>
                   </div>
-                </teamplate>
+                </template>
             </template>
           <template v-if="portfolios.meta">
             <div class="row" v-if="portfolios.meta.total > 8">

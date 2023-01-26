@@ -35,6 +35,9 @@
             <div class="content">
               {{ portfolio.content }}
             </div>
+              <div class="mt-5">
+                  <Disqus />
+              </div>
           </div>
           <el-skeleton v-else style="width: 100%">
             <template slot="template">

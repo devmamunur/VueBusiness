@@ -2,22 +2,23 @@
   <div class="header-right d-flex align-items-center justify-content-end">
     <div class="site-nav-menu">
       <ul class="primary-menu">
-        <li class="pore">
+        <li class="pore" :class="this.$route.name == 'Home' ? 'current' : ''">
           <router-link class="nav-link" :to="{ name: 'Home' }">{{
             $t("Home")
-          }}</router-link>
+          }}
+          </router-link>
         </li>
-        <li v-if="visibility.is_about_page" class="pore">
+        <li v-if="visibility.is_about_page" class="pore"  :class="this.$route.name == 'About' ? 'current' : ''">
           <router-link class="nav-link" :to="{ name: 'About' }">{{
             $t("About")
           }}</router-link>
         </li>
-        <li v-if="visibility.is_service_page" class="pore">
+        <li v-if="visibility.is_service_page" class="pore"  :class="this.$route.name == 'Service' ? 'current' : ''">
           <router-link class="nav-link" :to="{ name: 'Service' }">{{
             $t("Service")
           }}</router-link>
         </li>
-        <li v-if="visibility.is_poerfolio_page" class="pore">
+        <li v-if="visibility.is_poerfolio_page" class="pore"  :class="this.$route.name == 'Portfolio' ? 'current' : ''">
           <router-link class="nav-link" :to="{ name: 'Portfolio' }">{{
             $t("Portfolio")
           }}</router-link>
@@ -32,6 +33,13 @@
             visibility.is_blog_page
           "
           class="submenu-wrapper pore"
+          :class="this.$route.name == 'Package'
+          || this.$route.name == 'Team'
+          || this.$route.name == 'Faq'
+          || this.$route.name == 'Gallery'
+          || this.$route.name == 'Career'
+          || this.$route.name == 'Blog'
+          ? 'current' : ''"
         >
           <a class="sm-link p-link" href="javascript: void(0)"
             >{{ $t("Pages") }}
@@ -65,12 +73,12 @@
             </li>
           </ul>
         </li>
-        <li v-if="visibility.is_contact_page" class="pore">
+        <li v-if="visibility.is_contact_page" class="pore"  :class="this.$route.name == 'Contact' ? 'current' : ''">
           <router-link class="nav-link" :to="{ name: 'Contact' }">{{
             $t("Contact")
           }}</router-link>
         </li>
-        <li v-if="visibility.is_quote_page" class="mobile-quote">
+        <li v-if="visibility.is_quote_page" class="mobile-quote" >
           <router-link class="nav-link" :to="{ name: 'GateQuote' }">{{
             $t("Gate A Quote")
           }}</router-link>
